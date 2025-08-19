@@ -45,10 +45,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const sliderContainer = document.getElementById('testimonial-slider');
     if (sliderContainer) {
         const images = [
-            'images/testimoni-1.jpeg',
-            'images/testimoni-2.jpeg',
-            'images/testimoni-3.jpeg',
-            'images/testimoni-4.jpeg'
+            'testimoni-1.jpeg',
+            'testimoni-2.jpeg',
+            'testimoni-3.jpeg',
+            'testimoni-4.jpeg'
         ];
         let currentIndex = 0;
 
@@ -75,4 +75,5 @@ document.addEventListener('DOMContentLoaded', () => {
             
         }, 4000); // Ganti gambar setiap 4 detik
     }
+
 });
