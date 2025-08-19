@@ -106,16 +106,13 @@ body {
     box-shadow: 0 12px 24px -6px rgba(15, 23, 42, .15);
 }
 
-.prod-img { 
-    width: 88px; 
+.prod-img {
+    width: 88px;
     height: 88px;
-    flex-shrink: 0; 
-    border-radius: 0.875rem;
-    background: var(--slate-50); 
-    border: 1px solid var(--slate-200); 
-    padding: 8px; /* Padding sedikit dikurangi agar gambar lebih lega */
-    object-fit: cover; /* Diubah dari 'contain' menjadi 'cover' */
-    box-shadow: 0 4px 12px -4px rgba(8,145,178,.1); 
+    flex-shrink: 0;
+    border-radius: 0.875rem; /* Memastikan sudut gambar tetap melengkung */
+    object-fit: cover;      /* Memaksa gambar mengisi penuh area */
+    box-shadow: 0 4px 12px -4px rgba(8,145,178,.1); /* Tetap beri bayangan agar timbul */
 }
 .btnchips { display: flex; flex-direction: column; gap: 0.5rem; align-items: center; }
 @media (min-width: 420px) { .btnchips { flex-direction: row; } }
@@ -159,5 +156,6 @@ body {
     opacity: 0;
 
 }
+
 
 
