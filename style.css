@@ -106,7 +106,17 @@ body {
     box-shadow: 0 12px 24px -6px rgba(15, 23, 42, .15);
 }
 
-.prod-img { width: 56px; height: 56px; flex-shrink: 0; border-radius: 0.75rem; background: var(--slate-50); border: 1px solid var(--slate-200); padding: 8px; object-fit: contain; box-shadow: 0 4px 12px -4px rgba(8,145,178,.1); }
+.prod-img { 
+    width: 72px; /* Diubah dari 56px */
+    height: 72px; /* Diubah dari 56px */
+    flex-shrink: 0; 
+    border-radius: 0.75rem; 
+    background: var(--slate-50); 
+    border: 1px solid var(--slate-200); 
+    padding: 10px; /* Sedikit disesuaikan dari 8px */
+    object-fit: contain; 
+    box-shadow: 0 4px 12px -4px rgba(8,145,178,.1); 
+}
 .btnchips { display: flex; flex-direction: column; gap: 0.5rem; align-items: center; }
 @media (min-width: 420px) { .btnchips { flex-direction: row; } }
 .btn { display: inline-flex; align-items: center; justify-content: center; gap: 0.375rem; border-radius: 999px; width: 80px; padding: 0.5rem 1rem; font-weight: 600; font-size: 0.875rem; transition: filter .2s; }
@@ -147,4 +157,5 @@ body {
 }
 #testimonial-slider img.fade-out {
     opacity: 0;
+
 }
