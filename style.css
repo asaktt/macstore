@@ -107,13 +107,13 @@ body {
 }
 
 .prod-img { 
-    width: 72px; /* Diubah dari 56px */
-    height: 72px; /* Diubah dari 56px */
+    width: 88px; /* Diubah dari 72px */
+    height: 88px; /* Diubah dari 72px */
     flex-shrink: 0; 
-    border-radius: 0.75rem; 
+    border-radius: 0.875rem; /* Disesuaikan agar lebih proporsional */
     background: var(--slate-50); 
     border: 1px solid var(--slate-200); 
-    padding: 10px; /* Sedikit disesuaikan dari 8px */
+    padding: 12px; /* Disesuaikan dari 10px */
     object-fit: contain; 
     box-shadow: 0 4px 12px -4px rgba(8,145,178,.1); 
 }
@@ -159,3 +159,4 @@ body {
     opacity: 0;
 
 }
+
