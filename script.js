@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
         try {
             const jam = parseInt(new Date().toLocaleTimeString('en-US', { timeZone: 'Asia/Jakarta', hour12: false, hour: '2-digit' }), 10);
             if (jam >= 8 && jam < 00) {
-                jamOperasionalEl.innerHTML = '<span class="status-dot online"></span><span class="font-bold">Sedang Buka</span>&nbsp; (08:00 – 22:00 WIB)';
+                jamOperasionalEl.innerHTML = '<span class="status-dot online"></span><span class="font-bold">Sedang Buka</span>&nbsp; (08:00 – 00:00 WIB)';
             } else {
                 jamOperasionalEl.innerHTML = '<span class="status-dot offline"></span><span class="font-bold">Sedang Tutup</span>, Buka jam 08:00 WIB';
             }
@@ -77,4 +77,5 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
 });
+
 
