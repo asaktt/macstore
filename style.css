@@ -107,14 +107,14 @@ body {
 }
 
 .prod-img { 
-    width: 88px; /* Diubah dari 72px */
-    height: 88px; /* Diubah dari 72px */
+    width: 88px; 
+    height: 88px;
     flex-shrink: 0; 
-    border-radius: 0.875rem; /* Disesuaikan agar lebih proporsional */
+    border-radius: 0.875rem;
     background: var(--slate-50); 
     border: 1px solid var(--slate-200); 
-    padding: 12px; /* Disesuaikan dari 10px */
-    object-fit: contain; 
+    padding: 8px; /* Padding sedikit dikurangi agar gambar lebih lega */
+    object-fit: cover; /* Diubah dari 'contain' menjadi 'cover' */
     box-shadow: 0 4px 12px -4px rgba(8,145,178,.1); 
 }
 .btnchips { display: flex; flex-direction: column; gap: 0.5rem; align-items: center; }
@@ -159,4 +159,5 @@ body {
     opacity: 0;
 
 }
+
 
