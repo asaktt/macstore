@@ -2,6 +2,10 @@
 <html lang="id">
 <head>
   <meta charset="utf-8" />
+  <!-- Favicon default (inline) akan diganti via JS jika file eksternal tersedia -->
+  <link id="favicon" rel="icon" type="image/svg+xml" href='data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="12" fill="%230c1116"/><path d="M16 44V20h8l8 10 8-10h8v24h-8V31l-8 10-8-10v13z" fill="%2310b981"/></svg>'/>
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png"/>
+  <meta name="theme-color" content="#0b0c10" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Veo 3 Prompt Generator — macstoredigital.id</title>
   <meta name="description" content="Generator prompt VEO 3 siap pakai untuk macstoredigital.id. Buat prompt video sinematik lengkap: konteks, karakter, dialog, kamera, lighting, durasi, rasio, dan negatif."/>
@@ -18,6 +22,7 @@
     header{display:flex;gap:12px;align-items:center;justify-content:space-between;margin-bottom:16px}
     .brand{display:flex;gap:10px;align-items:center}
     .brand .logo{width:28px;height:28px;border-radius:8px;background:radial-gradient(60% 70% at 30% 30%,#1a73e8,transparent),radial-gradient(60% 70% at 70% 70%,#10b981,transparent);box-shadow:0 0 0 1px #1f2937 inset}
+    .brand .logo-img{width:28px;height:28px;border-radius:8px;display:block;object-fit:contain;background:#0b0c10;box-shadow:0 0 0 1px #1f2937 inset}
     h1{font-size:18px;margin:0}
     .tag{font-size:12px;padding:2px 8px;border-radius:999px;background:#0e1725;border:1px solid var(--border);color:#8ab4f8}
     .grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
@@ -475,6 +480,29 @@
     $('#btnPresetUGC').addEventListener('click', ()=>applyPreset('ugc'));
 
     // Init
+    // Logo & Favicon loader
+    (function(){
+      const LOGO_SRC = '/assets/macstore-logo.svg';
+      const FAVICON_SVG = '/assets/favicon.svg';
+      const FAVICON_PNG = '/assets/favicon.png';
+      const logoBox = document.querySelector('.brand .logo');
+      if(logoBox){
+        const img = new Image();
+        img.alt = 'MacStore Digital';
+        img.className = 'logo-img';
+        img.onload = ()=>{ logoBox.replaceWith(img); };
+        img.onerror = ()=>{};
+        img.src = LOGO_SRC;
+      }
+      const fav = document.getElementById('favicon');
+      function tryFavicon(url){
+        return new Promise(res=>{ const i=new Image(); i.onload=()=>res(url); i.onerror=()=>res(null); i.src=url; });
+      }
+      tryFavicon(FAVICON_SVG).then(u=>{
+        if(u && fav) fav.href=u; else return tryFavicon(FAVICON_PNG).then(u2=>{ if(u2 && fav) fav.href=u2; });
+      });
+    })();
+
     loadLocal();
     // Initial outputs
     $('#outLong').textContent = buildLong();
