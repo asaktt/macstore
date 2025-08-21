@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MacStore Digital — Akun Premium Murah, Garansi Ganti, Bayar QRIS</title>
+    <meta name="description" content="Beli Akun Premium CapCut, Canva, Netflix, ChatGPT murah. Proses cepat 1-20 menit, garansi penuh, dan admin responsif. Order via Link id atau WhatsApp.">
+    <link rel="icon" type="image/png" href="favicon.png" sizes="32x32">
+    <meta name="theme-color" content="#075985">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-CVD1CLMM9R"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-CVD1CLMM9R');
+    </script>
+    
+    <meta property="og:title" content="MacStore Digital — Akun Premium Murah & Terpercaya">
+    <meta property="og:description" content="Proses cepat, garansi ganti baru. Beli Netflix, Canva, CapCut, dan lainnya dengan aman.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="logo-macstore.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="MacStore Digital — Akun Premium Murah & Terpercaya">
+    <meta name="twitter:description" content="Proses cepat, garansi ganti baru. Beli Netflix, Canva, CapCut, dan lainnya dengan aman.">
+    <meta name="twitter:image" content="logo-macstore.png">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script type="application/ld+json">{
+      "@context":"https://schema.org","@type":"Organization","name":"MacStore Digital","logo":"logo-macstore.png","url":"URL_WEBSITE_ANDA","sameAs":["https://www.instagram.com/macstore.digital/","https://www.facebook.com/profile.php?id=61578070384736","https://www.tiktok.com/@macstore.digitall"]
+    }</script>
+</head>
+<body class="text-slate-800 antialiased">
+
+    <div class="container mx-auto max-w-2xl p-4 sm:p-6">
+        
+        <header class="text-center mb-10 pt-8 pb-10 rounded-b-[2rem] sm:rounded-b-[3rem] shadow-lg shadow-cyan-500/5 relative overflow-hidden">
+            <div class="header-bg"></div>
+            <div class="relative z-10">
+                <img src="logo-macstore.png" alt="Logo MacStore Digital" class="w-28 h-28 rounded-full mx-auto mb-4 shadow-xl shadow-cyan-500/10 border-4 border-white">
+                <h1 class="font-heading-xl">MacStore Digital</h1>
+                <p class="font-subheading max-w-md mx-auto">Jual Akun Premium Murah, Aman & Terpercaya</p>
+                
+                <div class="mt-6 flex flex-col sm:flex-row items-center justify-center gap-x-6 gap-y-3">
+                    <div class="font-small font-medium text-slate-600">
+                        ✨ Telah dipercaya oleh <b>500+ pelanggan</b>
+                    </div>
+                    <div id="jam-operasional" class="font-small font-medium text-slate-700 bg-white/80 border border-slate-200/80 inline-flex items-center px-4 py-2 rounded-full">
+                    </div>
+                </div>
+
+                <div class="flex justify-center items-center space-x-4 sm:space-x-5 mt-8">
+                    <a href="https://api.whatsapp.com/send/?phone=6283853289396" target="_blank" title="WhatsApp" aria-label="Hubungi via WhatsApp">
+                        <span class="social-circle"><img src="whatsapp.png" alt="Ikon WhatsApp"></span>
+                    </a>
+                    <a href="https://www.facebook.com/profile.php?id=61578070384736" target="_blank" title="Facebook" aria-label="Kunjungi halaman Facebook kami">
+                        <span class="social-circle"><img src="facebook.png" alt="Ikon Facebook"></span>
+                    </a>
+                    <a href="https://www.instagram.com/macstore.digital/" target="_blank" title="Instagram" aria-label="Kunjungi profil Instagram kami">
+                        <span class="social-circle"><img src="instagram.png" alt="Ikon Instagram"></span>
+                    </a>
+                    <a href="https://www.tiktok.com/@macstore.digitall" target="_blank" title="TikTok" aria-label="Kunjungi profil TikTok kami">
+                        <span class="social-circle"><img src="tiktok.png" alt="Ikon TikTok"></span>
+                    </a>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <section aria-label="Cara Order" class="bg-white/70 backdrop-blur-sm rounded-3xl border border-slate-200 p-5 sm:p-6 shadow-xl shadow-cyan-500/10">
+              <h2 class="font-heading-lg tracking-tight text-slate-900 mb-5">Cara Order Cepat</h2>
+              <ol class="grid gap-4 sm:grid-cols-3">
+                <li class="flex items-start gap-4 p-4 rounded-xl bg-slate-50/50">
+                  <span class="inline-grid w-9 h-9 shrink-0 place-items-center rounded-full bg-cyan-600 text-white font-bold">1</span>
+                  <div>
+                    <h3 class="font-small font-semibold text-slate-800">Pilih Produk</h3>
+                    <p class="font-xs text-slate-500 mt-0.5">Pilih paket di pricelist bawah.</p>
+                  </div>
+                </li>
+                <li class="flex items-start gap-4 p-4 rounded-xl bg-slate-50/50">
+                  <span class="inline-grid w-9 h-9 shrink-0 place-items-center rounded-full bg-cyan-600 text-white font-bold">2</span>
+                  <div>
+                    <h3 class="font-small font-semibold text-slate-800">Bayar</h3>
+                    <p class="font-xs text-slate-500 mt-0.5">Klik <b>Lynk</b> atau <b>WA</b> untuk bayar via QRIS.</p>
+                  </div>
+                </li>
+                <li class="flex items-start gap-4 p-4 rounded-xl bg-slate-50/50">
+                  <span class="inline-grid w-9 h-9 shrink-0 place-items-center rounded-full bg-cyan-600 text-white font-bold">3</span>
+                  <div>
+                    <h3 class="font-small font-semibold text-slate-800">Aktivasi</h3>
+                    <p class="font-xs text-slate-500 mt-0.5">Proses 1-20 menit (jam kerja).</p>
+                  </div>
+                </li>
+              </ol>
+            </section>
+
+            <section aria-label="Keunggulan Toko" class="mt-8">
+                <h2 class="font-heading-lg text-center tracking-tight text-slate-900 mb-6">Kenapa Beli di MacStore Digital?</h2>
+                <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 text-center">
+                    <div class="bg-white rounded-2xl p-4 border border-slate-200/80 shadow-sm">
+                        <div class="mx-auto w-12 h-12 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center">
+                            <i data-feather="shield" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="font-semibold mt-3 text-slate-800 font-small">Garansi Penuh</h3>
+                        <p class="font-xs text-slate-500 mt-1">Akun bermasalah? Langsung ganti baru.</p>
+                    </div>
+                    <div class="bg-white rounded-2xl p-4 border border-slate-200/80 shadow-sm">
+                        <div class="mx-auto w-12 h-12 rounded-full bg-sky-100 text-sky-600 flex items-center justify-center">
+                            <i data-feather="zap" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="font-semibold mt-3 text-slate-800 font-small">Proses Cepat</h3>
+                        <p class="font-xs text-slate-500 mt-1">Aktivasi 1-20 menit di jam kerja.</p>
+                    </div>
+                    <div class="bg-white rounded-2xl p-4 border border-slate-200/80 shadow-sm">
+                        <div class="mx-auto w-12 h-12 rounded-full bg-amber-100 text-amber-600 flex items-center justify-center">
+                            <i data-feather="message-circle" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="font-semibold mt-3 text-slate-800 font-small">Admin Responsif</h3>
+                        <p class="font-xs text-slate-500 mt-1">Siap bantu jika ada pertanyaan.</p>
+                    </div>
+                    <div class="bg-white rounded-2xl p-4 border border-slate-200/80 shadow-sm">
+                        <div class="mx-auto w-12 h-12 rounded-full bg-rose-100 text-rose-600 flex items-center justify-center">
+                            <i data-feather="tag" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="font-semibold mt-3 text-slate-800 font-small">Harga Terbaik</h3>
+                        <p class="font-xs text-slate-500 mt-1">Kualitas premium, harga minimum.</p>
+                    </div>
+                </div>
+            </section>
+            
+            <div class="space-y-4 mt-6">
+                <a href="https://lynk.id/asakrisnatara" target="_blank" class="block" aria-label="Order via Link id">
+                    <div class="cta cta--light">
+                        <span class="icon"><img src="lynk-color.png" alt="Logo Lynk.id"></span>
+                        <div class="text-left">
+                            <div class="font-body font-semibold leading-tight">Order via Link id</div>
+                            <div class="font-xs opacity-90 font-normal">Pembayaran otomatis & cepat</div>
+                        </div>
+                        <i data-feather="arrow-right" class="chev w-6 h-6"></i>
+                    </div>
+                </a>
+                <a href="https://api.whatsapp.com/send?phone=6283853289396" target="_blank" class="block" aria-label="Order via WhatsApp">
+                    <div class="cta cta--wa">
+                        <span class="icon"><img src="whatsapp-white.png" alt="Logo WhatsApp"></span>
+                        <div class="text-left">
+                            <div class="font-body font-semibold leading-tight">Order via WhatsApp</div>
+                            <div class="font-xs opacity-90 font-normal">Tanya & order lewat admin</div>
+                        </div>
+                        <i data-feather="arrow-right" class="chev w-6 h-6"></i>
+                    </div>
+                </a>
+                <a href="https://www.instagram.com/stories/highlights/18052147886160945/" target="_blank" class="block" aria-label="Lihat testimoni pelanggan di Instagram">
+                    <div class="cta cta--testi">
+                        <span class="icon"><img src="instagram-white.png" alt="Logo Instagram"></span>
+                        <div class="text-left">
+                            <div class="font-body font-semibold leading-tight">Lihat Testimoni Lainnya</div>
+                            <div class="font-xs opacity-90 font-normal">Cek highlight Instagram kami</div>
+                        </div>
+                        <i data-feather="arrow-right" class="chev w-6 h-6"></i>
+                    </div>
+                </a>
+            </div>
+            
+            <div class="space-y-3 mt-10">
+                <h2 class="text-center font-semibold text-slate-500 uppercase tracking-widest font-xs">— PRICELIST —</h2>
+                
+                <details class="bg-white rounded-2xl shadow-sm border border-slate-200/80 overflow-hidden group" open>
+                    <summary class="accordion-toggle list-none w-full flex justify-between items-center text-left p-4 font-semibold text-slate-800 hover:bg-slate-50/80 focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400 transition-colors cursor-pointer">
+                        <span class="flex items-center gap-3"><span class="text-xl">🔥</span> Promo Spesial</span>
+                        <i data-feather="chevron-down" class="group-open:rotate-180 transition-transform"></i>
+                    </summary>
+                    <div class="accordion-content">
+                        <div class="px-4 pb-4 border-t border-slate-100 space-y-4 pt-4">
+                            <div class="flex items-center gap-4">
+                                <img src="paket-bundle1.png" class="prod-img" alt="Ikon Paket Bundle" loading="lazy">
+                                <div class="flex-grow">
+                                    <p class="font-small font-semibold">Promo CapCut Pro 6 bln GRATIS Canva Pro 6 bln + YT Prem 1 bln</p>
+                                    <p class="font-xs text-slate-500">PROMO TERBATAS</p>
+                                    <p class="font-bold text-slate-900 mt-1">Rp99.000</p>
+                                </div>
+                                <div class="btnchips">
+                                  <a href="https://lynk.id/asakrisnatara" target="_blank" class="btn btn-lynk"><img src="lynk-white.png" alt="Logo Lynk.id">Lynk</a>
+                                  <a href="https://api.whatsapp.com/send?phone=6283853289396&text=Halo%2C%20saya%20mau%20pesan%20Promo%20CapCut%20Pro%206%20bln%20GRATIS%20Canva%20Pro%206%20bln%20%2B%20YT%20Prem%201%20bln." target="_blank" class="btn btn-wa"><img src="whatsapp-white.png" alt="Logo WhatsApp">WA</a>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <img src="paket-bundle1.png" class="prod-img" alt="Ikon Paket Bundle" loading="lazy">
+                                <div class="flex-grow">
+                                    <p class="font-small font-semibold">Promo CapCut Pro 4 bln GRATIS Canva Pro 4 bln + YT Prem 1 bln</p>
+                                    <p class="font-xs text-slate-500">PROMO TERBATAS</p>
+                                    <p class="font-bold text-slate-900 mt-1">Rp69.000</p>
+                                </div>
+                                <div class="btnchips">
+                                  <a href="https://lynk.id/asakrisnatara" target="_blank" class="btn btn-lynk"><img src="lynk-white.png" alt="Logo Lynk.id">Lynk</a>
+                                  <a href="https://api.whatsapp.com/send?phone=6283853289396&text=Halo%2C%20saya%20mau%20pesan%20Promo%20CapCut%20Pro%204%20bln%20GRATIS%20Canva%20Pro%204%20bln%20%2B%20YT%20Prem%201%20bln." target="_blank" class="btn btn-wa"><img src="whatsapp-white.png" alt="Logo WhatsApp">WA</a>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <img src="paket-bundle.png" class="prod-img" alt="Ikon Paket Bundle" loading="lazy">
+                                <div class="flex-grow">
+                                    <p class="font-small font-semibold">Promo CapCut Pro 1 bln GRATIS Canva Pro 1 bln</p>
+                                    <p class="font-xs text-slate-500">PROMO TERBATAS</p>
+                                    <p class="font-bold text-slate-900 mt-1">Rp29.000</p>
+                                </div>
+                                <div class="btnchips">
+                                  <a href="https://lynk.id/asakrisnatara" target="_blank" class="btn btn-lynk"><img src="lynk-white.png" alt="Logo Lynk.id">Lynk</a>
+                                  <a href="https://api.whatsapp.com/send?phone=6283853289396&text=Halo%2C%20saya%20mau%20pesan%20Promo%20CapCut%20Pro%201%20bln%20GRATIS%20Canva%20Pro%201%20bln." target="_blank" class="btn btn-wa"><img src="whatsapp-white.png" alt="Logo WhatsApp">WA</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </details>
+                
+                <details class="bg-white rounded-2xl shadow-sm border border-slate-200/80 overflow-hidden group">
+                    <summary class="accordion-toggle list-none w-full flex justify-between items-center text-left p-4 font-semibold text-slate-800 hover:bg-slate-50/80">
+                        <span class="flex items-center gap-3"><span class="text-xl">✨</span> Paket Editing</span>
+                        <i data-feather="chevron-down" class="group-open:rotate-180 transition-transform"></i>
+                    </summary>
+                    <div class="accordion-content">
+                        <div class="px-4 pb-4 border-t border-slate-100 space-y-4 pt-4">
+                            <div class="flex items-center gap-4">
+                                <img src="capcut.png" class="prod-img" alt="Logo CapCut Pro" loading="lazy">
+                                <div class="flex-grow">
+                                    <p class="font-small font-semibold">CapCut Pro 1 Bulan</p>
+                                    <p class="font-xs text-slate-500">Akun dari kami</p>
+                                    <p class="font-bold text-slate-900 mt-1">Rp28.000</p>
+                                </div>
+                                <div class="btnchips">
+                                  <a href="https://lynk.id/asakrisnatara" target="_blank" class="btn btn-lynk"><img src="lynk-white.png" alt="Logo Lynk.id">Lynk</a>
+                                  <a href="https://api.whatsapp.com/send?phone=6283853289396&text=Halo%2C%20saya%20mau%20pesan%20CapCut%20Pro%201%20Bulan." target="_blank" class="btn btn-wa"><img src="whatsapp-white.png" alt="Logo WhatsApp">WA</a>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <img src="canva.png" class="prod-img" alt="Logo Canva Pro" loading="lazy">
+                                <div class="flex-grow">
+                                    <p class="font-small font-semibold">Canva Pro 1 Bulan</p>
+                                    <p class="font-xs text-slate-500">Aktivasi via invite/undang</p>
+                                    <p class="font-bold text-slate-900 mt-1">Rp4.500</p>
+                                </div>
+                                <div class="btnchips">
+                                  <a href="https://lynk.id/asakrisnatara" target="_blank" class="btn btn-lynk"><img src="lynk-white.png" alt="Logo Lynk.id">Lynk</a>
+                                  <a href="https://api.whatsapp.com/send?phone=6283853289396&text=Halo%2C%20saya%20mau%20pesan%20Canva%20Pro%201%20Bulan." target="_blank" class="btn btn-wa"><img src="whatsapp-white.png" alt="Logo WhatsApp">WA</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </details>
+
+                <details class="bg-white rounded-2xl shadow-sm border border-slate-200/80 overflow-hidden group">
+                    <summary class="accordion-toggle list-none w-full flex justify-between items-center text-left p-4 font-semibold text-slate-800 hover:bg-slate-50/80 focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400 transition-colors cursor-pointer">
+                        <span class="flex items-center gap-3"><span class="text-xl">🤖</span> AI Tools</span>
+                        <i data-feather="chevron-down" class="group-open:rotate-180 transition-transform"></i>
+                    </summary>
+                    <div class="accordion-content">
+                        <div class="px-4 pb-4 border-t border-slate-100 space-y-4 pt-4">
+                            <div class="flex items-center gap-4">
+                                <img src="chatgpt.png" class="prod-img" alt="Logo ChatGPT Plus" loading="lazy">
+                                <div class="flex-grow">
+                                    <p class="font-small font-semibold">ChatGPT+ 1 Bulan</p>
+                                    <p class="font-xs text-slate-500">Akun sharing, akses GPT-5 Thinking</p>
+                                    <p class="font-bold text-slate-900 mt-1">Rp24.000</p>
+                                </div>
+                                <div class="btnchips">
+                                  <a href="https://lynk.id/asakrisnatara" target="_blank" class="btn btn-lynk"><img src="lynk-white.png" alt="Logo Lynk.id">Lynk</a>
+                                  <a href="https://api.whatsapp.com/send?phone=6283853289396&text=Halo%2C%20saya%20mau%20pesan%20ChatGPT%2B%201%20Bulan." target="_blank" class="btn btn-wa"><img src="whatsapp-white.png" alt="Logo WhatsApp">WA</a>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <img src="perplexity.png" class="prod-img" alt="Logo Perplexity AI" loading="lazy">
+                                <div class="flex-grow">
+                                    <p class="font-small font-semibold">Perplexity AI 1 Bulan</p>
+                                    <p class="font-xs text-slate-500">Pro Search</p>
+                                    <p class="font-bold text-slate-900 mt-1">Rp44.000</p>
+                                </div>
+                                <div class="btnchips">
+                                  <a href="https://lynk.id/asakrisnatara" target="_blank" class="btn btn-lynk"><img src="lynk-white.png" alt="Logo Lynk.id">Lynk</a>
+                                  <a href="https://api.whatsapp.com/send?phone=6283853289396&text=Halo%2C%20saya%20mau%20pesan%20Perplexity%20AI%201%20Bulan." target="_blank" class="btn btn-wa"><img src="whatsapp-white.png" alt="Logo WhatsApp">WA</a>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <img src="claude.png" class="prod-img" alt="Logo Claude AI" loading="lazy">
+                                <div class="flex-grow">
+                                    <p class="font-small font-semibold">Claude AI 1 Bulan</p>
+                                    <p class="font-xs text-slate-500">akses Pro seperti Opus</p>
+                                    <p class="font-bold text-slate-900 mt-1">Rp74.000</p>
+                                </div>
+                                <div class="btnchips">
+                                  <a href="https://lynk.id/asakrisnatara" target="_blank" class="btn btn-lynk"><img src="lynk-white.png" alt="Logo Lynk.id">Lynk</a>
+                                  <a href="https://api.whatsapp.com/send?phone=6283853289396&text=Halo%2C%20saya%20mau%20pesan%20Claude%20AI%201%20Bulan." target="_blank" class="btn btn-wa"><img src="whatsapp-white.png" alt="Logo WhatsApp">WA</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </details>
+                
+                <details class="bg-white rounded-2xl shadow-sm border border-slate-200/80 overflow-hidden group">
+                    <summary class="accordion-toggle list-none w-full flex justify-between items-center text-left p-4 font-semibold text-slate-800 hover:bg-slate-50/80 focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400 transition-colors cursor-pointer">
+                        <span class="flex items-center gap-3"><span class="text-xl">📺</span> Paket Streaming</span>
+                        <i data-feather="chevron-down" class="group-open:rotate-180 transition-transform"></i>
+                    </summary>
+                    <div class="accordion-content">
+                        <div class="px-4 pb-4 border-t border-slate-100 space-y-4 pt-4">
+                            <div class="flex items-center gap-4">
+                                <img src="netflix.png" class="prod-img" alt="Logo Netflix" loading="lazy">
+                                <div class="flex-grow">
+                                    <p class="font-small font-semibold">Netflix Sharing 1 Bulan</p>
+                                    <p class="font-xs text-slate-500">1 Profil 2 User, kualitas UHD</p>
+                                    <p class="font-bold text-slate-900 mt-1">Rp34.000</p>
+                                </div>
+                                <div class="btnchips">
+                                  <a href="https://lynk.id/asakrisnatara" target="_blank" class="btn btn-lynk"><img src="lynk-white.png" alt="Logo Lynk.id">Lynk</a>
+                                  <a href="https://api.whatsapp.com/send?phone=6283853289396&text=Halo%2C%20saya%20mau%20pesan%20Netflix%20Sharing%201%20Bulan." target="_blank" class="btn btn-wa"><img src="whatsapp-white.png" alt="Logo WhatsApp">WA</a>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <img src="netflix.png" class="prod-img" alt="Logo Netflix" loading="lazy">
+                                <div class="flex-grow">
+                                    <p class="font-small font-semibold">Netflix Private 1 Bulan</p>
+                                    <p class="font-xs text-slate-500">1 Profile 1 User, Kualitas UHD</p>
+                                    <p class="font-bold text-slate-900 mt-1">Rp49.000</p>
+                                </div>
+                                <div class="btnchips">
+                                  <a href="https://lynk.id/asakrisnatara" target="_blank" class="btn btn-lynk"><img src="lynk-white.png" alt="Logo Lynk.id">Lynk</a>
+                                  <a href="https://api.whatsapp.com/send?phone=6283853289396&text=Halo%2C%20saya%20mau%20pesan%20Netflix%20Private%201%20Bulan." target="_blank" class="btn btn-wa"><img src="whatsapp-white.png" alt="Logo WhatsApp">WA</a>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <img src="bstation.png" class="prod-img" alt="Logo Bstation" loading="lazy">
+                                <div class="flex-grow">
+                                    <p class="font-small font-semibold">Bstation 3 Bulan</p>
+                                    <p class="font-xs text-slate-500">Nonton anime</p>
+                                    <p class="font-bold text-slate-900 mt-1">Rp29.000</p>
+                                </div>
+                                <div class="btnchips">
+                                  <a href="https://lynk.id/asakrisnatara" target="_blank" class="btn btn-lynk"><img src="lynk-white.png" alt="Logo Lynk.id">Lynk</a>
+                                  <a href="https://api.whatsapp.com/send?phone=6283853289396&text=Halo%2C%20saya%20mau%20pesan%20Bstation%203%20Bulan." target="_blank" class="btn btn-wa"><img src="whatsapp-white.png" alt="Logo WhatsApp">WA</a>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <img src="bstation.png" class="prod-img" alt="Logo Bstation" loading="lazy">
+                                <div class="flex-grow">
+                                    <p class="font-small font-semibold">Bstation 1 Tahun</p>
+                                    <p class="font-xs text-slate-500">Nonton anime</p>
+                                    <p class="font-bold text-slate-900 mt-1">Rp49.000</p>
+                                </div>
+                                <div class="btnchips">
+                                  <a href="https://lynk.id/asakrisnatara" target="_blank" class="btn btn-lynk"><img src="lynk-white.png" alt="Logo Lynk.id">Lynk</a>
+                                  <a href="https://api.whatsapp.com/send?phone=6283853289396&text=Halo%2C%20saya%20mau%20pesan%20Bstation%201%20Tahun." target="_blank" class="btn btn-wa"><img src="whatsapp-white.png" alt="Logo WhatsApp">WA</a>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <img src="spotify.png" class="prod-img" alt="Logo Spotify" loading="lazy">
+                                <div class="flex-grow">
+                                    <p class="font-small font-semibold">Spotify 1 Bulan</p>
+                                    <p class="font-xs text-slate-500">Akun dari kami</p>
+                                    <p class="font-bold text-slate-900 mt-1">Rp19.000</p>
+                                </div>
+                                <div class="btnchips">
+                                  <a href="https://lynk.id/asakrisnatara" target="_blank" class="btn btn-lynk"><img src="lynk-white.png" alt="Logo Lynk.id">Lynk</a>
+                                  <a href="https://api.whatsapp.com/send?phone=6283853289396&text=Halo%2C%20saya%20mau%20pesan%20Spotify%201%20Bulan." target="_blank" class="btn btn-wa"><img src="whatsapp-white.png" alt="Logo WhatsApp">WA</a>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <img src="youtube.png" class="prod-img" alt="Logo YouTube Premium" loading="lazy">
+                                <div class="flex-grow">
+                                    <p class="font-small font-semibold">YouTube Premium 1 Bulan</p>
+                                    <p class="font-xs text-slate-500">Aktivasi via invite/undang</p>
+                                    <p class="font-bold text-slate-900 mt-1">Rp5.000</p>
+                                </div>
+                                <div class="btnchips">
+                                  <a href="https://lynk.id/asakrisnatara" target="_blank" class="btn btn-lynk"><img src="lynk-white.png" alt="Logo Lynk.id">Lynk</a>
+                                  <a href="https://api.whatsapp.com/send?phone=6283853289396&text=Halo%2C%20saya%20mau%20pesan%20YouTube%20Premium%201%20Bulan." target="_blank" class="btn btn-wa"><img src="whatsapp-white.png" alt="Logo WhatsApp">WA</a>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <img src="viu.png" class="prod-img" alt="Logo Viu" loading="lazy">
+                                <div class="flex-grow">
+                                    <p class="font-small font-semibold">Viu 1 Tahun</p>
+                                    <p class="font-xs text-slate-500">Nonton drakor</p>
+                                    <p class="font-bold text-slate-900 mt-1">Rp34.000</p>
+                                </div>
+                                <div class="btnchips">
+                                  <a href="https://lynk.id/asakrisnatara" target="_blank" class="btn btn-lynk"><img src="lynk-white.png" alt="Logo Lynk.id">Lynk</a>
+                                  <a href="https://api.whatsapp.com/send?phone=6283853289396&text=Halo%2C%20saya%20mau%20pesan%20Viu%201%20Tahun." target="_blank" class="btn btn-wa"><img src="whatsapp-white.png" alt="Logo WhatsApp">WA</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </details>
+                
+                <details class="bg-white rounded-2xl shadow-sm border border-slate-200/80 overflow-hidden group">
+                    <summary class="accordion-toggle list-none w-full flex justify-between items-center text-left p-4 font-semibold text-slate-800 hover:bg-slate-50/80 focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400 transition-colors cursor-pointer">
+                        <span class="flex items-center gap-3"><span class="text-xl">☁️</span> Paket Storage</span>
+                        <i data-feather="chevron-down" class="group-open:rotate-180 transition-transform"></i>
+                    </summary>
+                    <div class="accordion-content">
+                        <div class="px-4 pb-4 border-t border-slate-100 space-y-4 pt-4">
+                            <div class="flex items-center gap-4">
+                                <img src="google-drive.png" class="prod-img" alt="Logo Google Drive" loading="lazy">
+                                <div class="flex-grow">
+                                    <p class="font-small font-semibold">Google Drive Lifetime</p>
+                                    <p class="font-xs text-slate-500">Unlimited Storage</p>
+                                    <p class="font-bold text-slate-900 mt-1">Rp49.000</p>
+                                </div>
+                                <div class="btnchips">
+                                  <a href="https://lynk.id/asakrisnatara" target="_blank" class="btn btn-lynk"><img src="lynk-white.png" alt="Logo Lynk.id">Lynk</a>
+                                  <a href="https://api.whatsapp.com/send?phone=6283853289396&text=Halo%2C%20saya%20mau%20pesan%20Google%20Drive%20Lifetime." target="_blank" class="btn btn-wa"><img src="whatsapp-white.png" alt="Logo WhatsApp">WA</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+
+            <section id="testimoni" class="mt-10">
+                <h2 class="text-center font-semibold text-slate-500 uppercase tracking-widest font-xs mb-4">— KATA MEREKA —</h2>
+                <div id="testimonial-slider" class="relative w-full max-w-sm mx-auto min-h-[300px]">
+                </div>
+            </section>
+       
+            <div class="text-center mt-10">
+                <p class="font-small text-slate-600 mb-3">Kami menerima pembayaran via:</p>
+                <div class="flex flex-wrap justify-center items-center gap-5 payment-logos">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/QRIS_logo.svg/1024px-QRIS_logo.svg.png" alt="Logo QRIS">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Gopay_logo.svg/1280px-Gopay_logo.svg.png" alt="Logo Gopay">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Logo_ovo_purple.svg/1200px-Logo_ovo_purple.svg.png" alt="Logo OVO">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Logo_dana_blue.svg/1280px-Logo_dana_blue.svg.png" alt="Logo DANA">
+                </div>
+            </div>
+
+            <section id="faq" class="mt-10">
+                <h2 class="font-heading-lg text-slate-900 mb-4">FAQ</h2>
+                
+                <div class="divide-y divide-slate-200 bg-white/70 border border-slate-200/80 rounded-2xl overflow-hidden">
+                  <details class="p-4 group">
+                      <summary class="font-small font-semibold cursor-pointer list-none flex justify-between items-center">Garansi ganti baru berlaku bagaimana? <i data-feather="chevron-down" class="group-open:rotate-180 transition-transform"></i></summary>
+                      <p class="font-small text-slate-600 mt-3">Jika akun bermasalah dalam masa aktif, kami akan ganti dengan akun baru. Cukup kirim bukti screenshot kendalanya via WhatsApp.</p>
+                    </details>
+                  <details class="p-4 group">
+                      <summary class="font-small font-semibold cursor-pointer list-none flex justify-between items-center">Waktu proses berapa lama? <i data-feather="chevron-down" class="group-open:rotate-180 transition-transform"></i></summary>
+                      <p class="font-small text-slate-600 mt-3">Rata-rata proses aktivasi memakan waktu 1–20 menit pada jam operasional kami (08.00–00.00 WIB).</p>
+                    </details>
+                  <details class="p-4 group">
+                      <summary class="font-small font-semibold cursor-pointer list-none flex justify-between items-center">Bedanya sharing vs private? <i data-feather="chevron-down" class="group-open:rotate-180 transition-transform"></i></summary>
+                      <p class="font-small text-slate-600 mt-3"><b>Akun Sharing</b> berarti 1 akun digunakan bersama beberapa pengguna, sehingga harganya lebih murah. <b>Akun Private</b> berarti 1 akun hanya untuk Anda seorang, lebih stabil dan bisa ganti password.</p>
+                    </details>
+                </div>
+            </section>
+        </main>
+        
+        <footer class="text-center mt-12 border-t border-slate-200 pt-8">
+            <div class="flex flex-col sm:flex-row justify-between items-center gap-4">
+                <p class="text-slate-500 font-small">&copy; <span id="current-year"></span> MacStore Digital</p>
+                <div class="flex gap-5">
+                    <a href="#" class="text-slate-500 hover:text-cyan-600 font-small transition-colors">Syarat & Ketentuan</a>
+                    <a href="#" class="text-slate-500 hover:text-cyan-600 font-small transition-colors">Kebijakan Privasi</a>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+
+    <script src="script.js" defer></script>
+
+</body>
+
+</html>
