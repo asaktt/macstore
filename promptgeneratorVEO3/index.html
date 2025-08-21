@@ -510,37 +510,72 @@
   
 
   // === Promo Modal Logic (VEO3 39rb) ===
-  (function(){
-    const KEY='veo3_promo_seen_at_v1';
-    const DAY=24*60*60*1000;
-    const $m = document.getElementById('promoModal');
-    const $close = document.getElementById('promoClose');
-    const $back = document.getElementById('promoBackdrop');
-    const $buy = document.getElementById('promoBuy');
-    const $wa = document.getElementById('promoWA');
+  // === Promo Modal Logic (VEO3 39rb) ===
+window.addEventListener('DOMContentLoaded', () => {
+  const KEY='veo3_promo_seen_at_v1';
+  const DAY=24*60*60*1000;
 
-    // TODO: set your links here
-    if($buy && $buy.getAttribute('href')==='#') $buy.href = 'https://macstoredigital.id/checkout/veo3-private-39k';
-    if($wa && $wa.getAttribute('href')==='#') $wa.href = 'https://wa.me/6280000000000?text=Halo,%20saya%20minat%20VEO%203%20Private%2039rb';
+  // pakai util yang sudah ada
+  const $ = (sel, el=document)=>el.querySelector(sel);
+  const $$ = (sel, el=document)=>Array.from(el.querySelectorAll(sel));
 
-    function seenWithin(days){
-      try{ const t=+localStorage.getItem(KEY)||0; return Date.now()-t < days*DAY; }catch(e){ return false; }
-    }
-    function markSeen(){ try{ localStorage.setItem(KEY, String(Date.now())); }catch(e){} }
-    function open(){ if(!$m) return; $m.hidden=false; document.body.style.overflow='hidden'; }
-    function close(){ if(!$m) return; $m.hidden=true; document.body.style.overflow=''; markSeen(); }
+  function seenWithin(days){
+    try{ const t=+localStorage.getItem(KEY)||0; return Date.now()-t < days*DAY; }catch(e){ return false; }
+  }
+  function markSeen(){ try{ localStorage.setItem(KEY, String(Date.now())); }catch(e){} }
 
-    $close && $close.addEventListener('click', close);
-    $back && $back.addEventListener('click', close);
-    $buy && $buy.addEventListener('click', markSeen);
-    $wa && $wa.addEventListener('click', markSeen);
+  function open(){
+    const m = $('#promoModal');
+    if(!m) return;
+    m.hidden=false;
+    document.body.style.overflow='hidden';
+  }
+  function close(){
+    const m = $('#promoModal');
+    if(!m) return;
+    m.hidden=true;
+    document.body.style.overflow='';
+    markSeen();
+  }
 
-    function maybe(trigger){
-      if(seenWithin(7)) return;
-      if(sessionStorage.getItem('veo3_promo_opened')==='1') return;
-      open();
-      sessionStorage.setItem('veo3_promo_opened','1');
-    }
+  const closeBtn = $('#promoClose');
+  const back = $('#promoBackdrop');
+  const buy = $('#promoBuy');
+  const wa = $('#promoWA');
+
+  if(buy && buy.getAttribute('href')==='#') buy.href='https://macstoredigital.id/checkout/veo3-private-39k';
+  if(wa && wa.getAttribute('href')==='#')  wa.href='https://wa.me/6280000000000?text=Halo,%20saya%20minat%20VEO%203%20Private%2039rb';
+
+  closeBtn && closeBtn.addEventListener('click', close);
+  back && back.addEventListener('click', close);
+  buy && buy.addEventListener('click', markSeen);
+  wa && wa.addEventListener('click', markSeen);
+
+  function maybe(){
+    if(seenWithin(7)) return;
+    // set “opened” hanya setelah benar2 dibuka
+    if(sessionStorage.getItem('veo3_promo_opened')==='1') return;
+    open();
+    sessionStorage.setItem('veo3_promo_opened','1');
+  }
+
+  // Tampilkan di awal kunjungan
+  maybe();
+
+  // Fallback: delay, exit-intent, on-copy
+  setTimeout(maybe, 10000);
+  let exitFired=false;
+  document.addEventListener('mouseout', e=>{
+    if(exitFired) return;
+    if(window.innerWidth<900) return;
+    if(e.clientY<=0){ exitFired=true; maybe(); }
+  });
+  $$('.copy').forEach(btn=>btn.addEventListener('click', ()=>setTimeout(maybe,200)));
+
+  // Debug manual di console: window.__promoVEO3.open()
+  window.__promoVEO3={open,close};
+});
+
 
     // Delay trigger
     setTimeout(()=>maybe('delay'), 10000);
