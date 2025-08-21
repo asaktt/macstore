@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Veo 3 Prompt Generator — macstoredigital.id</title>
+  <meta name="description" content="Generator prompt VEO 3 siap pakai untuk macstoredigital.id. Buat prompt video sinematik lengkap: konteks, karakter, dialog, kamera, lighting, durasi, rasio, dan negatif."/>
+  <style>
+    :root{
+      --bg:#0b0c10;--card:#121319;--muted:#9aa0a6;--text:#e8eaed;--accent:#10b981;--accent-2:#60a5fa;--danger:#ef4444;--border:#22242c;
+      --radius:16px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{margin:0;background:linear-gradient(180deg,#0b0c10,#0c1116);color:var(--text);font:14px/1.45 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial}
+    a{color:var(--accent-2);text-decoration:none}
+    .container{max-width:1000px;margin:24px auto;padding:0 16px}
+    header{display:flex;gap:12px;align-items:center;justify-content:space-between;margin-bottom:16px}
+    .brand{display:flex;gap:10px;align-items:center}
+    .brand .logo{width:28px;height:28px;border-radius:8px;background:radial-gradient(60% 70% at 30% 30%,#1a73e8,transparent),radial-gradient(60% 70% at 70% 70%,#10b981,transparent);box-shadow:0 0 0 1px #1f2937 inset}
+    h1{font-size:18px;margin:0}
+    .tag{font-size:12px;padding:2px 8px;border-radius:999px;background:#0e1725;border:1px solid var(--border);color:#8ab4f8}
+    .grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+    @media (max-width:880px){.grid{grid-template-columns:1fr}}
+    .card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:14px}
+    .card h2{font-size:14px;margin:0 0 8px}
+    label{display:block;font-size:12px;color:var(--muted);margin:10px 0 6px}
+    input[type="text"],input[type="number"],select,textarea{width:100%;background:#0c0f14;border:1px solid #1e2430;color:var(--text);border-radius:12px;padding:10px 12px;outline:none}
+    textarea{min-height:72px;resize:vertical}
+    .row{display:flex;gap:10px}
+    .row>div{flex:1}
+    .btn{display:inline-flex;align-items:center;gap:8px;padding:10px 12px;border-radius:12px;border:1px solid #263041;background:#121826;color:var(--text);cursor:pointer}
+    .btn:hover{filter:brightness(1.1)}
+    .btn.primary{background:linear-gradient(180deg,#0ea5e9,#0ea5e933);border-color:#1f3a5f}
+    .btn.accent{background:linear-gradient(180deg,#10b981,#10b98133);border-color:#124b37}
+    .btn.ghost{background:transparent}
+    .btn.danger{background:linear-gradient(180deg,#ef4444,#ef444433);border-color:#5f1f1f}
+    .toolbar{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0 2px}
+    .pill{font-size:12px;border:1px dashed #2b3548;border-radius:999px;padding:4px 8px;color:#9fb3c8}
+    .character{border:1px dashed #2b3548;border-radius:12px;padding:10px;margin:8px 0;background:#0b1018}
+    .small{font-size:12px;color:var(--muted)}
+    .output{white-space:pre-wrap;background:#0a0e14;border:1px solid #1f2937;padding:12px;border-radius:12px;min-height:160px}
+    .footer{display:flex;align-items:center;justify-content:space-between;margin:12px 0;color:var(--muted)}
+    .copy{position:relative}
+    .toast{position:fixed;right:16px;bottom:16px;background:#0b141e;border:1px solid #1f2937;color:#d1e9ff;padding:10px 12px;border-radius:12px;box-shadow:0 8px 24px rgba(0,0,0,.4);opacity:0;transform:translateY(6px);transition:all .2s}
+    .toast.show{opacity:1;transform:none}
+    .note{font-size:12px;color:#9fb3c8}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo" aria-hidden="true"></div>
+        <h1>VEO 3 Prompt Generator <span class="tag">macstoredigital.id</span></h1>
+      </div>
+      <div class="toolbar">
+        <button id="btnPresetShort" class="btn">Preset: Iklan 10s</button>
+        <button id="btnPresetScene" class="btn">Preset: Scene Sinematik</button>
+        <button id="btnPresetUGC" class="btn">Preset: UGC Review</button>
+        <button id="btnReset" class="btn danger">Reset</button>
+      </div>
+    </header>
+
+    <section class="grid" aria-label="Form">
+      <div class="card">
+        <h2>1) Dasar</h2>
+        <label>Judul / Tujuan</label>
+        <input id="title" type="text" placeholder="Contoh: Iklan CapCut Pro hemat untuk kreator pemula" />
+
+        <label>Konteks / Ringkasan Adegan</label>
+        <textarea id="context" placeholder="Contoh: Remaja merekam proses edit video di kamar, suasana malam, merasa antusias lalu menunjukkan hasil sebelum/sesudah."></textarea>
+
+        <div class="row">
+          <div>
+            <label>Durasi (detik)</label>
+            <input id="duration" type="number" min="3" max="120" value="10" />
+          </div>
+          <div>
+            <label>Rasio</label>
+            <select id="aspect">
+              <option>9:16</option>
+              <option selected>16:9</option>
+              <option>1:1</option>
+              <option>4:5</option>
+              <option>2.39:1</option>
+            </select>
+          </div>
+          <div>
+            <label>Resolusi</label>
+            <select id="resolution">
+              <option>1080p</option>
+              <option selected>4K</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="row">
+          <div>
+            <label>Gaya Visual</label>
+            <input id="style" type="text" placeholder="cinematic, vibrant, documentary, product-focus"/>
+          </div>
+          <div>
+            <label>Lokasi / Lingkungan</label>
+            <input id="env" type="text" placeholder="kamar minimalis, kota malam, kafe terang"/>
+          </div>
+        </div>
+
+        <div class="row">
+          <div>
+            <label>Kamera</label>
+            <input id="camera" type="text" placeholder="35mm, handheld, push-in, gimbal tracking"/>
+          </div>
+          <div>
+            <label>Pencahayaan & Warna</label>
+            <input id="lighting" type="text" placeholder="soft key, rim light, teal-orange, practical lights"/>
+          </div>
+        </div>
+
+        <label>Suara / Audio</label>
+        <input id="audio" type="text" placeholder="energetic beat, subtle keyboard clicks, city ambience"/>
+
+        <label>Instruksi Negatif (hindari)</label>
+        <input id="negative" type="text" placeholder="no text overlays, no logos, no gore, no watermark"/>
+
+        <div class="toolbar">
+          <span class="pill">Output: Inggris otomatis</span>
+          <button id="btnSuggest" class="btn">Saran cepat</button>
+          <button id="btnSave" class="btn">Simpan sesi</button>
+          <button id="btnShare" class="btn ghost">Bagikan tautan</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>2) Karakter & Dialog</h2>
+        <div id="characters"></div>
+        <div class="toolbar">
+          <button id="btnAddChar" class="btn">+ Tambah Karakter</button>
+          <button id="btnSuggestChar" class="btn">Saran karakter</button>
+        </div>
+        <p class="note">Opsional. Biarkan kosong untuk video tanpa dialog.</p>
+      </div>
+    </section>
+
+    <section class="grid" aria-label="Output">
+      <div class="card">
+        <h2>3) Prompt Lengkap (struktur multi-bagian)</h2>
+        <div id="outLong" class="output" spellcheck="false"></div>
+        <div class="toolbar">
+          <button id="btnGenLong" class="btn primary">Buat Prompt Lengkap</button>
+          <button data-copy="outLong" class="btn accent copy">Salin</button>
+          <button id="btnDownloadLong" class="btn ghost">Unduh .txt</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>4) Prompt Singkat (satu paragraf)</h2>
+        <div id="outShort" class="output" spellcheck="false"></div>
+        <div class="toolbar">
+          <button id="btnGenShort" class="btn primary">Buat Prompt Singkat</button>
+          <button data-copy="outShort" class="btn accent copy">Salin</button>
+          <button id="btnDownloadShort" class="btn ghost">Unduh .txt</button>
+        </div>
+      </div>
+    </section>
+
+    <div class="footer small">
+      <span>Tip: setelah salin, tempel di VEO 3. Tambahkan “Write the final output in natural English.” agar model menerjemahkan konten Indonesia otomatis.</span>
+      <span>v1.0</span>
+    </div>
+  </div>
+
+  <div id="toast" class="toast" role="status" aria-live="polite">Tersalin</div>
+
+  <script>
+    // Utilities
+    const $ = (sel, el=document) => el.querySelector(sel);
+    const $$ = (sel, el=document) => Array.from(el.querySelectorAll(sel));
+
+    // Character component
+    function makeCharacter(index){
+      const wrap = document.createElement('div');
+      wrap.className = 'character';
+      wrap.innerHTML = `
+        <div class="row">
+          <div><label>Nama</label><input type="text" data-k="name" placeholder="Alya"/></div>
+          <div><label>Peran</label><input type="text" data-k="role" placeholder="kreator pemula"/></div>
+        </div>
+        <label>Deskripsi</label>
+        <textarea data-k="desc" placeholder="umur 19, energik, hoodie merah, ekspresif"></textarea>
+        <div class="row">
+          <div><label>Suara</label><input type="text" data-k="voice" placeholder="friendly, confident, youthful"/></div>
+          <div><label>Dialog singkat</label><input type="text" data-k="dialog" placeholder="“Edit cepat, hasil rapi. Gas konten!”"/></div>
+        </div>
+        <div class="toolbar">
+          <button class="btn ghost" data-act="dup">Duplikat</button>
+          <button class="btn danger" data-act="del">Hapus</button>
+        </div>`;
+
+      wrap.addEventListener('click', (e)=>{
+        const t = e.target;
+        if(!(t instanceof HTMLElement)) return;
+        if(t.dataset.act==='del') wrap.remove();
+        if(t.dataset.act==='dup'){
+          const clone = makeCharacter(index+1);
+          $('#characters').insertBefore(clone, wrap.nextSibling);
+          clone.scrollIntoView({behavior:'smooth', block:'center'});
+        }
+      });
+      return wrap;
+    }
+
+    function getCharacters(){
+      return $$('#characters .character').map(box=>{
+        const get = (k)=>$(`[data-k="${k}"]`, box).value.trim();
+        return {name:get('name'), role:get('role'), desc:get('desc'), voice:get('voice'), dialog:get('dialog')}
+      }).filter(c=>Object.values(c).some(v=>v));
+    }
+
+    // Suggestion pools
+    const S = {
+      style:[
+        'cinematic with soft contrast','documentary handheld natural light','vivid commercial with product macro','moody neo-noir with practical lights','clean tech ad minimal aesthetic'
+      ],
+      env:[
+        'minimalist bedroom at night','street food alley at dusk','cozy cafe with warm lights','neon city rooftop','bright desk setup with RGB'
+      ],
+      camera:[
+        '35mm lens handheld with gentle push-in','24mm gimbal tracking shot','50mm portrait close-ups and rack focus','drone reveal into ground-level dolly','macro shots with tripod stability'
+      ],
+      lighting:[
+        'soft key + rim light, teal‑orange grade','motivated desk lamp practicals','hard side light with haze','high key daylight bounce','mixed lighting with neon accents'
+      ],
+      audio:[
+        'energetic trap beat + subtle keyboard clicks','lofi beat + ambient city noise','upbeat indie pop + whoosh transitions','minimal techno + room tone','cinematic pulse + riser at climax'
+      ],
+      names:['Alya','Bima','Raka','Sinta','Naya','Fajar','Gio','Mika'],
+      roles:['kreator pemula','editor freelance','pelajar desain','vlogger kampus','barista kreatif'],
+      voices:['friendly and confident','warm and inspiring','calm and informative','energetic and playful'],
+      dialogs:[
+        '“Edit cepat. Hasil rapi. Gas upload!”','“Dari ide sampai publish. Beres!”','“Budget kecil, kualitas tetap naik.”','“Sekali klik, video jadi kece.”'
+      ]
+    }
+
+    // Load / Save
+    function serialize(){
+      const data = {
+        title: $('#title').value.trim(),
+        context: $('#context').value.trim(),
+        duration: +$('#duration').value || 10,
+        aspect: $('#aspect').value,
+        resolution: $('#resolution').value,
+        style: $('#style').value.trim(),
+        env: $('#env').value.trim(),
+        camera: $('#camera').value.trim(),
+        lighting: $('#lighting').value.trim(),
+        audio: $('#audio').value.trim(),
+        negative: $('#negative').value.trim(),
+        characters: getCharacters(),
+      };
+      return data;
+    }
+
+    function hydrate(data){
+      $('#title').value = data.title||'';
+      $('#context').value = data.context||'';
+      $('#duration').value = data.duration||10;
+      $('#aspect').value = data.aspect||'16:9';
+      $('#resolution').value = data.resolution||'4K';
+      $('#style').value = data.style||'';
+      $('#env').value = data.env||'';
+      $('#camera').value = data.camera||'';
+      $('#lighting').value = data.lighting||'';
+      $('#audio').value = data.audio||'';
+      $('#negative').value = data.negative||'';
+
+      $('#characters').innerHTML = '';
+      (data.characters||[]).forEach((c,i)=>{
+        const el = makeCharacter(i);
+        $('#characters').appendChild(el);
+        $('[data-k="name"]', el).value = c.name||'';
+        $('[data-k="role"]', el).value = c.role||'';
+        $('[data-k="desc"]', el).value = c.desc||'';
+        $('[data-k="voice"]', el).value = c.voice||'';
+        $('[data-k="dialog"]', el).value = c.dialog||'';
+      });
+      if(!$('#characters').children.length){
+        $('#characters').appendChild(makeCharacter(0));
+      }
+    }
+
+    function saveLocal(){
+      localStorage.setItem('veo3_gen', JSON.stringify(serialize()));
+      toast('Tersimpan lokal');
+    }
+
+    function loadLocal(){
+      const raw = localStorage.getItem('veo3_gen');
+      if(raw){ try{ hydrate(JSON.parse(raw)); }catch(e){} }
+      if(location.hash.startsWith('#data=')){
+        try{ hydrate(JSON.parse(decodeURIComponent(atob(location.hash.slice(6))))); }catch(e){}
+      }
+      if(!$('#characters').children.length){ $('#characters').appendChild(makeCharacter(0)); }
+    }
+
+    function shareLink(){
+      const data = btoa(encodeURIComponent(JSON.stringify(serialize())));
+      const url = location.origin + location.pathname + '#data=' + data;
+      navigator.clipboard.writeText(url).then(()=>toast('Tautan tersalin'));
+    }
+
+    function download(name, text){
+      const blob = new Blob([text], {type:'text/plain'});
+      const a = document.createElement('a');
+      a.href = URL.createObjectURL(blob);
+      a.download = name;
+      document.body.appendChild(a); a.click(); a.remove();
+    }
+
+    function toast(msg){
+      const el = $('#toast');
+      el.textContent = msg; el.classList.add('show');
+      setTimeout(()=>el.classList.remove('show'), 1400);
+    }
+
+    // Generators
+    function buildLong(){
+      const d = serialize();
+      const chars = d.characters;
+      const parts = [];
+      parts.push(`TASK: Create a ${d.duration}s ${d.aspect} ${d.resolution} video prompt for Google VEO 3. Write the full prompt in natural English.`);
+      if(d.title) parts.push(`GOAL: ${d.title}`);
+      if(d.context) parts.push(`CONTEXT: ${d.context}`);
+      if(d.style || d.env || d.camera || d.lighting){
+        parts.push(
+          `VISUAL STYLE: ${[d.style, d.env].filter(Boolean).join(' · ')}\nCAMERA: ${d.camera||'neutral'}\nLIGHTING & COLOR: ${d.lighting||'neutral'}`
+        );
+      }
+      if(d.audio) parts.push(`AUDIO: ${d.audio}`);
+      if(chars.length){
+        parts.push('CHARACTERS:');
+        chars.forEach((c,i)=>{
+          const lines = [];
+          if(c.name||c.role) lines.push(`- ${c.name||'Character '+(i+1)} (${c.role||'role n/a'})`);
+          if(c.desc) lines.push(`  Appearance/traits: ${c.desc}`);
+          if(c.voice) lines.push(`  Voice: ${c.voice}`);
+          if(c.dialog) lines.push(`  Sample line: ${c.dialog}`);
+          parts.push(lines.join('\n'));
+        });
+      }
+      parts.push(`TECHNICAL: frame consistency, natural motion, coherent edits, minimal noise, keep subject integrity, avoid text overlays unless specified.`);
+      parts.push(`CONSTRAINTS: ${d.negative||'avoid watermarks, brand logos, gore, sexual content, offensive gestures.'}`);
+      parts.push('OUTPUT: Provide a concise final VEO 3 prompt block ready to paste.');
+      return parts.join('\n\n');
+    }
+
+    function buildShort(){
+      const d = serialize();
+      const who = d.characters[0];
+      const charLine = who && (who.name||who.role||who.desc) ? ` Characters: ${[who.name, who.role].filter(Boolean).join(' - ')}. `: '';
+      return (
+        `Create a ${d.duration}s ${d.aspect} ${d.resolution} ${d.style||'cinematic'} video for Google VEO 3 set in ${d.env||'a simple room'}. `+
+        `Camera: ${d.camera||'neutral'}. Lighting/color: ${d.lighting||'neutral'}. `+
+        (d.audio?`Audio: ${d.audio}. `:'')+
+        (d.context?`Context: ${d.context}. `:'')+
+        charLine+
+        `Avoid: ${d.negative||'watermarks, brand logos, explicit content, on-screen text.'} Write final prompt in natural English.`
+      ).trim();
+    }
+
+    // Suggestions
+    function suggestBasics(){
+      const pick = (arr)=>arr[Math.floor(Math.random()*arr.length)];
+      if(!$('#style').value) $('#style').value = pick(S.style);
+      if(!$('#env').value) $('#env').value = pick(S.env);
+      if(!$('#camera').value) $('#camera').value = pick(S.camera);
+      if(!$('#lighting').value) $('#lighting').value = pick(S.lighting);
+      if(!$('#audio').value) $('#audio').value = pick(S.audio);
+      if(!$('#title').value) $('#title').value = 'Cinematic micro‑ad highlighting editing speed and result';
+      if(!$('#context').value) $('#context').value = 'Show quick edit workflow then reveal before/after to demonstrate value.';
+    }
+
+    function suggestCharacter(){
+      const pick = (arr)=>arr[Math.floor(Math.random()*arr.length)];
+      const el = makeCharacter(Date.now());
+      $('#characters').appendChild(el);
+      $('[data-k="name"]', el).value = pick(S.names);
+      $('[data-k="role"]', el).value = pick(S.roles);
+      $('[data-k="desc"]', el).value = 'casual outfit, expressive gestures, positive energy';
+      $('[data-k="voice"]', el).value = pick(S.voices);
+      $('[data-k="dialog"]', el).value = pick(S.dialogs);
+      el.scrollIntoView({behavior:'smooth', block:'center'});
+    }
+
+    // Presets
+    const Presets = {
+      shortAd:{
+        title:'10s product micro‑ad for budget creators',
+        context:'Fast cuts show editing process then before/after reveal to prove value.',
+        duration:10,aspect:'9:16',resolution:'1080p',
+        style:'clean tech ad minimal aesthetic', env:'bright desk setup with RGB',
+        camera:'35mm handheld push‑in + macro inserts', lighting:'high key daylight bounce',
+        audio:'energetic beat with whooshes', negative:'no watermarks, no brand logos, no on‑screen text'
+      },
+      scene:{
+        title:'Moody cinematic scene on a city rooftop',
+        context:'Protagonist reflects at dusk; wind and neon lights; subtle camera drift.',
+        duration:20,aspect:'2.39:1',resolution:'4K',
+        style:'moody neo‑noir with practical lights', env:'neon city rooftop',
+        camera:'24mm gimbal tracking, slow push‑in', lighting:'mixed neon accents with haze',
+        audio:'cinematic pulse + wind ambience', negative:'no gore, no text overlays, no trademarked signs'
+      },
+      ugc:{
+        title:'UGC review explaining benefits in one take',
+        context:'Casual direct‑to‑camera explanation with quick b‑roll cutaways.',
+        duration:15,aspect:'9:16',resolution:'1080p',
+        style:'authentic handheld, natural light', env:'cozy cafe with warm lights',
+        camera:'50mm portrait close‑ups, light rack focus', lighting:'warm practical lights',
+        audio:'lofi beat + room tone', negative:'no subtitles, no logos'
+      }
+    };
+
+    function applyPreset(key){ hydrate({...Presets[key], characters:[]}); }
+
+    // Events
+    $('#btnAddChar').addEventListener('click', ()=>{
+      $('#characters').appendChild(makeCharacter(Date.now()));
+    });
+    $('#btnSuggest').addEventListener('click', suggestBasics);
+    $('#btnSuggestChar').addEventListener('click', suggestCharacter);
+    $('#btnSave').addEventListener('click', saveLocal);
+    $('#btnShare').addEventListener('click', shareLink);
+    $('#btnGenLong').addEventListener('click', ()=>{ $('#outLong').textContent = buildLong(); });
+    $('#btnGenShort').addEventListener('click', ()=>{ $('#outShort').textContent = buildShort(); });
+
+    $$('.copy').forEach(btn=>btn.addEventListener('click', ()=>{
+      const id = btn.getAttribute('data-copy');
+      const text = $('#'+id).textContent;
+      if(!text.trim()){ toast('Belum ada output'); return; }
+      navigator.clipboard.writeText(text).then(()=>toast('Tersalin'));
+    }));
+
+    $('#btnDownloadLong').addEventListener('click', ()=>{
+      const t = $('#outLong').textContent.trim();
+      if(!t){ toast('Belum ada output'); return; }
+      download('veo3_prompt_full.txt', t);
+    });
+    $('#btnDownloadShort').addEventListener('click', ()=>{
+      const t = $('#outShort').textContent.trim();
+      if(!t){ toast('Belum ada output'); return; }
+      download('veo3_prompt_short.txt', t);
+    });
+    $('#btnReset').addEventListener('click', ()=>{ localStorage.removeItem('veo3_gen'); hydrate({characters:[]}); toast('Di-reset'); });
+
+    $('#btnPresetShort').addEventListener('click', ()=>applyPreset('shortAd'));
+    $('#btnPresetScene').addEventListener('click', ()=>applyPreset('scene'));
+    $('#btnPresetUGC').addEventListener('click', ()=>applyPreset('ugc'));
+
+    // Init
+    loadLocal();
+    // Initial outputs
+    $('#outLong').textContent = buildLong();
+    $('#outShort').textContent = buildShort();
+  </script>
+</body>
+</html>
