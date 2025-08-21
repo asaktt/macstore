@@ -45,7 +45,25 @@
     .toast{position:fixed;right:16px;bottom:16px;background:#0b141e;border:1px solid #1f2937;color:#d1e9ff;padding:10px 12px;border-radius:12px;box-shadow:0 8px 24px rgba(0,0,0,.4);opacity:0;transform:translateY(6px);transition:all .2s}
     .toast.show{opacity:1;transform:none}
     .note{font-size:12px;color:#9fb3c8}
-  </style>
+    /* === Promo Modal VEO3 39rb === */
+  #promoModal[hidden]{display:none}
+  #promoModal{position:fixed;inset:0;z-index:60}
+  #promoModal .backdrop{position:absolute;inset:0;background:rgba(3,8,15,.72);backdrop-filter:blur(2px)}
+  #promoModal .panel{position:relative;margin:clamp(24px,6vh,64px) auto;max-width:520px;background:linear-gradient(180deg,#101522,#0e1320);border:1px solid var(--border);border-radius:20px;padding:16px;box-shadow:0 20px 60px rgba(0,0,0,.45)}
+  #promoModal .hdr{display:flex;gap:10px;align-items:center;justify-content:space-between}
+  #promoModal .title{font-size:18px;font-weight:700}
+  #promoModal .badge{font-size:12px;padding:2px 8px;border-radius:999px;background:#0e1725;border:1px solid #243045;color:#8ab4f8}
+  #promoModal .close{appearance:none;border:1px solid #2b3548;background:#0b111a;color:var(--text);border-radius:10px;padding:6px 10px;cursor:pointer}
+  #promoModal .body{margin-top:8px}
+  #promoModal .price{font-size:28px;font-weight:800;letter-spacing:.2px}
+  #promoModal .sub{font-size:12px;color:var(--muted)}
+  #promoModal ul{margin:10px 0 0 18px;padding:0}
+  #promoModal li{margin:6px 0}
+  #promoModal .actions{display:flex;gap:10px;margin-top:12px}
+  #promoModal .actions .btn{flex:1;justify-content:center}
+  #promoModal .fine{margin-top:10px;font-size:11px;color:#9fb3c8}
+  @media(max-width:520px){#promoModal .panel{margin:0;inset:auto 0 0 0;border-radius:16px 16px 0 0}}
+</style>
 </head>
 <body>
   <div class="container">
@@ -461,6 +479,88 @@
     // Initial outputs
     $('#outLong').textContent = buildLong();
     $('#outShort').textContent = buildShort();
-  </script>
+  
+
+  // === Promo Modal Logic (VEO3 39rb) ===
+  (function(){
+    const KEY='veo3_promo_seen_at_v1';
+    const DAY=24*60*60*1000;
+    const $m = document.getElementById('promoModal');
+    const $close = document.getElementById('promoClose');
+    const $back = document.getElementById('promoBackdrop');
+    const $buy = document.getElementById('promoBuy');
+    const $wa = document.getElementById('promoWA');
+
+    // TODO: set your links here
+    if($buy && $buy.getAttribute('href')==='#') $buy.href = 'https://macstoredigital.id/checkout/veo3-private-39k';
+    if($wa && $wa.getAttribute('href')==='#') $wa.href = 'https://wa.me/6280000000000?text=Halo,%20saya%20minat%20VEO%203%20Private%2039rb';
+
+    function seenWithin(days){
+      try{ const t=+localStorage.getItem(KEY)||0; return Date.now()-t < days*DAY; }catch(e){ return false; }
+    }
+    function markSeen(){ try{ localStorage.setItem(KEY, String(Date.now())); }catch(e){} }
+    function open(){ if(!$m) return; $m.hidden=false; document.body.style.overflow='hidden'; }
+    function close(){ if(!$m) return; $m.hidden=true; document.body.style.overflow=''; markSeen(); }
+
+    $close && $close.addEventListener('click', close);
+    $back && $back.addEventListener('click', close);
+    $buy && $buy.addEventListener('click', markSeen);
+    $wa && $wa.addEventListener('click', markSeen);
+
+    function maybe(trigger){
+      if(seenWithin(7)) return;
+      if(sessionStorage.getItem('veo3_promo_opened')==='1') return;
+      open();
+      sessionStorage.setItem('veo3_promo_opened','1');
+    }
+
+    // Delay trigger
+    setTimeout(()=>maybe('delay'), 10000);
+
+    // Exit-intent (desktop only)
+    let exitFired=false;
+    document.addEventListener('mouseout', (e)=>{
+      if(exitFired) return;
+      if(window.innerWidth<900) return;
+      if(e.clientY<=0) { exitFired=true; maybe('exit'); }
+    });
+
+    // On-copy trigger (after output copied)
+    $$('.copy').forEach(btn=>btn.addEventListener('click', ()=>{ setTimeout(()=>maybe('copy'), 200); }));
+
+    // Expose to window for manual trigger if needed
+    window.__promoVEO3 = {open, close, markSeen};
+  })();
+
+</script>
+  
+<!-- Promo Modal: VEO 3 Private Akun 39rb -->
+<div id="promoModal" hidden>
+  <div class="backdrop" id="promoBackdrop" aria-hidden="true"></div>
+  <div class="panel" role="dialog" aria-modal="true" aria-labelledby="promoTitle">
+    <div class="hdr">
+      <div>
+        <div class="badge">Promo kreator</div>
+        <div id="promoTitle" class="title">VEO 3 Private Akun — <span style="color:var(--accent)">39rb</span></div>
+      </div>
+      <button id="promoClose" class="close" aria-label="Tutup">✕</button>
+    </div>
+    <div class="body">
+      <div class="price">Hemat. Aktif cepat.</div>
+      <div class="sub">Cocok untuk prompt generator & eksperimen render.</div>
+      <ul>
+        <li>Akses 1 akun private VEO 3</li>
+        <li>Garansi bantuan teknis</li>
+        <li>Proses 5–10 menit saat jam operasional</li>
+      </ul>
+      <div class="actions">
+        <a id="promoBuy" class="btn accent" href="#" target="_blank" rel="nofollow noopener">Beli 39rb</a>
+        <a id="promoWA" class="btn primary" href="#" target="_blank" rel="nofollow noopener">Chat WhatsApp</a>
+      </div>
+      <div class="fine">Kode kupon opsional: <strong>PROMPTVEO39</strong>. Frekuensi pop‑up: maks 1× per 7 hari.</div>
+    </div>
+  </div>
+</div>
+
 </body>
 </html>
