@@ -49,10 +49,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const sliderContainer = document.getElementById('testimonial-slider');
     if (sliderContainer) {
         const images = [
-            'testimoni-1.jpeg',
-            'testimoni-2.jpeg',
-            'testimoni-3.jpeg',
-            'testimoni-4.jpeg'
+            'https://macstoredigital.id/img/testimoni-1.jpeg',
+            'https://macstoredigital.id/img/testimoni-2.jpeg',
+            'https://macstoredigital.id/img/testimoni-3.jpeg',
+            'https://macstoredigital.id/img/testimoni-4.jpeg'
         ];
         let currentIndex = 0;
 
@@ -74,4 +74,5 @@ document.addEventListener('DOMContentLoaded', () => {
             
         }, 4000);
     }
+
 });
