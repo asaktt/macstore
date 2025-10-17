@@ -61,7 +61,7 @@ tbody tr:hover{background:rgba(148,163,184,.12)}
   <div class="container">
     <div class="card">
       <h1>Generator Nomor Pesanan Personal Use</h1>
-      <p>Statis. Kebutuhan No Pesanan <span class="badge">PRIVATE USE</span> By <span class="badge">Macstore Digital</span>.</p>
+      <p>Statis. Kebutuhan No Pesanan<span class="badge">PRIVATE</span>By<span class="badge">Macstore Digital</span>.</p>
 
       <div class="row" aria-label="controls">
         <div class="field">
@@ -227,8 +227,12 @@ tbody tr:hover{background:rgba(148,163,184,.12)}
     return toCase(formatByPattern(pattern.value)) + '-' + (Date.now()%1000).toString(36);
   };
 
-  const setPreview = (id)=>{
-    preview.textContent = (prefix.value || '') + id;
+  const setPreview = (id, ts = Date.now())=>{
+    const d = new Date(ts);
+    const bulanAbbr = ["Jan","Feb","Mar","Apr","Mei","Jun","Jul","Agu","Sep","Okt","Nov","Des"];
+    const tgl = `${d.getDate()} ${bulanAbbr[d.getMonth()]} ${d.getFullYear()}`;
+    const pfx = (prefix.value || 'No Pesanan: ');
+    preview.textContent = `[${tgl}] ${pfx}${id}`;
   };
 
   const addHistory = (id)=>{
@@ -239,7 +243,7 @@ tbody tr:hover{background:rgba(148,163,184,.12)}
     save(LS_HISTORY,history);
     save(LS_ISSUED,Array.from(issued));
     refreshTable();
-    setPreview(id);
+    setPreview(id, rec.ts);
     if(autocopy.value==='1') copyText(preview.textContent).then(ok=> showToast(ok ? 'Disalin otomatis' : 'Gagal menyalin. Klik Copy'));
   };
 
@@ -302,7 +306,7 @@ tbody tr:hover{background:rgba(148,163,184,.12)}
 
   // initial state
   refreshTable();
-  if(history.length){ setPreview(history[history.length-1].id); }
+  if(history.length){ const last = history[history.length-1]; setPreview(last.id, last.ts); }
   else { setPreview('—'); }
 })();
 </script>
