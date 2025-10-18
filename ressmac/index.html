@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Macstore Digital - Reseller Official</title>
+    <!-- Tailwind CSS CDN --><script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome for Icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f8fafc; /* Lighter background */
+            color: #333;
+        }
+        .container {
+            max-width: 1100px; /* Slightly wider container */
+            margin: auto;
+            padding: 2rem;
+        }
+        .card {
+            background-color: #ffffff;
+            border-radius: 16px; /* More rounded corners */
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08); /* Stronger, softer shadow */
+            padding: 2.5rem;
+            margin-bottom: 2.5rem;
+            transition: transform 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px); /* Subtle hover effect */
+        }
+        .section-title {
+            font-size: 2rem; /* Larger H2 size */
+            font-weight: 700;
+            color: #1e3a8a; /* Darker blue */
+            margin-bottom: 2rem;
+            border-bottom: 3px solid #bfdbfe; /* Accent bottom border */
+            padding-bottom: 1rem;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.75rem;
+        }
+        .product-category-title {
+            font-size: 1.6rem; /* H3 size */
+            font-weight: 600;
+            color: #2563eb; /* Primary blue */
+            margin-top: 3rem;
+            margin-bottom: 1.5rem;
+            background-color: #eff6ff; /* Very light blue background */
+            padding: 1rem 2rem;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+        .product-item {
+            background-color: #f0f8ff; /* Light blue background for product items */
+            border-radius: 12px;
+            padding: 1.5rem;
+            border: 1px solid #dbeafe;
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .product-item:hover {
+            border-color: #93c5fd;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            transform: translateY(-3px);
+        }
+        .product-name {
+            font-weight: 600;
+            color: #1f2937; /* Darker product name */
+            font-size: 1.2rem;
+            line-height: 1.4;
+            margin-bottom: 0.5rem;
+        }
+        .product-description {
+            color: #6b7280;
+            font-size: 0.9rem;
+            margin-top: 0.4rem;
+            flex-grow: 1; /* Allows description to take available space */
+        }
+        .product-price {
+            font-weight: 700;
+            color: #ef4444; /* Red color for price */
+            font-size: 1.25rem;
+            margin-top: 1rem;
+            display: block; /* Ensure it's on its own line */
+        }
+        .note {
+            background-color: #fefce8; /* Light yellow background for notes */
+            border-left: 5px solid #facc15; /* Yellow border */
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+            color: #333;
+            line-height: 1.6;
+        }
+        .link-button {
+            display: inline-block;
+            background-color: #2563eb; /* Primary blue button */
+            color: white;
+            padding: 0.9rem 2rem;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            margin-top: 1rem;
+            box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);
+        }
+        .link-button:hover {
+            background-color: #1d4ed8;
+            transform: translateY(-2px);
+        }
+        .header-main {
+            background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%); /* Gradient header */
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+            border-bottom-left-radius: 30px;
+            border-bottom-right-radius: 30px;
+            margin-bottom: 3rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        }
+        .header-main h1 {
+            font-size: 3rem; /* Even larger heading */
+            font-weight: 800;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+        .header-main p {
+            font-size: 1.25rem;
+            font-weight: 300;
+            max-width: 800px;
+            margin: 1rem auto;
+            line-height: 1.7;
+        }
+        .footer-main {
+            background-color: #1e3a8a; /* Darker blue for footer */
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+            margin-top: 4rem;
+            border-top-left-radius: 30px;
+            border-top-right-radius: 30px;
+            box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.15);
+        }
+        .footer-main a {
+            color: #93c5fd;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        .footer-main a:hover {
+            color: #bfdbfe;
+            text-decoration: underline;
+        }
+        .bullet-point {
+            color: #2563eb; /* Primary blue bullet point */
+            margin-right: 0.5rem;
+        }
+        .whatsapp-button {
+            background-color: #25d366; /* WhatsApp green */
+            color: white;
+            padding: 1rem 2.5rem;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            margin-top: 2rem;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+            font-size: 1.1rem;
+        }
+        .whatsapp-button:hover {
+            background-color: #1da851;
+            transform: translateY(-2px);
+        }
+        .icon-size {
+            font-size: 1.5rem; /* For section titles */
+            color: #2563eb; /* Primary blue for icons in titles */
+        }
+        .category-icon-size {
+            font-size: 1.25rem; /* For category titles */
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            .header-main h1 {
+                font-size: 2.25rem;
+            }
+            .header-main p {
+                font-size: 1rem;
+            }
+            .section-title {
+                font-size: 1.75rem;
+            }
+            .product-category-title {
+                font-size: 1.3rem;
+            }
+            .container {
+                padding: 1rem;
+            }
+            .card {
+                padding: 1.5rem;
+            }
+            .product-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section --><header class="header-main">
+        <div class="container">
+            <h1>Selamat Datang Reseller Macstore Digital!</h1>
+            <p class="font-light">
+                Sumber terpercaya Anda untuk update stok, harga, dan panduan lengkap.
+            </p>
+            <div class="mt-4 inline-block bg-yellow-400 text-slate-900 font-bold px-6 py-2 rounded-full text-base shadow-lg">
+                <i class="fas fa-info-circle mr-2"></i> BUDAYAKAN MEMBACA SEBELUM BERTANYA
+            </div>
+            <a href="https://api.whatsapp.com/send?phone=6283853289396&text=Halo Admin Macstore Digital, saya ingin bergabung sebagai reseller. JOIN RESS + Minimal Sekali Order Harga Normal!" target="_blank" class="whatsapp-button">
+                <i class="fab fa-whatsapp"></i> Gabung & Support Reseller
+            </a>
+        </div>
+    </header>
+
+    <!-- Main Content --><div class="container">
+        <!-- Terms and Conditions Section --><section class="card">
+            <h2 class="section-title"><i class="fas fa-file-contract icon-size"></i> Syarat & Ketentuan</h2>
+            <ul class="list-disc pl-6 space-y-2 text-base text-gray-700 leading-relaxed">
+                <li><span class="bullet-point"></span>Penjelasan detail setiap produk tersedia di website ini.</li>
+                <li><span class="bullet-point"></span>Update harga akan selalu tersedia secara berkala.</li>
+                <li><span class="bullet-point"></span>**Bulk Order** minimal Rp 170.000,- akan mendapatkan **diskon 5%**.</li>
+                <li><span class="bullet-point"></span>Mohon tidak melakukan **Rush Order**. Admin adalah manusia, bukan robot, jadi harap bersabar 🙏.</li>
+                <li><span class="bullet-point"></span>Jika stok habis, uang Anda akan kami **refund 100%**.</li>
+                <li><span class="bullet-point"></span><strong class="text-red-500">PENTING UNTUK RESELLER:</strong> Saat melakukan order, <strong>wajib</strong> gunakan format: <i>"Hi, Saya Ress Mac"</i> untuk memastikan Anda mendapatkan harga spesial reseller.</li>
+            </ul>
+            <p class="mt-6 text-base italic text-center text-gray-600 font-medium">
+                "📦 Kami memberikan peluang emas bagi yang mengerti untuk mengambil kesempatan ini."
+            </p>
+            <div class="text-center mt-6">
+                <a href="http://macstoredigital.id/" target="_blank" class="link-button">Kunjungi Website Utama Macstore Digital</a>
+            </div>
+        </section>
+
+        <!-- Syarat & Ketentuan Lengkap dan Kebijakan Privasi --><section class="card">
+            <h2 class="section-title"><i class="fas fa-shield-alt icon-size"></i> Syarat & Ketentuan Lengkap dan Kebijakan Privasi</h2>
+            <p class="text-center text-gray-700 leading-relaxed mb-6">
+                Dengan menjadi reseller atau pelanggan Macstore Digital, Anda dianggap telah membaca, memahami, dan menyetujui semua syarat, ketentuan, serta kebijakan privasi yang berlaku. Harap baca dokumen lengkapnya untuk memahami hak dan kewajiban Anda.
+            </p>
+            <div class="text-center">
+                <a href="https://macstoredigital.id/syarat&ketentuan&kebijakan/" target="_blank" class="link-button">
+                    Baca Selengkapnya Di Sini
+                </a>
+            </div>
+        </section>
+
+        <!-- Product Categories --><!-- PROMO BUNDLING --><section class="card">
+            <h2 class="section-title"><i class="fas fa-tags icon-size"></i> PROMO BUNDLING</h2>
+            <div class="product-category-title">
+                <i class="fas fa-box-open category-icon-size"></i> Paket Promo Eksklusif
+            </div>
+            <div class="product-grid mt-6">
+                <div class="product-item">
+                    <div>
+                        <p class="product-name">Paket Bundle Capcut Pro Private 12 Bulan GRATIS Canva Pro 12 Bulan & Youtube Premium 1 Bulan</p>
+                        <p class="product-description">Dapatkan garansi penuh 12 bulan! Promo terbatas, selagi stok masih tampil, berarti masih tersedia.</p>
+                    </div>
+                    <p class="product-price">Rp 159.000</p>
+                </div>
+                <div class="product-item">
+                    <div>
+                        <p class="product-name">Paket Bundle Capcut Pro Private 6 Bulan GRATIS Canva Pro 6 Bulan & Youtube Premium 1 Bulan</p>
+                        <p class="product-description">Nikmati garansi 6 bulan. Jangan lewatkan kesempatan ini selagi promo masih berlangsung!</p>
+                    </div>
+                    <p class="product-price">Rp 85.000</p>
+                </div>
+                <div class="product-item">
+                    <div>
+                        <p class="product-name">Paket Bundle Capcut Pro Private 4 Bulan GRATIS Canva Pro 4 Bulan & Youtube Premium 1 Bulan</p>
+                        <p class="product-description">Garansi 4 bulan untuk paket ekonomis ini. Segera ambil sebelum kehabisan!</p>
+                    </div>
+                    <p class="product-price">Rp 55.000</p>
+                </div>
+                <div class="product-item">
+                    <div>
+                        <p class="product-name">Paket Bundle Capcut Pro Private 1 Bulan GRATIS Canva Pro 1 Bulan</p>
+                        <p class="product-description">Coba sekarang dengan garansi 4 bulan. Ideal untuk kebutuhan jangka pendek.</p>
+                    </div>
+                    <p class="product-price">Rp 18.000</p>
+                </div>
+            </div>
+
+            <div class="note">
+                <p class="font-semibold text-lg mb-3 text-gray-800">📌 Penting untuk Promo Bundling:</p>
+                <ul class="list-disc pl-5 space-y-2 text-sm text-gray-700">
+                    <li><span class="bullet-point"></span>**Canva:** Kirimkan email, kami akan kirimkan link untuk join tim agar Anda bisa akses Canva Pro.</li>
+                    <li><span class="bullet-point"></span>**CapCut:** Akun disediakan oleh kami dan bisa digunakan sampai **3 device** per akun.</li>
+                    <li><span class="bullet-point"></span>**Youtube:** Pastikan akun Gmail Anda belum pernah mendaftarkan YouTube Premium, atau jika sudah, minimal 12 bulan yang lalu, agar bisa masuk menjadi family dan bisa akses YouTube Premium.</li>
+                </ul>
+                <p class="font-semibold text-lg mt-5 mb-2 text-gray-800">📖 Panduan Lengkap:</p>
+                <ul class="list-disc pl-5 space-y-2 text-sm text-gray-700">
+                    <li><span class="bullet-point"></span>**Cara Login CapCut Pro:** <a href="https://www.notion.so/Cara-Login-CapCut-Pro-Private-237b68103c0880328218fb5ff80468bf?source=copy_link" target="_blank" class="text-blue-600 hover:underline font-medium">Lihat Panduan di Notion</a></li>
+                    <li><span class="bullet-point"></span>**Cara Gabung Canva Pro:** <a href="https://www.notion.so/Cara-Masuk-Canva-Pro-237b68103c0880879199f036f6eb006c?source=copy_link" target="_blank" class="text-blue-600 hover:underline font-medium">Lihat Panduan di Notion</a></li>
+                    <li><span class="bullet-point"></span>**Cara Pindahkan Desain Canva:** <a href="https://www.youtube.com/watch?v=JSVAIo3a17s" target="_blank" class="text-blue-600 hover:underline font-medium">Tonton Video Tutorial (YouTube)</a></li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- ECOURSE --><section class="card">
+            <h2 class="section-title"><i class="fas fa-graduation-cap icon-size"></i> ECOURSE</h2>
+            <div class="product-category-title">
+                <i class="fas fa-book-open category-icon-size"></i> Materi Pembelajaran Digital
+            </div>
+            <div class="product-grid mt-6">
+                <div class="product-item">
+                    <div>
+                        <p class="product-name">Complete Financial Freedom & Invest - Ternak Uang Original Episode 1 - 29</p>
+                        <p class="product-description">BONUS: Sekolah Jalanan By Timothy Ronald (Rahasia Jualan Untuk Omset Terbaik).</p>
+                    </div>
+                    <p class="product-price">Rp 9.500</p>
+                </div>
+                <div class="product-item">
+                    <div>
+                        <p class="product-name">Kelas Jago Capcut - Belajar Mahir Editing Video dengan Aplikasi Capcut Terlengkap</p>
+                        <p class="product-description">BONUS: JAGO CANVA DALAM 5 HARI Mahir Buat Konten Apapun Menggunakan Canva.</p>
+                    </div>
+                    <p class="product-price">Rp 4.000</p>
+                </div>
+                <div class="product-item">
+                    <div>
+                        <p class="product-name">TIKTOK AFFILIATE UNTUK PEMULA TANPA JUTAAN FOLLOWER</p>
+                        <p class="product-description">BONUS: Cara Mudah FYP Tiktok. Mulai perjalanan affiliate Anda!</p>
+                    </div>
+                    <p class="product-price">Rp 6.000</p>
+                </div>
+                <div class="product-item">
+                    <div>
+                        <p class="product-name">ECOURSE - KELAS MASTER TT ADS Cuan Berlipat Ganda Hingga Jutaan Dari Ngiklan</p>
+                        <p class="product-description">Materi video pembelajaran dengan 11 sesi lengkap untuk kuasai TikTok Ads.</p>
+                    </div>
+                    <p class="product-price">Rp 5.000</p>
+                </div>
+                <div class="product-item">
+                    <div>
+                        <p class="product-name">1000+ GPT Prompt - Mengungkap Rahasia Kekuatan AI untuk Para Konten Kreator</p>
+                        <p class="product-description">Tingkatkan efisiensi kerja Anda 10x lebih cepat dengan koleksi prompt ChatGPT ini.</p>
+                    </div>
+                    <p class="product-price">Rp 2.000</p>
+                </div>
+            </div>
+            <div class="note">
+                <p class="font-semibold text-lg mb-3 text-gray-800">📚 Catatan Ecourse:</p>
+                <ul class="list-disc pl-5 space-y-2 text-sm text-gray-700">
+                    <li><span class="bullet-point"></span>Produk berupa video pembelajaran, kecuali "1000+ GPT Prompt" yang berupa teks.</li>
+                    <li><span class="bullet-point"></span>Sekali beli, bisa dijual berkali-kali! Peluang tak terbatas untuk reseller.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- EDITING --><section class="card">
+            <h2 class="section-title"><i class="fas fa-pencil-ruler icon-size"></i> EDITING</h2>
+            <div class="product-category-title">
+                <i class="fas fa-magic category-icon-size"></i> Alat & Aplikasi Editing Profesional
+            </div>
+            <div class="product-grid mt-6">
+                <div class="product-item">
+                    <div>
+                        <p class="product-name">CapCut Pro Private 1 Bulan</p>
+                        <p class="product-description">Akun Private dari kami & bisa digunakan sampai 3 device (Garansi 1 Bulan).</p>
+                    </div>
+                    <p class="product-price">Rp 15.000</p>
+                </div>
+                <div class="product-item">
+                    <div>
+                        <p class="product-name">Canva Pro 1 Bulan</p>
+                        <p class="product-description">Menggunakan akun pembeli untuk akses fitur Pro (Garansi 1 Bulan).</p>
+                    </div>
+                    <p class="product-price">Rp 2.500</p>
+                </div>
+                <div class="product-item">
+                    <div>
+                        <p class="product-name">Canva Pro 1 Tahun</p>
+                        <p class="product-description">Akses penuh Canva Pro selama setahun penuh dengan akun Anda (Garansi 1 Tahun).</p>
+                    </div>
+                    <p class="product-price">Rp 29.000</p>
+                </div>
+                <div class="product-item">
+                    <div>
+                        <p class="product-name">Canva Admin 1 Bulan</p>
+                        <p class="product-description">Akun admin dari kami, bisa undang hingga 100 pembeli ke tim Anda.</p>
+                    </div>
+                    <p class="product-price">Rp 29.000</p>
+                </div>
+                <div class="product-item">
+                    <div>
+                        <p class="product-name">Canva Admin 3 Bulan</p>
+                        <p class="product-description">Akun admin dari kami, bisa undang hingga 100 pembeli ke tim Anda.</p>
+                    </div>
+                    <p class="product-price">Rp 49.000</p>
+                </div>
+                <div class="product-item">
+                    <div>
+                        <p class="product-name">Canva Lifetime</p>
+                        <p class="product-description">Akses Canva Pro seumur hidup dengan akun Anda (Garansi 15 Bulan).</p>
+                    </div>
+                    <p class="product-price">Rp 49.000</p>
+                </div>
+                <div class="product-item">
+                    <div>
+                        <p class="product-name">Alight Motion Private 1 Tahun</p>
+                        <p class="product-description">Akun Private dari kami & bisa digunakan sampai 3 device (Garansi 1 Tahun).</p>
+                    </div>
+                    <p class="product-price">Rp 22.000</p>
+                </div>
+                <div class="product-item">
+                    <div>
+                        <p class="product-name">Remini Private 1 Bulan</p>
+                        <p class="product-description">Akun Private dari kami untuk hasil foto dan video berkualitas tinggi (Garansi 1 Bulan).</p>
+                    </div>
+                    <p class="product-price">Rp 15.000</p>
+                </div>
+                <div class="product-item">
+                    <div>
+                        <p class="product-name">Remini Private 1 Tahun</p>
+                        <p class="product-description">Akun Private dari kami untuk akses Remini Premium selama setahun (Garansi 1 Tahun).</p>
+                    </div>
+                    <p class="product-price">Rp 39.000</p>
+                </div>
+                <div class="product-item">
+                    <div>
+                        <p class="product-name">Adobe Express Premium 1 Tahun</p>
+                        <p class="product-description">Akses Adobe Express Premium, Photoshop Express, 250 Kredit Generatif AI (reset bulanan). Gunakan akun pembeli (Garansi 1 Tahun).</p>
+                    </div>
+                    <p class="product-price">Rp 109.000</p>
+                </div>
+                <div class="product-item">
+                    <div>
+                        <p class="product-name">Adobe Lightroom Sharing 1 Tahun</p>
+                        <p class="product-description">Akun Sharing dari kami (galeri tercampur). Dilarang ubah info akun (Garansi 6 Bulan).</p>
+                    </div>
+                    <p class="product-price">Rp 19.000</p>
+                </div>
+            </div>
+            <div class="note">
+                <p class="font-semibold text-lg mb-3 text-gray-800">📝 Catatan Penting untuk Editing:</p>
+                <ul class="list-disc pl-5 space-y-2 text-sm text-gray-700">
+                    <li><span class="bullet-point"></span>**Canva:** Kirimkan email, kami akan kirimkan link untuk join tim agar bisa akses Canva Pro.</li>
+                    <li><span class="bullet-point"></span>**CapCut:** Akun dari kami dan bisa digunakan sampai 3 device per akun.</li>
+                    <li><span class="bullet-point"></span>**Canva Admin:** Anda akan mendapatkan akun yang bisa mengundang hingga 100 pembeli ke tim Anda. <a href="https://www.youtube.com/shorts/dxq-jvN5ZHQ" target="_blank" class="text-blue-600 hover:underline font-medium">Lihat Cara Invite Pembeli di YouTube</a></li>
+                </ul>
+                <p class="font-semibold text-lg mt-5 mb-2 text-gray-800">📖 Panduan Lengkap:</p>
+                <ul class="list-disc pl-5 space-y-2 text-sm text-gray-700">
+                    <li><span class="bullet-point"></span>**Cara Login CapCut Pro:** <a href="https://www.notion.so/Cara-Login-CapCut-Pro-Private-237b68103c0880328218fb5ff80468bf?source=copy_link" target="_blank" class="text-blue-600 hover:underline font-medium">Lihat Panduan di Notion</a></li>
+                    <li><span class="bullet-point"></span>**Cara Gabung Canva Pro:** <a href="https://www.notion.so/Cara-Masuk-Canva-Pro-237b68103c0880879199f036f6eb006c?source=copy_link" target="_blank" class="text-blue-600 hover:underline font-medium">Lihat Panduan di Notion</a></li>
+                    <li><span class="bullet-point"></span>**Cara Pindahkan Desain Canva:** <a href="https://www.youtube.com/watch?v=JSVAIo3a17s" target="_blank" class="text-blue-600 hover:underline font-medium">Tonton Video Tutorial (YouTube)</a></li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- AI TOOLS --><section class="card">
+            <h2 class="section-title"><i class="fas fa-robot icon-size"></i> AI TOOLS</h2>
+            <div class="product-category-title">
+                <i class="fas fa-brain category-icon-size"></i> Solusi Kecerdasan Buatan
+            </div>
+            <div class="product-grid mt-6">
+                <div class="product-item">
+                    <div>
+                        <p class="product-name">ChatGPT Plus 1 Sharing Bulan</p>
+                        <p class="product-description">Akun Sharing (1 device), login via OTP dari kami, akses di workspace (Garansi 1 Bulan).</p>
+                    </div>
+                    <p class="product-price">Rp 15.000</p>
+                </div>
+                <div class="product-item">
+                    <div>
+                        <p class="product-name">ChatGPT Plus Private 3 Bulan</p>
+                        <p class="product-description">Akun full private dari kami, login via OTP, akses di personal akun (Garansi 3 Bulan).</p>
+                    </div>
+                    <p class="product-price">Rp 99.000</p>
+                </div>
+                <div class="product-item">
+                    <div>
+                        <p class="product-name">Gemini Pro 1 Tahun</p>
+                        <p class="product-description">Menggunakan akun pembeli: storage 2 TB, Gemini Pro (VEO3), Gemini di Gmail & Docs (Garansi 9 Bulan).</p>
+                    </div>
+                    <p class="product-price">Rp 39.000</p>
+                </div>
+                <div class="product-item">
+                    <div>
+                        <p class="product-name">Gemini Pro 1 Bulan</p>
+                        <p class="product-description">Menggunakan akun pembeli: storage 2 TB, Gemini Pro (VEO3), Gemini di Gmail & Docs (Garansi 1 Bulan).</p>
+                    </div>
+                    <p class="product-price">Rp 15.000</p>
+                </div>
+                <div class="product-item">
+                    <div>
+                        <p class="product-name">Jasa Generate SUNO AI Versi 4.5</p>
+                        <p class="product-description">Harga per sekali generate, min. 10x generate. Kirim lirik & style lagu via chat (Bebas copyright, No Garansi).</p>
+                    </div>
+                    <p class="product-price">Rp 5.000</p>
+                </div>
+                <div class="product-item">
+                    <div>
+                        <p class="product-name">BLACKBOX AI PRO Private 3 Bulan</p>
+                        <p class="product-description">Akun private dengan akses model AI Terbaik (GPT-5, Claude Sonnet 4, Opus 4.1, dll.), membantu coding (Garansi 3 Bulan).</p>
+                    </div>
+                    <p class="product-price">Rp 39.000</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- PAKET STREAMING --><section class="card">
+            <h2 class="section-title"><i class="fas fa-video icon-size"></i> PAKET STREAMING</h2>
+            <div class="product-category-title">
+                <i class="fas fa-tv category-icon-size"></i> Hiburan & Media Premium
+            </div>
+            <div class="product-grid mt-6">
+                <div class="product-item">
+                    <div>
+                        <p class="product-name">Netflix Sharing 1 Bulan</p>
+                        <p class="product-description">1 Profile, 2 User, 1 device. Wajib cantumkan device & lokasi saat order (Garansi 1 Bulan).</p>
+                    </div>
+                    <p class="product-price">Rp 19.000</p>
+                </div>
+                <div class="product-item">
+                    <div>
+                        <p class="product-name">Netflix Semi Private 1 Bulan</p>
+                        <p class="product-description">1 Profile, 1 User, 2 device. Wajib cantumkan device & lokasi saat order (Garansi 1 Bulan).</p>
+                    </div>
+                    <p class="product-price">Rp 29.000</p>
+                </div>
+                <div class="product-item">
+                    <div>
+                        <p class="product-name">Spotify Premium Private 1 Bulan</p>
+                        <p class="product-description">Akun private dari kami, nikmati musik tanpa iklan (Garansi 1 Bulan).</p>
+                    </div>
+                    <p class="product-price">Rp 15.000</p>
+                </div>
+                <div class="product-item">
+                    <div>
+                        <p class="product-name">Youtube Premium Private 1 Bulan</p>
+                        <p class="product-description">Syarat: akun Gmail belum pernah daftar YouTube Premium, atau maksimal 1 tahun lalu (Garansi 25 Hari).</p>
+                    </div>
+                    <p class="product-price">Rp 4.000</p>
+                </div>
+                <div class="product-item">
+                    <div>
+                        <p class="product-name">Youtube Premium Private [Akun Baru] 1 Bulan</p>
+                        <p class="product-description">Akun baru dari kami, tinggal login Gmail & siap pakai (Garansi 25 Hari).</p>
+                    </div>
+                    <p class="product-price">Rp 7.000</p>
+                </div>
+                <div class="product-item">
+                    <div>
+                        <p class="product-name">Vidio Platinum [TV Only] Private 1 Bulan</p>
+                        <p class="product-description">Akun private dari kami, login khusus untuk di TV (Garansi 1 Bulan).</p>
+                    </div>
+                    <p class="product-price">Rp 17.000</p>
+                </div>
+                <div class="product-item">
+                    <div>
+                        <p class="product-name">Vidio Platinum [TV Only] Private 1 Tahun</p>
+                        <p class="product-description">Akun private dari kami, login khusus untuk di TV (Garansi 1 Tahun).</p>
+                    </div>
+                    <p class="product-price">Rp 49.000</p>
+                </div>
+                <div class="product-item">
+                    <div>
+                        <p class="product-name">Vidio Platinum [Mobile Only] Private 1 Bulan</p>
+                        <p class="product-description">Akun private dari kami, login khusus untuk di HP (Garansi 1 Bulan).</p>
+                    </div>
+                    <p class="product-price">Rp 32.000</p>
+                </div>
+                <div class="product-item">
+                    <div>
+                        <p class="product-name">Disney+ Hotstar Sharing 1 Bulan</p>
+                        <p class="product-description">Akun sharing dari kami, login via OTP nomor dari kami (Garansi 1 Bulan).</p>
+                    </div>
+                    <p class="product-price">Rp 29.000</p>
+                </div>
+                <div class="product-item">
+                    <div>
+                        <p class="product-name">Viu Premium 1 Private Tahun</p>
+                        <p class="product-description">Akun private dari kami untuk akses Viu Premium selama setahun (Garansi 10 Bulan).</p>
+                    </div>
+                    <p class="product-price">Rp 29.000</p>
+                </div>
+                <div class="product-item">
+                    <div>
+                        <p class="product-name">Bstation Sharing 1 Tahun</p>
+                        <p class="product-description">Akun Sharing dari kami untuk akses Bstation Premium (Garansi 10 Bulan).</p>
+                    </div>
+                    <p class="product-price">Rp 29.000</p>
+                </div>
+                <div class="product-item">
+                    <div>
+                        <p class="product-name">Amazon Prime Video Sharing 1 Bulan</p>
+                        <p class="product-description">Akun sharing dari kami untuk menikmati berbagai tayangan (Garansi 1 Bulan).</p>
+                    </div>
+                    <p class="product-price">Rp 15.000</p>
+                </div>
+                <div class="product-item">
+                    <div>
+                        <p class="product-name">WeTV VIP Sharing 1 Bulan</p>
+                        <p class="product-description">Akun sharing (1 device, no login TV). Wajib cantumkan device & lokasi saat order (Garansi 1 Bulan).</p>
+                    </div>
+                    <p class="product-price">Rp 13.000</p>
+                </div>
+                <div class="product-item">
+                    <div>
+                        <p class="product-name">iQIYI VIP Premium Sharing 1 Bulan</p>
+                        <p class="product-description">Akun sharing dari kami untuk akses iQIYI VIP Premium (Garansi 1 Bulan).</p>
+                    </div>
+                    <p class="product-price">Rp 13.000</p>
+                </div>
+            </div>
+
+            <div class="note">
+                <p class="font-semibold text-lg mb-3 text-gray-800">📺 Catatan Penting untuk Streaming:</p>
+                <ul class="list-disc pl-5 space-y-2 text-sm text-gray-700">
+                    <li><span class="bullet-point"></span><strong>Pengguna Netflix Pemula WAJIB Baca:</strong> <a href="https://www.notion.so/PENGGUNA-AWAM-WAJIB-BACA-INI-265b68103c0880a39649dabcfbec77b2?source=copy_link" target="_blank" class="text-blue-600 hover:underline font-medium">Klik di sini</a></li>
+                    <li><span class="bullet-point"></span><strong>Tutorial Jika Netflix Incorrect Password / Kata Sandi Salah:</strong> <a href="https://www.notion.so/TUTORIAL-LOGIN-NETFLIX-INCORECT-PASSWORD-LIMIT-LOGIN-237b68103c08804abd0cf022b382e1b1?source=copy_link" target="_blank" class="text-blue-600 hover:underline font-medium">Lihat Tutorial</a></li>
+                </ul>
+                <p class="mt-4 text-center italic font-semibold text-amber-700 bg-amber-100 p-3 rounded-lg shadow-inner">
+                    Budayakan mandiri sebelum tanya admin 🙏
+                </p>
+            </div>
+        </section>
+
+        <!-- PAKET STORAGE --><section class="card">
+            <h2 class="section-title"><i class="fas fa-hdd icon-size"></i> PAKET STORAGE</h2>
+            <div class="product-category-title">
+                <i class="fas fa-cloud category-icon-size"></i> Penyimpanan Digital Aman & Luas
+            </div>
+            <div class="product-grid mt-6">
+                <div class="product-item">
+                    <div>
+                        <p class="product-name">Google Drive 1TB Lifetime Private</p>
+                        <p class="product-description">Akun private dari kami dengan durasi Selamanya untuk penyimpanan 1TB.</p>
+                    </div>
+                    <p class="product-price">Rp 79.000</p>
+                </div>
+                <div class="product-item">
+                    <div>
+                        <p class="product-name">Google Storage 2TB 1 Tahun</p>
+                        <p class="product-description">Menggunakan akun pembeli: storage 2 TB, Gemini Pro (VEO3), Gemini di Gmail & Docs (Garansi 10 Bulan).</p>
+                    </div>
+                    <p class="product-price">Rp 39.000</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- LAIN-LAIN --><section class="card">
+            <h2 class="section-title"><i class="fas fa-ellipsis-h icon-size"></i> LAIN-LAIN</h2>
+            <div class="product-category-title">
+                <i class="fas fa-globe category-icon-size"></i> Layanan Digital Lainnya
+            </div>
+            <div class="product-grid mt-6">
+                <div class="product-item">
+                    <div>
+                        <p class="product-name">TURNITIN 7 Hari Private</p>
+                        <p class="product-description">Maksimal upload 3x/24 jam untuk cek plagiarisme (Garansi 7 Hari).</p>
+                    </div>
+                    <p class="product-price">Rp 22.000</p>
+                </div>
+                <div class="product-item">
+                    <div>
+                        <p class="product-name">SCRIBD Private 1 Bulan</p>
+                        <p class="product-description">Akun private dari kami untuk akses Scribd Premium (Garansi 1 Bulan).</p>
+                    </div>
+                    <p class="product-price">Rp 14.000</p>
+                </div>
+                <div class="product-item">
+                    <div>
+                        <p class="product-name">GetContact Premium Private 1 Bulan</p>
+                        <p class="product-description">Proses menggunakan nomor WhatsApp. Wajib standby untuk proses orderan (Garansi 20 Hari).</p>
+                    </div>
+                    <p class="product-price">Rp 12.000</p>
+                </div>
+                <div class="product-item">
+                    <div>
+                        <p class="product-name">Duolingo Plus Private 1 Bulan</p>
+                        <p class="product-description">Akun private dari kami, bisa undang 5 orang untuk belajar bahasa (Garansi 1 Bulan).</p>
+                    </div>
+                    <p class="product-price">Rp 18.000</p>
+                </div>
+                <div class="product-item">
+                    <div>
+                        <p class="product-name">Unblock IMEI iPhone 3 Bulan</p>
+                        <p class="product-description">Solusi untuk iPhone inter yang ingin ada jaringan. Bukan untuk iPhone Bypass.</p>
+                    </div>
+                    <p class="product-price">Rp 240.000</p>
+                </div>
+                <div class="product-item">
+                    <div>
+                        <p class="product-name">Open Bypass iPhone Lock iCloud Or Passcode (Not For Robber)</p>
+                        <p class="product-description">Hubungi admin untuk detail lebih lanjut mengenai layanan ini.</p>
+                    </div>
+                    <p class="product-price">Hubungi Admin</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Request Product Section --><section class="card bg-gradient-to-r from-indigo-600 to-purple-600 text-white text-center shadow-2xl">
+            <h2 class="section-title !text-white !border-indigo-300"><i class="fas fa-search-plus icon-size !text-white"></i> Tidak Menemukan Produk yang Anda Cari?</h2>
+            <p class="text-lg leading-relaxed mb-6 max-w-3xl mx-auto font-light">
+                Ada produk digital lain yang Anda butuhkan tapi tidak ada di daftar? Jangan ragu untuk bertanya! Tim kami siap membantu membuatkan produk yang Anda inginkan dengan harga terbaik untuk reseller.
+            </p>
+            <a href="https://api.whatsapp.com/send?phone=6283853289396&text=Halo Admin Macstore Digital, saya Ress Mac. Saya ingin menanyakan ketersediaan produk yang tidak ada di list." target="_blank" class="inline-block bg-white text-indigo-600 font-bold text-lg py-3 px-8 rounded-lg shadow-xl transform transition-transform duration-200 hover:scale-105 hover:bg-yellow-300">
+                <i class="fab fa-whatsapp mr-2"></i> Tanyakan Produk di Sini
+            </a>
+        </section>
+    </div>
+
+    <!-- Footer Section --><footer class="footer-main">
+        <p class="mb-2 text-lg font-light">
+            © 2025 Macstore Digital. Semua Hak Dilindungi.
+        </p>
+        <p class="text-xl font-medium mt-4">
+            Kunjungi website resmi kami: <a href="http://macstoredigital.id/" target="_blank" class="hover:text-white">macstoredigital.id</a>
+        </p>
+        <p class="mt-4 text-md">
+            Untuk dukungan & pendaftaran reseller, hubungi kami via WhatsApp: <a href="https://api.whatsapp.com/send?phone=6283853289396" target="_blank" class="text-green-300 hover:text-green-100 hover:underline">083853289396</a>
+        </p>
+    </footer>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
