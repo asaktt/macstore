@@ -1,0 +1,677 @@
+{
+  "sections": [
+    {
+      "id": "promo",
+      "title": "Promo Spesial",
+      "icon": "flame",
+      "products": [
+        {
+          "name": "Paket Bundle Capcut Pro Private 12 Bulan GRATIS Canva Pro 12 Bulan & Youtube Premium 1 Bulan",
+          "price": "Rp179.000",
+          "originalPrice": "Rp299.000",
+          "description": "Promo Terbatas, jika produk masih tampil berarti masih tersedia! (Garansi 12 Bulan)",
+          "image": "https://macstoredigital.id/img/paket-bundle1.png",
+          "whatsappText": "Paket Bundle Capcut Pro Private 12 Bulan GRATIS Canva Pro 12 Bulan & Youtube Premium 1 Bulan, Ready Kak?",
+          "isBestSeller": true
+        },
+        {
+          "name": "Paket Bundle Capcut Pro Private 6 Bulan GRATIS Canva Pro 6 Bulan & Youtube Premium 1 Bulan",
+          "price": "Rp99.000",
+          "originalPrice": "Rp179.000",
+          "description": "Promo Terbatas, jika produk masih tampil berarti masih tersedia! (Garansi 6 Bulan)",
+          "image": "https://macstoredigital.id/img/paket-bundle1.png",
+          "whatsappText": "Paket Bundle Capcut Pro Private 6 Bulan GRATIS Canva Pro 6 Bulan & Youtube Premium 1 Bulan, Ready Kak?",
+          "isBestSeller": true
+        },
+        {
+          "name": "Paket Bundle Capcut Pro Private 4 Bulan GRATIS Canva Pro 4 Bulan & Youtube Premium 1 Bulan",
+          "price": "Rp69.000",
+          "originalPrice": "Rp129.000",
+          "description": "Promo Terbatas, jika produk masih tampil berarti masih tersedia! (Garansi 4 Bulan)",
+          "image": "https://macstoredigital.id/img/paket-bundle1.png",
+          "whatsappText": "Paket Bundle Capcut Pro Private 4 Bulan GRATIS Canva Pro 4 Bulan & Youtube Premium 1 Bulan, Ready Kak?",
+          "isBestSeller":true
+        },
+        {
+          "name": "Paket Bundle CapCut Pro Private 1 Bulan & Canva Pro 1 Bulan",
+          "price": "Rp28.000",
+          "originalPrice": "Rp49.000",
+          "description": "Promo Terbatas, jika produk masih tampil berarti masih tersedia! (Garansi 1 Bulan)",
+          "image": "https://macstoredigital.id/img/paket-bundle.png",
+          "whatsappText": "Paket Bundle CapCut Pro Private 1 Bulan & Canva Pro 1 Bulan, Ready Kak?",
+          "isBestSeller": true
+        },
+        {
+          "name": "ChatGPT Pro Private 3 Bulan",
+          "price": "Rp79.000",
+          "originalPrice": "Rp119.000",
+          "description": "Menggunakan email pembeli (Garansi 3 Bulan)",
+          "image": "https://macstoredigital.id/img/chatgpt.png",
+          "whatsappText": "ChatGPT Pro Private 3 Bulan, Ready Kak?",
+          "isBestSeller": true
+        },
+        {
+          "name": "ChatGPT Pro Private 12 Bulan",
+          "price": "Rp199.000",
+          "originalPrice": "Rp469.000",
+          "description": "Menggunakan email pembeli (Garansi 12 Bulan)",
+          "image": "https://macstoredigital.id/img/chatgpt.png",
+          "whatsappText": "ChatGPT Go Private 12 Bulan, Ready Kak?",
+          "isBestSeller": true
+        }
+      ]
+    },
+    {
+      "id": "design",
+      "title": "Desain & Editing",
+      "icon": "palette",
+      "products": [
+        {
+          "name": "CapCut Pro Private 1 Bulan",
+          "price": "Rp27.000",
+          "originalPrice": "Rp49.000",
+          "description": "Edit video pro tanpa watermark, unlock semua fitur premium. Akun Private 3 device (Garansi 1 Bulan)",
+          "image": "https://macstoredigital.id/img/capcut.png",
+          "whatsappText": "CapCut Pro Private 1 Bulan, Ready Kak?",
+          "isBestSeller": true
+        },
+        {
+          "name": "Canva Pro 1 Bulan",
+          "price": "Rp4.000",
+          "originalPrice": "Rp9.000",
+          "description": "Desain profesional: 610K+ template premium, remove background 1-click, brand kit unlimited (Garansi 1 Bulan)",
+          "image": "https://macstoredigital.id/img/canva.png",
+          "whatsappText": "Canva Pro 1 Bulan, Ready Kak?",
+          "isBestSeller": true
+        },
+        {
+          "name": "Canva Pro 12 Bulan",
+          "price": "Rp39.000",
+          "originalPrice": "Rp79.000",
+          "description": "Desain profesional: 610K+ template premium, remove background 1-click, brand kit unlimited (Garansi 12 Bulan)",
+          "image": "https://macstoredigital.id/img/canva.png",
+          "whatsappText": "Canva Pro 12 Bulan, Ready Kak?",
+          "isBestSeller": false
+        },
+        {
+          "name": "Canva Pro Lifetime (Selamanya)",
+          "price": "Rp49.000",
+          "originalPrice": "Rp99.000",
+          "description": "Desain profesional: 610K+ template premium, remove background 1-click, brand kit unlimited (Garansi 24 Bulan)",
+          "image": "https://macstoredigital.id/img/canva.png",
+          "whatsappText": "Canva Pro Lifetime (Selamanya), Ready Kak?",
+          "isBestSeller": true
+        },
+        {
+          "name": "Alight Motion Private 12 Bulan",
+          "price": "Rp24.000",
+          "originalPrice": "Rp44.000",
+          "description": "Akun Private dari kami & bisa digunakan sampai 3 device (Garansi 1 Tahun)",
+          "image": "https://macstoredigital.id/img/alightmotion.png",
+          "whatsappText": "Alight Motion Private 12 Bulan, Ready Kak?",
+          "isBestSeller": false
+        },
+        {
+          "name": "Remini Private (Web Only) 1 Bulan",
+          "price": "Rp19.000",
+          "originalPrice": "Rp34.000",
+          "description": "Akun Private dari kami (Garansi 25 Hari)",
+          "image": "https://macstoredigital.id/img/remini.png",
+          "whatsappText": "Remini Private (Web Only) 1 Bulan, Ready Kak?",
+          "isBestSeller": false
+        },
+        {
+          "name": "Remini Private (Mobile IOS & Android) 1 Bulan",
+          "price": "Rp24.000",
+          "originalPrice": "Rp44.000",
+          "description": "Akun Private dari kami (Garansi 25 Hari)",
+          "image": "https://macstoredigital.id/img/remini.png",
+          "whatsappText": "Remini Private (Mobile IOS & Android) 1 Bulan, Ready Kak?",
+          "isBestSeller": false
+        },
+        {
+          "name": "Adobe Lightroom (Web Only) Sharing 1 Tahun",
+          "price": "Rp29.000",
+          "originalPrice": "Rp49.000",
+          "description": "Akses Web. Bisa Untuk Semua Jenis Device. Akun Sharing dari kami (Garansi 10 Bulan)",
+          "image": "https://macstoredigital.id/img/adobelightroom.png",
+          "whatsappText": "Adobe Lightroom (Web Only) Sharing 1 Tahun, Ready Kak?",
+          "isBestSeller": false
+        },
+        {
+          "name": "Adobe Lightroom (Mobile IOS & Android) Sharing 1 Tahun",
+          "price": "Rp39.000",
+          "originalPrice": "Rp69.000",
+          "description": "Akses IOS & Android. Akun Sharing dari kami (Garansi 10 Bulan)",
+          "image": "https://macstoredigital.id/img/adobelightroom.png",
+          "whatsappText": "Adobe Lightroom (Mobile IOS & Android) Sharing 1 Tahun, Ready Kak?",
+          "isBestSeller": false
+        },
+        {
+          "name": "Figma Pro 24 Bulan",
+          "price": "Rp99.000",
+          "originalPrice": "Rp179.000",
+          "description": "Akun dari kami (Garansi 12 Bulan)",
+          "image": "https://macstoredigital.id/img/figma.png",
+          "whatsappText": "Figma Pro 24 Bulan, Ready Kak?",
+          "isBestSeller": false
+        },
+        {
+          "name": "Picsart Private 1 Bulan",
+          "price": "Rp19.000",
+          "originalPrice": "Rp34.000",
+          "description": "Akun Private dari kami (Garansi 25 Hari)",
+          "image": "https://macstoredigital.id/img/picsart.png",
+          "whatsappText": "Picsart Private 1 Bulan, Ready Kak?",
+          "isBestSeller": false
+        },
+        {
+          "name": "Polarr Sharing 12 Bulan",
+          "price": "Rp29.000",
+          "originalPrice": "Rp49.000",
+          "description": "Akun Sharing dari kami (Garansi 6 Bulan)",
+          "image": "https://macstoredigital.id/img/polarr.png",
+          "whatsappText": "Polarr Sharing 12 Bulan, Ready Kak?",
+          "isBestSeller": false
+        },
+        {
+          "name": "Dazzcam Lifetime (Selamanya) (IOS Only)",
+          "price": "Rp29.000",
+          "originalPrice": "Rp49.000",
+          "description": "Akun Sharing dari kami (Garansi 6 Bulan)",
+          "image": "https://macstoredigital.id/img/dazzcam.png",
+          "whatsappText": "Dazzcam Lifetime (Selamanya) (IOS Only), Ready Kak?",
+          "isBestSeller": false
+        },
+        {
+          "name": "Oldroll Lifetime (Selamanya) (Android Only)",
+          "price": "Rp19.000",
+          "originalPrice": "Rp34.000",
+          "description": "Akun Sharing dari kami (Garansi 6 Bulan)",
+          "image": "https://macstoredigital.id/img/oldroll.png",
+          "whatsappText": "Oldroll Lifetime (Selamanya) (Android Only), Ready Kak?",
+          "isBestSeller": false
+        },
+        {
+          "name": "VSCO Sharing 1 Bulan",
+          "price": "Rp19.000",
+          "originalPrice": "Rp34.000",
+          "description": "Akun Sharing dari kami (Garansi 25 Hari) (Konfirmasi Device Yang Digunakan ke Admin)",
+          "image": "https://macstoredigital.id/img/vsco.png",
+          "whatsappText": "VSCO Sharing 1 Bulan, Ready Kak?",
+          "isBestSeller": false
+        },
+        {
+          "name": "Camscanner 1 Bulan",
+          "price": "Rp19.000",
+          "originalPrice": "Rp34.000",
+          "description": "Akun Private dari kami (Garansi 25 Hari) (Butuh 12 Bulan? Tanya Admin)",
+          "image": "https://macstoredigital.id/img/camscanner.png",
+          "whatsappText": "Camscanner 1 Bulan, Ready Kak?",
+          "isBestSeller": false
+        },
+        {
+          "name": "Meitu Sharing 1 Bulan",
+          "price": "Rp24.000",
+          "originalPrice": "Rp44.000",
+          "description": "Akun Sharing dari kami (Garansi 25 Hari)",
+          "image": "https://macstoredigital.id/img/meitu.png",
+          "whatsappText": "Meitu Sharing 1 Bulan, Ready Kak?",
+          "isBestSeller": false
+        },
+        {
+          "name": "IBIS PAINT (Android Only) Sharing 1 Bulan",
+          "price": "Rp19.000",
+          "originalPrice": "Rp34.000",
+          "description": "Akun Sharing dari kami (Garansi 25 Hari)",
+          "image": "https://macstoredigital.id/img/ibis.png",
+          "whatsappText": "IBIS PAINT (Android Only) Sharing 1 Bulan, Ready Kak?",
+          "isBestSeller": false
+        }
+      ]
+    },
+    {
+      "id": "ai",
+      "title": "AI Tools",
+      "icon": "brain",
+      "products": [
+        {
+          "name": "ChatGPT Pro Sharing 1 Bulan",
+          "price": "Rp19.000",
+          "originalPrice": "Rp34.000",
+          "description": "AI terpintar: GPT-4o, DALL-E 3, voice mode, analisis data, unlimited messages (Garansi 25 Hari)",
+          "image": "https://macstoredigital.id/img/chatgpt.png",
+          "whatsappText": "ChatGPT Pro Sharing 1 Bulan, Ready Kak?",
+          "isBestSeller": false
+        },
+        {
+          "name": "ChatGPT Pro Private 1 Bulan",
+          "price": "Rp29.000",
+          "originalPrice": "Rp49.000",
+          "description": "AI terpintar: GPT-4o, DALL-E 3, voice mode, analisis data. Akun Private pribadi (Garansi 1 Bulan)",
+          "image": "https://macstoredigital.id/img/chatgpt.png",
+          "whatsappText": "ChatGPT Pro Private 1 Bulan, Ready Kak?",
+          "isBestSeller": true
+        },
+        {
+          "name": "Gemini Pro 1 Tahun",
+          "price": "Rp49.000",
+          "originalPrice": "Rp99.000",
+          "description": "Menggunakan akun pembeli dengan benefit storage 2 TB, Gemini Pro (VEO3), Gemini in (Gmail, Docs, Sheet). (Garansi 11 Bulan)",
+          "image": "https://macstoredigital.id/img/gemini.png",
+          "whatsappText": "Gemini Pro 1 Tahun, Ready Kak?",
+          "isBestSeller": true
+        },
+        {
+          "name": "Perplexity Pro Private 1 Bulan",
+          "price": "Rp29.000",
+          "originalPrice": "Rp49.000",
+          "description": "Akun private (Garansi 25 Bulan)",
+          "image": "https://macstoredigital.id/img/perplexity.png",
+          "whatsappText": "Perplexity Pro Private 1 Bulan, Ready Kak?",
+          "isBestSeller": false
+        },
+        {
+          "name": "DeepL Sharing 1 Bulan",
+          "price": "Rp24.000",
+          "originalPrice": "Rp44.000",
+          "description": "Akun sharing (Garansi 25 Hari)",
+          "image": "https://macstoredigital.id/img/deepl.png",
+          "whatsappText": "DeepL Sharing 1 Bulan, Ready Kak?",
+          "isBestSeller": false
+        },
+        {
+          "name": "Grammarly Sharing 1 Bulan",
+          "price": "Rp29.000",
+          "originalPrice": "Rp49.000",
+          "description": "Akun sharing (Garansi 25 Hari)",
+          "image": "https://macstoredigital.id/img/grammarly.png",
+          "whatsappText": "Grammarly Sharing 1 Bulan, Ready Kak?",
+          "isBestSeller": false
+        },
+        {
+          "name": "Jasa Generate SUNO AI Versi 4.5",
+          "price": "Rp6.000",
+          "description": "Jasa generate SUNO AI v4.5 | Harga persekali generate | Kirimkan lirik lagumu Beserta stylenya via chat | Min Order 10 | Bebas copyright. (No Garansi)",
+          "image": "https://macstoredigital.id/img/suno.png",
+          "whatsappText": "Jasa Generate SUNO AI Versi 4.5, Ready Kak?",
+          "isBestSeller": false
+        }
+      ]
+    },
+    {
+      "id": "streaming",
+      "title": "Streaming",
+      "icon": "play",
+      "products": [
+        {
+          "name": "Netflix 1 Device Only 1 Bulan",
+          "price": "Rp29.000",
+          "originalPrice": "Rp59.000",
+          "description": "Baca S&K Saat Pesanan di kirimkan (Garansi 25 Bulan)",
+          "image": "https://macstoredigital.id/img/netflix.png",
+          "whatsappText": "Netflix Semi Private 1 Bulan, Ready Kak?",
+          "isBestSeller": true
+        },
+        {
+          "name": "Spotify Premium (Android / Windows) Private 1 Bulan",
+          "price": "Rp19.000",
+          "originalPrice": "Rp29.000",
+          "description": "Akun private (Garansi 25 Hari)",
+          "image": "https://macstoredigital.id/img/spotify.png",
+          "whatsappText": "Spotify Premium Private 1 Bulan, Ready Kak?",
+          "isBestSeller": true
+        },
+        {
+          "name": "Spotify Premium (iOS / Mac OS) Private 1 Bulan",
+          "price": "Rp26.000",
+          "originalPrice": "Rp44.000",
+          "description": "Akun private (Garansi 25 Hari)",
+          "image": "https://macstoredigital.id/img/spotify.png",
+          "whatsappText": "Spotify Premium Private 2 Bulan, Ready Kak?",
+          "isBestSeller": false
+        },
+        {
+          "name": "Youtube Premium Private 1 Bulan",
+          "price": "Rp5.000",
+          "originalPrice": "Rp14.000",
+          "description": "Syarat akun gmail belum pernah mendaftarkan youtube premium, jika sudah pernah maksimal 1 tahun yang lalu. (Garansi 25 Hari)",
+          "image": "https://macstoredigital.id/img/youtube.png",
+          "whatsappText": "Youtube Premium Private 1 Bulan, Ready Kak?",
+          "isBestSeller": true
+        },
+        {
+          "name": "Youtube Premium Private (Akun Baru) 1 Bulan",
+          "price": "Rp9.000",
+          "originalPrice": "Rp19.000",
+          "description": "Akun baru dari kami tinggal login gmail & siap pakai (Garansi 25 Hari)",
+          "image": "https://macstoredigital.id/img/youtube.png",
+          "whatsappText": "Youtube Premium Private (Akun Baru) 1 Bulan, Ready Kak?",
+          "isBestSeller": false
+        },
+        {
+          "name": "Youtube Premium Private (Akun Baru) 3 Bulan",
+          "price": "Rp29.000",
+          "originalPrice": "Rp59.000",
+          "description": "Akun baru dari kami tinggal login gmail & siap pakai (Garansi 85 Hari)",
+          "image": "https://macstoredigital.id/img/youtube.png",
+          "whatsappText": "Youtube Premium Private (Akun Baru) 3 Bulan, Ready Kak?",
+          "isBestSeller": true
+        },
+        {
+          "name": "Youtube Premium Private (Akun Baru) 12 Bulan",
+          "price": "Rp100.000",
+          "originalPrice": "Rp300.000",
+          "description": "Akun baru dari kami tinggal login gmail & siap pakai (Garansi 85 Hari)",
+          "image": "https://macstoredigital.id/img/youtube.png",
+          "whatsappText": "Youtube Premium Private (Akun Baru) 3 Bulan, Ready Kak?",
+          "isBestSeller": true
+        },
+        {
+          "name": "Vidio Platinum (TV Only) Private 1 Tahun",
+          "price": "Rp39.000",
+          "originalPrice": "Rp89.000",
+          "description": "Akun private dari kami | Login hanya untuk di TV (Garansi 11 Bulan)",
+          "image": "https://macstoredigital.id/img/vidio.png",
+          "whatsappText": "Vidio Platinum (TV Only) Private 1 Tahun, Ready Kak?",
+          "isBestSeller": true
+        },
+        {
+          "name": "Vidio Platinum (All Device) Sharing 1 Bulan",
+          "price": "Rp39.000",
+          "originalPrice": "Rp69.000",
+          "description": "Akun sharing dari kami | Bisa login untuk semua jenis device (Garansi 25 Hari)",
+          "image": "https://macstoredigital.id/img/vidio.png",
+          "whatsappText": "Vidio Platinum (All Device) Sharing 1 Bulan, Ready Kak?",
+          "isBestSeller": false
+        },
+        {
+          "name": "Vidio Platinum (Mobile Only) Sharing 1 Bulan",
+          "price": "Rp25.000",
+          "originalPrice": "Rp59.000",
+          "description": "Akun sharing dari kami | Login hanya untuk Mobile / HaPe (Garansi 25 Hari)",
+          "image": "https://macstoredigital.id/img/vidio.png",
+          "whatsappText": "Vidio Platinum (Mobile Only) Sharing 1 Bulan, Ready Kak?",
+          "isBestSeller": true
+        },
+        {
+          "name": "Disney+ Hotstar Sharing 1 Bulan",
+          "price": "Rp29.000",
+          "originalPrice": "Rp49.000",
+          "description": "Akun sharing dari kami | Login via OTP nomor dari kami (Garansi 28 Hari)",
+          "image": "https://macstoredigital.id/img/disney.png",
+          "whatsappText": "Disney+ Hotstar Sharing 1 Bulan, Ready Kak?",
+          "isBestSeller": false
+        },
+        {
+          "name": "Viu Premium Private Lifetime (Selamanya)",
+          "price": "Rp19.000",
+          "originalPrice": "Rp34.000",
+          "description": "Akun private (Garansi 10 Bulan)",
+          "image": "https://macstoredigital.id/img/viu.png",
+          "whatsappText": "Viu Premium Private 12 Bulan, Ready Kak?",
+          "isBestSeller": false
+        },
+        {
+          "name": "Bstation Premium Sharing 12 Bulan",
+          "price": "Rp29.000",
+          "originalPrice": "Rp49.000",
+          "description": "Akun Sharing (Garansi 10 Bulan)",
+          "image": "https://macstoredigital.id/img/bstation.png",
+          "whatsappText": "Bstation Premium Sharing 12 Bulan, Ready Kak?",
+          "isBestSeller": false
+        },
+        {
+          "name": "Crunchyroll Premium Sharing 12 Bulan",
+          "price": "Rp29.000",
+          "originalPrice": "Rp49.000",
+          "description": "Akun Sharing (Garansi 10 Bulan)",
+          "image": "https://macstoredigital.id/img/crunchyroll.png",
+          "whatsappText": "Crunchyroll Premium Sharing 12 Bulan, Ready Kak?",
+          "isBestSeller": false
+        },
+        {
+          "name": "Amazon Prime Video Sharing 1 Bulan",
+          "price": "Rp19.000",
+          "originalPrice": "Rp34.000",
+          "description": "Akun sharing (Garansi 25 Hari)",
+          "image": "https://macstoredigital.id/img/amazon.png",
+          "whatsappText": "Amazon Prime Video Sharing 1 Bulan, Ready Kak?",
+          "isBestSeller": false
+        },
+        {
+          "name": "WeTV VIP Sharing 1 Bulan",
+          "price": "Rp19.000",
+          "originalPrice": "Rp34.000",
+          "description": "Akun sharing dari kami | Wajib Cantumkan Device & Lokasi saat order (Garansi 25 Hari)",
+          "image": "https://macstoredigital.id/img/wetv.png",
+          "whatsappText": "WeTV VIP Sharing 1 Bulan, Ready Kak?",
+          "isBestSeller": false
+        },
+        {
+          "name": "iQIYI VIP Premium Sharing 1 Bulan",
+          "price": "Rp19.000",
+          "originalPrice": "Rp34.000",
+          "description": "Akun sharing (Garansi 25 Hari)",
+          "image": "https://macstoredigital.id/img/iqiyi.png",
+          "whatsappText": "iQIYI VIP Premium Sharing 1 Bulan, Ready Kak?",
+          "isBestSeller": false
+        },
+        {
+          "name": "Drakor ID Premium Sharing 1 Bulan",
+          "price": "Rp19.000",
+          "originalPrice": "Rp34.000",
+          "description": "Akun sharing (Garansi 25 Hari)",
+          "image": "https://macstoredigital.id/img/drakor.png",
+          "whatsappText": "Drakor ID Premium Sharing 1 Bulan, Ready Kak?",
+          "isBestSeller": false
+        },
+        {
+          "name": "YOUKU VIP Sharing 1 Bulan",
+          "price": "Rp19.000",
+          "originalPrice": "Rp34.000",
+          "description": "Akun sharing (Garansi 28 Hari)",
+          "image": "https://macstoredigital.id/img/youku.png",
+          "whatsappText": "YOUKU VIP Sharing 1 Bulan, Ready Kak?",
+          "isBestSeller": false
+        },
+        {
+          "name": "LOKLOK Premium Sharing 1 Bulan",
+          "price": "Rp24.000",
+          "originalPrice": "Rp44.000",
+          "description": "Akun sharing (Garansi 25 Hari)",
+          "image": "https://macstoredigital.id/img/loklok.png",
+          "whatsappText": "LOKLOK Premium Sharing 1 Bulan, Ready Kak?",
+          "isBestSeller": false
+        },
+        {
+          "name": "DramaBox Premium Sharing 1 Bulan",
+          "price": "Rp19.000",
+          "originalPrice": "Rp34.000",
+          "description": "Akun sharing (Garansi 25 Hari)",
+          "image": "https://macstoredigital.id/img/dramabox.png",
+          "whatsappText": "DramaBox Premium Sharing 1 Bulan, Ready Kak?",
+          "isBestSeller": false
+        },
+        {
+          "name": "HBO Max Ultimate Sharing 1 Bulan",
+          "price": "Rp25.000",
+          "originalPrice": "Rp44.000",
+          "description": "Akun sharing (Garansi 25 Hari)",
+          "image": "https://macstoredigital.id/img/hbo.png",
+          "whatsappText": "HBO Max Ultimate Sharing 1 Bulan, Ready Kak?",
+          "isBestSeller": false
+        }
+      ]
+    },
+    {
+      "id": "storage",
+      "title": "Paket Storage",
+      "icon": "harddrive",
+      "products": [
+        {
+          "name": "Google Drive 1TB Private Lifetime (Selamanya)",
+          "price": "Rp99.000",
+          "originalPrice": "Rp179.000",
+          "description": "Akun private dari kami. Digunakan dengan bijak",
+          "image": "https://macstoredigital.id/img/google-drive.png",
+          "whatsappText": "Google Drive 1TB Private Lifetime (Selamanya), Ready Kak?",
+          "isBestSeller": false
+        },
+        {
+          "name": "Google Storage 2TB 1 Tahun",
+          "price": "Rp49.000",
+          "originalPrice": "Rp99.000",
+          "description": "Menggunakan akun dari pembeli. Benefit: storage 2 TB, Gemini Pro, Google Meet 24 jam, dan lainnya (Garansi 10 Bulan)",
+          "image": "https://macstoredigital.id/img/google-drive.png",
+          "whatsappText": "Google Storage 2TB 1 Tahun, Ready Kak?",
+          "isBestSeller": false
+        }
+      ]
+    },
+    {
+      "id": "ecourse",
+      "title": "Ecourse",
+      "icon": "graduationcap",
+      "products": [
+        {
+          "name": "Complete Financial Freedom & Invest - Ternak Uang Original Episode 1 - 29",
+          "price": "Rp9.500",
+          "description": "BONUS: Sekolah Jalanan By Timothy Ronald - Rahasia Jualan Untuk Omset Terbaik.",
+          "image": "https://macstoredigital.id/img/ebook1.png",
+          "whatsappText": "Complete Financial Freedom & Invest - Ternak Uang Original Episode 1 - 29, Ready Kak?",
+          "isBestSeller": false
+        },
+        {
+          "name": "Kelas Jago Capcut - Belajar Mahir Editing Video dengan Aplikasi Capcut Terlengkap",
+          "price": "Rp4.000",
+          "description": "BONUS: JAGO CANVA DALAM 5 HARI - Mahir Buat Konten Apapun Menggunakan Canva",
+          "image": "https://macstoredigital.id/img/ebook2.png",
+          "whatsappText": "Kelas Jago Capcut - Belajar Mahir Editing Video dengan Aplikasi Capcut Terlengkap, Ready Kak?",
+          "isBestSeller": false
+        },
+        {
+          "name": "TIKTOK AFFILIATE UNTUK PEMULA TANPA JUTAAN FOLLOWER",
+          "price": "Rp6.000",
+          "description": "BONUS: Cara Mudah Fyp Tiktok",
+          "image": "https://macstoredigital.id/img/ebook3.png",
+          "whatsappText": "TIKTOK AFFILIATE UNTUK PEMULA TANPA JUTAAN FOLLOWER, Ready Kak?",
+          "isBestSeller": false
+        },
+        {
+          "name": "ECOURSE - KELAS MASTER TT ADS Cuan Berlipat Ganda Hingga Jutaan Dari Ngiklan (Materi Video Pembelajaran)",
+          "price": "Rp5.000",
+          "description": "Ada 11 Materi yang dijelaskan berupa video",
+          "image": "https://macstoredigital.id/img/ebook4.png",
+          "whatsappText": "ECOURSE - KELAS MASTER TT ADS Cuan Berlipat Ganda Hingga Jutaan Dari Ngiklan (Materi Video Pembelajaran), Ready Kak?",
+          "isBestSeller": false
+        },
+        {
+          "name": "1000+ GPT Prompt - Mengungkap Rahasia Kekuatan AI untuk Para Konten Kreator",
+          "price": "Rp2.000",
+          "description": "Miliki kekuatan 1000+ prompt ChatGPT yang membuat anda bekerja lebih cepat, lebih cerdas, dan 10x lebih efisien.",
+          "image": "https://macstoredigital.id/img/ebook5.png",
+          "whatsappText": "1000+ GPT Prompt - Mengungkap Rahasia Kekuatan AI untuk Para Konten Kreator, Ready Kak?",
+          "isBestSeller": false
+        }
+      ]
+    },
+    {
+      "id": "lainnya",
+      "title": "Lain-Lain",
+      "icon": "layers",
+      "products": [
+        {
+          "name": "SCRIBD Private 1 Bulan",
+          "price": "Rp19.000",
+          "originalPrice": "Rp34.000",
+          "description": "Akun private (Garansi 1 Bulan)",
+          "image": "https://macstoredigital.id/img/scribd.png",
+          "whatsappText": "SCRIBD Private 1 Bulan, Ready Kak?",
+          "isBestSeller": false
+        },
+        {
+          "name": "GetContact Premium Private 1 Bulan",
+          "price": "Rp19.000",
+          "originalPrice": "Rp34.000",
+          "description": "Proses Menggunakan Nomor WhatsApp | Wajib standby untuk proses orderan (Garansi 20 Hari)",
+          "image": "https://macstoredigital.id/img/getcontact.png",
+          "whatsappText": "GetContact Premium Private 1 Bulan, Ready Kak?",
+          "isBestSeller": false
+        },
+        {
+          "name": "Duolingo Private 1 Bulan",
+          "price": "Rp19.000",
+          "originalPrice": "Rp34.000",
+          "description": "Akun private (Garansi 28 Hari)",
+          "image": "https://macstoredigital.id/img/duolingo.png",
+          "whatsappText": "Duolingo Private 1 Bulan, Ready Kak?",
+          "isBestSeller": false
+        },
+        {
+          "name": "Zoom Pro Private 14 Hari",
+          "price": "Rp19.000",
+          "originalPrice": "Rp34.000",
+          "description": "Akun private dari kami | 100 Peserta (Garansi 14 Hari)",
+          "image": "https://macstoredigital.id/img/zoom.png",
+          "whatsappText": "Zoom Pro Private 14 Hari, Ready Kak?",
+          "isBestSeller": false
+        },
+        {
+          "name": "Wattpad Sharing 12 Bulan",
+          "price": "Rp29.000",
+          "originalPrice": "Rp49.000",
+          "description": "Akun sharing (Garansi 11 Bulan)",
+          "image": "https://macstoredigital.id/img/wattpad.png",
+          "whatsappText": "Wattpad Sharing 12 Bulan, Ready Kak?",
+          "isBestSeller": false
+        },
+        {
+          "name": "Microsoft 365 Private 12 Bulan",
+          "price": "Rp59.000",
+          "originalPrice": "Rp99.000",
+          "description": "Akun private dari kami | Full akses Original: Word, Excel, Power Point, One Note, Outlook, Publisher, Access (Garansi 6 Bulan)",
+          "image": "https://macstoredigital.id/img/office365.png",
+          "whatsappText": "Microsoft 365 Private 12 Bulan, Ready Kak?",
+          "isBestSeller": false
+        },
+        {
+          "name": "Fizzo Sharing 1 Bulan",
+          "price": "Rp19.000",
+          "originalPrice": "Rp34.000",
+          "description": "Akun sharing (Garansi 28 Hari)",
+          "image": "https://macstoredigital.id/img/fizzo.png",
+          "whatsappText": "Fizzo Sharing 1 Bulan, Ready Kak?",
+          "isBestSeller": false
+        },
+        {
+          "name": "Surfshark VPN Private 3 Bulan",
+          "price": "Rp39.000",
+          "originalPrice": "Rp69.000",
+          "description": "Akun private (Garansi 3 Bulan)",
+          "image": "https://macstoredigital.id/img/surfshark.png",
+          "whatsappText": "Surfshark VPN Private 3 Bulan, Ready Kak?",
+          "isBestSeller": false
+        },
+        {
+          "name": "ExpressVPN Private 1 Bulan",
+          "price": "Rp19.000",
+          "originalPrice": "Rp34.000",
+          "description": "Akun private (Garansi 28 Hari)",
+          "image": "https://macstoredigital.id/img/express.png",
+          "whatsappText": "ExpressVPN Private 1 Bulan, Ready Kak?",
+          "isBestSeller": false
+        },
+        {
+          "name": "HMA VPN Private 1 Bulan",
+          "price": "Rp19.000",
+          "originalPrice": "Rp34.000",
+          "description": "Akun private (Garansi 28 Hari)",
+          "image": "https://macstoredigital.id/img/hma.png",
+          "whatsappText": "HMA VPN Private 1 Bulan, Ready Kak?",
+          "isBestSeller": false
+        }
+      ]
+    }
+  ]
+}
