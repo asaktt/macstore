@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Macstore Digital - Reseller Official</title>
+    <!-- Tailwind CSS CDN --><script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome for Icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f8fafc; /* Lighter background */
+            color: #333;
+        }
+        .container {
+            max-width: 1100px;
+            margin: auto;
+            padding: 2rem;
+        }
+        .card {
+            background-color: #ffffff;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            padding: 2.5rem;
+            margin-bottom: 2.5rem;
+            transition: transform 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        .section-title {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #1e3a8a; /* Darker blue */
+            margin-bottom: 2rem;
+            border-bottom: 3px solid #bfdbfe; /* Accent bottom border */
+            padding-bottom: 1rem;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.75rem;
+        }
+        .product-category-title {
+            font-size: 1.6rem;
+            font-weight: 600;
+            color: #2563eb; /* Primary blue */
+            margin-top: 3rem;
+            margin-bottom: 1.5rem;
+            background-color: #eff6ff;
+            padding: 1rem 2rem;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+        .product-item {
+            background-color: #ffffff;
+            border-radius: 12px;
+            border: 1px solid #e5e7eb;
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            overflow: hidden;
+        }
+        .product-item:hover {
+            border-color: #93c5fd;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transform: translateY(-5px);
+        }
+        .product-item img {
+            width: 100%;
+            aspect-ratio: 16/9;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+        .product-item:hover img {
+            transform: scale(1.05);
+        }
+        .product-content {
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+        .product-name {
+            font-weight: 600;
+            color: #1f2937;
+            font-size: 1.1rem;
+            line-height: 1.4;
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+        }
+        .product-description {
+            color: #6b7280;
+            font-size: 0.9rem;
+            margin-top: 0.4rem;
+            flex-grow: 1;
+        }
+        .product-footer {
+            margin-top: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .product-price {
+            font-weight: 700;
+            color: #ef4444;
+            font-size: 1.25rem;
+        }
+        .buy-button {
+            background-color: #25d366;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.2s ease;
+        }
+        .buy-button:hover {
+            background-color: #1da851;
+            transform: scale(1.05);
+        }
+        .note {
+            background-color: #fefce8;
+            border-left: 5px solid #facc15;
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin-top: 2rem;
+            color: #333;
+            line-height: 1.6;
+        }
+        .link-button {
+            display: inline-block;
+            background-color: #2563eb;
+            color: white;
+            padding: 0.9rem 2rem;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            margin-top: 1rem;
+            box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);
+        }
+        .link-button:hover {
+            background-color: #1d4ed8;
+            transform: translateY(-2px);
+        }
+        .header-main {
+            background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+            border-bottom-left-radius: 30px;
+            border-bottom-right-radius: 30px;
+            margin-bottom: 3rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        }
+        .header-main h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+        .header-main p {
+            font-size: 1.25rem;
+            font-weight: 300;
+            max-width: 800px;
+            margin: 1rem auto;
+            line-height: 1.7;
+        }
+        .footer-main {
+            background-color: #1e3a8a;
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+            margin-top: 4rem;
+            border-top-left-radius: 30px;
+            border-top-right-radius: 30px;
+        }
+        .whatsapp-button {
+            background-color: #25d366;
+            color: white;
+            padding: 1rem 2.5rem;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            margin-top: 2rem;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+            font-size: 1.1rem;
+        }
+        .whatsapp-button:hover {
+            background-color: #1da851;
+            transform: translateY(-2px);
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            .header-main { padding: 3rem 1rem; }
+            .header-main h1 { font-size: 2rem; }
+            .header-main p { font-size: 1rem; }
+            .section-title { font-size: 1.5rem; }
+            .product-category-title { font-size: 1.2rem; padding: 0.8rem 1.2rem; }
+            .container { padding: 1rem; }
+            .card { padding: 1.5rem; margin-bottom: 1.5rem; }
+            .product-grid { grid-template-columns: 1fr; gap: 1rem; }
+            .product-content { padding: 1rem; }
+            .product-name { font-size: 0.95rem; }
+            .product-description { font-size: 0.8rem; }
+            .product-price { font-size: 1.1rem; }
+            .buy-button { padding: 0.4rem 0.8rem; font-size: 0.8rem; }
+        }
+        @media (max-width: 360px) {
+            .header-main h1 { font-size: 1.8rem; }
+            .whatsapp-button { padding: 0.8rem 1.5rem; font-size: 1rem; }
+        }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "vite": "https://aistudiocdn.com/vite@^7.2.2",
+    "@vitejs/plugin-react": "https://aistudiocdn.com/@vitejs/plugin-react@^5.1.0"
+  }
+}
+</script>
+</head>
+<body class="bg-slate-50">
+
+    <header class="header-main">
+        <div class="max-w-6xl mx-auto">
+            <h1 class="text-4xl md:text-5xl font-extrabold mb-4" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.2);">Selamat Datang Reseller Macstore Digital!</h1>
+            <p class="text-lg md:text-xl font-light max-w-3xl mx-auto leading-relaxed text-indigo-200">
+                Sumber terpercaya Anda untuk update stok, harga, dan panduan lengkap.
+            </p>
+            <div class="mt-6 inline-block bg-yellow-400 text-slate-900 font-bold px-6 py-2 rounded-full text-base shadow-lg">
+                <i class="fas fa-info-circle mr-2"></i> BUDAYAKAN MEMBACA
+            </div>
+            <div>
+                <a href="https://api.whatsapp.com/send?phone=6283853289396&text=Halo Admin Macstore Digital, saya ingin bergabung sebagai reseller. JOIN RESS + Minimal Sekali Order Harga Normal!" target="_blank" rel="noopener noreferrer" class="whatsapp-button">
+                    <i class="fab fa-whatsapp"></i> Gabung & Support Reseller
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <section class="card">
+            <h2 class="section-title"><i class="fas fa-file-contract text-indigo-500"></i> Syarat & Ketentuan</h2>
+            <ul class="list-none pl-2 space-y-3 text-base text-slate-600 leading-relaxed">
+                <li><i class="fas fa-check-circle text-indigo-500 mr-2"></i>Penjelasan detail setiap produk tersedia di website ini.</li>
+                <li><i class="fas fa-check-circle text-indigo-500 mr-2"></i>Update harga akan selalu tersedia secara berkala.</li>
+                <li><i class="fas fa-check-circle text-indigo-500 mr-2"></i><strong>Bulk Order</strong> minimal Rp 170.000,- akan mendapatkan <strong>diskon 5%</strong>.</li>
+                <li><i class="fas fa-check-circle text-indigo-500 mr-2"></i>Mohon tidak melakukan <strong>Rush Order</strong>. Admin adalah manusia, bukan robot, jadi harap bersabar 🙏.</li>
+                <li><i class="fas fa-check-circle text-indigo-500 mr-2"></i>Jika stok habis, uang Anda akan kami <strong>refund 100%</strong>.</li>
+                <li><i class="fas fa-check-circle text-indigo-500 mr-2"></i><strong class="text-red-600">PENTING UNTUK RESELLER:</strong> Saat melakukan order, <strong>wajib</strong> gunakan format: <i>"Hi, Saya Ress Mac"</i> untuk memastikan Anda mendapatkan harga spesial reseller.</li>
+            </ul>
+            <p class="mt-8 text-base italic text-center text-slate-500 font-medium">
+                "📦 Kami memberikan peluang emas bagi yang mengerti untuk mengambil kesempatan ini."
+            </p>
+            <div class="text-center mt-6">
+                <a href="http://macstoredigital.id/" target="_blank" rel="noopener noreferrer" class="link-button">
+                    Kunjungi Website Utama
+                </a>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2 class="section-title"><i class="fas fa-shield-alt text-indigo-500"></i> Syarat & Ketentuan Lengkap & Kebijakan Privasi</h2>
+            <p class="text-center text-slate-600 leading-relaxed mb-6">
+                Dengan menjadi reseller atau pelanggan Macstore Digital, Anda dianggap telah membaca, memahami, dan menyetujui semua syarat, ketentuan, serta kebijakan privasi yang berlaku.
+            </p>
+            <div class="text-center">
+                <a href="https://macstoredigital.id/syarat&ketentuan&kebijakan/" target="_blank" rel="noopener noreferrer" class="link-button">
+                    Baca Selengkapnya Di Sini
+                </a>
+            </div>
+        </section>
+        
+        <!-- PROMO SPESIAL -->
+        <section class="card">
+            <h2 class="section-title"><i class="fas fa-tags text-indigo-500"></i> PROMO SPESIAL</h2>
+            <div class="product-category-title"><i class="fas fa-box-open"></i> Paket Promo Eksklusif</div>
+            <div class="product-grid mt-6">
+                
+                <div class="product-item">
+                    <img src="https://macstoredigital.id/img/paket-bundle.png" alt="Paket Bundle Capcut Pro Private 12 Bulan GRATIS Canva Pro 12 Bulan & Youtube Premium 1 Bulan" loading="lazy">
+                    <div class="product-content">
+                        <div>
+                            <h3 class="product-name">Paket Bundle Capcut Pro Private 12 Bulan GRATIS Canva Pro 12 Bulan & Youtube Premium 1 Bulan</h3>
+                            <p class="product-description">Promo Terbatas, jika produk masih tampil berarti masih tersedia! (Garansi 12 Bulan)</p>
+                        </div>
+                        <div class="product-footer">
+                            <span class="product-price">Rp 149.000</span>
+                            <a href="https://api.whatsapp.com/send?phone=6283853289396&text=Hi%2C%20Saya%20Ress%20Mac%22%20saya%20beli%20produk%20Paket%20Bundle%20Capcut%20Pro%20Private%2012%20Bulan%20GRATIS%20Canva%20Pro%2012%20Bulan%20%26%20Youtube%20Premium%201%20Bulan" target="_blank" rel="noopener noreferrer" class="buy-button"><i class="fab fa-whatsapp"></i> Beli</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-item">
+                    <img src="https://macstoredigital.id/img/paket-bundle.png" alt="Paket Bundle Capcut Pro Private 6 Bulan GRATIS Canva Pro 6 Bulan & Youtube Premium 1 Bulan" loading="lazy">
+                    <div class="product-content">
+                        <div>
+                            <h3 class="product-name">Paket Bundle Capcut Pro Private 6 Bulan GRATIS Canva Pro 6 Bulan & Youtube Premium 1 Bulan</h3>
+                            <p class="product-description">Promo Terbatas, jika produk masih tampil berarti masih tersedia! (Garansi 6 Bulan)</p>
+                        </div>
+                        <div class="product-footer">
+                            <span class="product-price">Rp 79.000</span>
+                            <a href="https://api.whatsapp.com/send?phone=6283853289396&text=Hi%2C%20Saya%20Ress%20Mac%22%20saya%20beli%20produk%20Paket%20Bundle%20Capcut%20Pro%20Private%206%20Bulan%20GRATIS%20Canva%20Pro%206%20Bulan%20%26%20Youtube%20Premium%201%20Bulan" target="_blank" rel="noopener noreferrer" class="buy-button"><i class="fab fa-whatsapp"></i> Beli</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-item">
+                    <img src="https://macstoredigital.id/img/paket-bundle.png" alt="Paket Bundle Capcut Pro Private 4 Bulan GRATIS Canva Pro 4 Bulan & Youtube Premium 1 Bulan" loading="lazy">
+                    <div class="product-content">
+                        <div>
+                            <h3 class="product-name">Paket Bundle Capcut Pro Private 4 Bulan GRATIS Canva Pro 4 Bulan & Youtube Premium 1 Bulan</h3>
+                            <p class="product-description">Promo Terbatas, jika produk masih tampil berarti masih tersedia! (Garansi 4 Bulan)</p>
+                        </div>
+                        <div class="product-footer">
+                            <span class="product-price">Rp 49.000</span>
+                            <a href="https://api.whatsapp.com/send?phone=6283853289396&text=Hi%2C%20Saya%20Ress%20Mac%22%20saya%20beli%20produk%20Paket%20Bundle%20Capcut%20Pro%20Private%204%20Bulan%20GRATIS%20Canva%20Pro%204%20Bulan%20%26%20Youtube%20Premium%201%20Bulan" target="_blank" rel="noopener noreferrer" class="buy-button"><i class="fab fa-whatsapp"></i> Beli</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-item">
+                    <img src="https://macstoredigital.id/img/paket-bundle1.png" alt="Paket Bundle CapCut Pro Private 1 Bulan & Canva Pro 1 Bulan" loading="lazy">
+                    <div class="product-content">
+                        <div>
+                            <h3 class="product-name">Paket Bundle CapCut Pro Private 1 Bulan & Canva Pro 1 Bulan</h3>
+                            <p class="product-description">Promo Terbatas, jika produk masih tampil berarti masih tersedia! (Garansi 1 Bulan)</p>
+                        </div>
+                        <div class="product-footer">
+                            <span class="product-price">Rp 19.000</span>
+                            <a href="https://api.whatsapp.com/send?phone=6283853289396&text=Hi%2C%20Saya%20Ress%20Mac%22%20saya%20beli%20produk%20Paket%20Bundle%20CapCut%20Pro%20Private%201%20Bulan%20%26%20Canva%20Pro%201%20Bulan" target="_blank" rel="noopener noreferrer" class="buy-button"><i class="fab fa-whatsapp"></i> Beli</a>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="note">
+                <p class="font-semibold text-lg mb-3 text-gray-800">📌 Penting untuk Promo Spesial:</p>
+                <ul class="list-disc pl-5 space-y-2 text-sm text-gray-700">
+                    <li><strong class="font-semibold text-slate-900">Canva:</strong> Kirimkan email, kami akan kirimkan link untuk join tim agar Anda bisa akses Canva Pro.</li>
+                    <li><strong class="font-semibold text-slate-900">CapCut:</strong> Akun disediakan oleh kami dan bisa digunakan sampai <strong class="font-semibold text-slate-900">3 device</strong> per akun.</li>
+                    <li><strong class="font-semibold text-slate-900">Youtube:</strong> Pastikan akun Gmail Anda belum pernah mendaftarkan YouTube Premium, atau jika sudah, minimal 12 bulan yang lalu, agar bisa masuk menjadi family dan bisa akses YouTube Premium.</li>
+                </ul>
+                <p class="font-semibold text-lg mt-5 mb-2 text-gray-800">📖 Panduan Lengkap:</p>
+                <ul class="list-disc pl-5 space-y-2 text-sm text-gray-700">
+                    <li>Cara Login CapCut Pro: <a href="https://www.notion.so/Cara-Login-CapCut-Pro-Private-237b68103c0880328218fb5ff80468bf?source=copy_link" target="_blank" class="text-blue-600 hover:underline font-medium">Lihat Panduan di Notion</a></li>
+                    <li>Cara Gabung Canva Pro: <a href="https://www.notion.so/Cara-Masuk-Canva-Pro-237b68103c0880879199f036f6eb006c?source=copy_link" target="_blank" class="text-blue-600 hover:underline font-medium">Lihat Panduan di Notion</a></li>
+                    <li>Cara Pindahkan Desain Canva: <a href="https://www.youtube.com/watch?v=JSVAIo3a17s" target="_blank" class="text-blue-600 hover:underline font-medium">Tonton Video Tutorial (YouTube)</a></li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- DESAIN & EDITING -->
+        <section class="card">
+            <h2 class="section-title"><i class="fas fa-pencil-ruler text-indigo-500"></i> DESAIN & EDITING</h2>
+            <div class="product-category-title"><i class="fas fa-magic"></i> Alat & Aplikasi Desain & Editing</div>
+            <div class="product-grid mt-6">
+                <!-- Products will be generated here -->
+                <div class="product-item"><img src="https://macstoredigital.id/img/capcut.png" alt="CapCut Pro Private 1 Bulan" loading="lazy"><div class="product-content"><div><h3 class="product-name">CapCut Pro Private 1 Bulan</h3><p class="product-description">Akun Private dari kami &amp; bisa digunakan sampai 3 device (Garansi 1 Bulan)</p></div><div class="product-footer"><span class="product-price">Rp 19.000</span><a href="https://api.whatsapp.com/send?phone=6283853289396&text=Hi%2C%20Saya%20Ress%20Mac%22%20saya%20beli%20produk%20CapCut%20Pro%20Private%201%20Bulan" target="_blank" rel="noopener noreferrer" class="buy-button"><i class="fab fa-whatsapp"></i> Beli</a></div></div></div>
+                <div class="product-item"><img src="https://macstoredigital.id/img/canva.png" alt="Canva Pro 1 Bulan" loading="lazy"><div class="product-content"><div><h3 class="product-name">Canva Pro 1 Bulan</h3><p class="product-description">Menggunakan akun pembeli (Garansi 1 Bulan)</p></div><div class="product-footer"><span class="product-price">Rp 2.000</span><a href="https://api.whatsapp.com/send?phone=6283853289396&text=Hi%2C%20Saya%20Ress%20Mac%22%20saya%20beli%20produk%20Canva%20Pro%201%20Bulan" target="_blank" rel="noopener noreferrer" class="buy-button"><i class="fab fa-whatsapp"></i> Beli</a></div></div></div>
+                <div class="product-item"><img src="https://macstoredigital.id/img/canva.png" alt="Canva Pro 12 Bulan" loading="lazy"><div class="product-content"><div><h3 class="product-name">Canva Pro 12 Bulan</h3><p class="product-description">Menggunakan akun pembeli (Garansi 12 Bulan)</p></div><div class="product-footer"><span class="product-price">Rp 19.000</span><a href="https://api.whatsapp.com/send?phone=6283853289396&text=Hi%2C%20Saya%20Ress%20Mac%22%20saya%20beli%20produk%20Canva%20Pro%2012%20Bulan" target="_blank" rel="noopener noreferrer" class="buy-button"><i class="fab fa-whatsapp"></i> Beli</a></div></div></div>
+                <div class="product-item"><img src="https://macstoredigital.id/img/canva.png" alt="Canva Pro Lifetime (Selamanya)" loading="lazy"><div class="product-content"><div><h3 class="product-name">Canva Pro Lifetime (Selamanya)</h3><p class="product-description">Menggunakan akun pembeli (Garansi 2 Tahun)</p></div><div class="product-footer"><span class="product-price">Rp 29.000</span><a href="https://api.whatsapp.com/send?phone=6283853289396&text=Hi%2C%20Saya%20Ress%20Mac%22%20saya%20beli%20produk%20Canva%20Pro%20Lifetime%20(Selamanya)" target="_blank" rel="noopener noreferrer" class="buy-button"><i class="fab fa-whatsapp"></i> Beli</a></div></div></div>
+                <div class="product-item"><img src="https://macstoredigital.id/img/gemini.png" alt="Gemini Pro Private 1 Tahun" loading="lazy"><div class="product-content"><div><h3 class="product-name">Gemini Pro Private 1 Tahun</h3><p class="product-description">Menggunakan akun dari pembeli | Benefit: storage 2 TB (Google Drive, Google Foto, dll), Gemini Pro (VEO3), Gemini in (Gmail, Docs, Sheet), Google Meet 24 Jam NonStop, Google Calendar Premium, dll (Garansi 10 Bulan)</p></div><div class="product-footer"><span class="product-price">Rp 39.000</span><a href="https://api.whatsapp.com/send?phone=6283853289396&text=Hi%2C%20Saya%20Ress%20Mac%22%20saya%20beli%20produk%20Gemini%20Pro%20Private%201%20Tahun" target="_blank" rel="noopener noreferrer" class="buy-button"><i class="fab fa-whatsapp"></i> Beli</a></div></div></div>
+                <div class="product-item"><img src="https://macstoredigital.id/img/alightmotion.png" alt="Alight Motion Private 12 Bulan" loading="lazy"><div class="product-content"><div><h3 class="product-name">Alight Motion Private 12 Bulan</h3><p class="product-description">Akun Private dari kami &amp; bisa digunakan sampai 3 device (Garansi 1 Tahun)</p></div><div class="product-footer"><span class="product-price">Rp 14.000</span><a href="https://api.whatsapp.com/send?phone=6283853289396&text=Hi%2C%20Saya%20Ress%20Mac%22%20saya%20beli%20produk%20Alight%20Motion%20Private%2012%20Bulan" target="_blank" rel="noopener noreferrer" class="buy-button"><i class="fab fa-whatsapp"></i> Beli</a></div></div></div>
+                <div class="product-item"><img src="https://macstoredigital.id/img/remini.png" alt="Remini Private (Web Only) 1 Bulan" loading="lazy"><div class="product-content"><div><h3 class="product-name">Remini Private (Web Only) 1 Bulan</h3><p class="product-description">Akun Private dari kami (Garansi 28 Hari)</p></div><div class="product-footer"><span class="product-price">Rp 15.000</span><a href="https://api.whatsapp.com/send?phone=6283853289396&text=Hi%2C%20Saya%20Ress%20Mac%22%20saya%20beli%20produk%20Remini%20Private%20(Web%20Only)%201%20Bulan" target="_blank" rel="noopener noreferrer" class="buy-button"><i class="fab fa-whatsapp"></i> Beli</a></div></div></div>
+                <div class="product-item"><img src="https://macstoredigital.id/img/remini.png" alt="Remini Private (Mobile IOS & Android) 1 Bulan" loading="lazy"><div class="product-content"><div><h3 class="product-name">Remini Private (Mobile IOS & Android) 1 Bulan</h3><p class="product-description">Akun Private dari kami (Garansi 1 Tahun)</p></div><div class="product-footer"><span class="product-price">Rp 19.000</span><a href="https://api.whatsapp.com/send?phone=6283853289396&text=Hi%2C%20Saya%20Ress%20Mac%22%20saya%20beli%20produk%20Remini%20Private%20(Mobile%20IOS%20%26%20Android)%201%20Bulan" target="_blank" rel="noopener noreferrer" class="buy-button"><i class="fab fa-whatsapp"></i> Beli</a></div></div></div>
+                <div class="product-item"><img src="https://macstoredigital.id/img/adobelightroom.png" alt="Adobe Lightroom (Web Only) Sharing 1 Tahun" loading="lazy"><div class="product-content"><div><h3 class="product-name">Adobe Lightroom (Web Only) Sharing 1 Tahun</h3><p class="product-description">Akun Sharing dari kami (Garansi 10 Bulan)</p></div><div class="product-footer"><span class="product-price">Rp 19.000</span><a href="https://api.whatsapp.com/send?phone=6283853289396&text=Hi%2C%20Saya%20Ress%20Mac%22%20saya%20beli%20produk%20Adobe%20Lightroom%20(Web%20Only)%20Sharing%201%20Tahun" target="_blank" rel="noopener noreferrer" class="buy-button"><i class="fab fa-whatsapp"></i> Beli</a></div></div></div>
+                <div class="product-item"><img src="https://macstoredigital.id/img/adobelightroom.png" alt="Adobe Lightroom (Mobile IOS & Android) Sharing 1 Tahun" loading="lazy"><div class="product-content"><div><h3 class="product-name">Adobe Lightroom (Mobile IOS & Android) Sharing 1 Tahun</h3><p class="product-description">Akun Sharing dari kami (Garansi 10 Bulan)</p></div><div class="product-footer"><span class="product-price">Rp 29.000</span><a href="https://api.whatsapp.com/send?phone=6283853289396&text=Hi%2C%20Saya%20Ress%20Mac%22%20saya%20beli%20produk%20Adobe%20Lightroom%20(Mobile%20IOS%20%26%20Android)%20Sharing%201%20Tahun" target="_blank" rel="noopener noreferrer" class="buy-button"><i class="fab fa-whatsapp"></i> Beli</a></div></div></div>
+                <div class="product-item"><img src="https://macstoredigital.id/img/figma.png" alt="Figma Pro 24 Bulan" loading="lazy"><div class="product-content"><div><h3 class="product-name">Figma Pro 24 Bulan</h3><p class="product-description">Akun dari kami (Garansi 12 Bulan)</p></div><div class="product-footer"><span class="product-price">Rp 99.000</span><a href="https://api.whatsapp.com/send?phone=6283853289396&text=Hi%2C%20Saya%20Ress%20Mac%22%20saya%20beli%20produk%20Figma%20Pro%2024%20Bulan" target="_blank" rel="noopener noreferrer" class="buy-button"><i class="fab fa-whatsapp"></i> Beli</a></div></div></div>
+                <div class="product-item"><img src="https://macstoredigital.id/img/picsart.png" alt="Picsart Private 1 Bulan" loading="lazy"><div class="product-content"><div><h3 class="product-name">Picsart Private 1 Bulan</h3><p class="product-description">Akun Private dari kami (Garansi 25 Hari)</p></div><div class="product-footer"><span class="product-price">Rp 14.000</span><a href="https://api.whatsapp.com/send?phone=6283853289396&text=Hi%2C%20Saya%20Ress%20Mac%22%20saya%20beli%20produk%20Picsart%20Private%201%20Bulan" target="_blank" rel="noopener noreferrer" class="buy-button"><i class="fab fa-whatsapp"></i> Beli</a></div></div></div>
+                <div class="product-item"><img src="https://macstoredigital.id/img/polarr.png" alt="Polarr Sharing 12 Bulan" loading="lazy"><div class="product-content"><div><h3 class="product-name">Polarr Sharing 12 Bulan</h3><p class="product-description">Akun Sharing dari kami (Garansi 6 Bulan)</p></div><div class="product-footer"><span class="product-price">Rp 19.000</span><a href="https://api.whatsapp.com/send?phone=6283853289396&text=Hi%2C%20Saya%20Ress%20Mac%22%20saya%20beli%20produk%20Polarr%20Sharing%2012%20Bulan" target="_blank" rel="noopener noreferrer" class="buy-button"><i class="fab fa-whatsapp"></i> Beli</a></div></div></div>
+                <div class="product-item"><img src="https://macstoredigital.id/img/dazzcam.png" alt="Dazzcam Lifetime (Selamanya) (IOS Only)" loading="lazy"><div class="product-content"><div><h3 class="product-name">Dazzcam Lifetime (Selamanya) (IOS Only)</h3><p class="product-description">Akun Sharing dari kami (Garansi 6 Bulan)</p></div><div class="product-footer"><span class="product-price">Rp 19.000</span><a href="https://api.whatsapp.com/send?phone=6283853289396&text=Hi%2C%20Saya%20Ress%20Mac%22%20saya%20beli%20produk%20Dazzcam%20Lifetime%20(Selamanya)%20(IOS%20Only)" target="_blank" rel="noopener noreferrer" class="buy-button"><i class="fab fa-whatsapp"></i> Beli</a></div></div></div>
+                <div class="product-item"><img src="https://macstoredigital.id/img/oldroll.png" alt="Oldroll Lifetime (Selamanya) (Android Only)" loading="lazy"><div class="product-content"><div><h3 class="product-name">Oldroll Lifetime (Selamanya) (Android Only)</h3><p class="product-description">Akun Sharing dari kami (Garansi 6 Bulan)</p></div><div class="product-footer"><span class="product-price">Rp 14.000</span><a href="https://api.whatsapp.com/send?phone=6283853289396&text=Hi%2C%20Saya%20Ress%20Mac%22%20saya%20beli%20produk%20Oldroll%20Lifetime%20(Selamanya)%20(Android%20Only)" target="_blank" rel="noopener noreferrer" class="buy-button"><i class="fab fa-whatsapp"></i> Beli</a></div></div></div>
+                <div class="product-item"><img src="https://macstoredigital.id/img/vsco.png" alt="VSCO Sharing 1 Bulan" loading="lazy"><div class="product-content"><div><h3 class="product-name">VSCO Sharing 1 Bulan</h3><p class="product-description">Akun Sharing dari kami (Garansi 25 Hari) (Konfirmasi Device Yang Digunakan ke Admin)</p></div><div class="product-footer"><span class="product-price">Rp 14.000</span><a href="https://api.whatsapp.com/send?phone=6283853289396&text=Hi%2C%20Saya%20Ress%20Mac%22%20saya%20beli%20produk%20VSCO%20Sharing%201%20Bulan" target="_blank" rel="noopener noreferrer" class="buy-button"><i class="fab fa-whatsapp"></i> Beli</a></div></div></div>
+                <div class="product-item"><img src="https://macstoredigital.id/img/camscanner.png" alt="Camscanner 1 Bulan" loading="lazy"><div class="product-content"><div><h3 class="product-name">Camscanner 1 Bulan</h3><p class="product-description">Akun Private dari kami (Garansi 25 Hari) (Butuh 12 Bulan? Tanya Admin)</p></div><div class="product-footer"><span class="product-price">Rp 14.000</span><a href="https://api.whatsapp.com/send?phone=6283853289396&text=Hi%2C%20Saya%20Ress%20Mac%22%20saya%20beli%20produk%20Camscanner%201%20Bulan" target="_blank" rel="noopener noreferrer" class="buy-button"><i class="fab fa-whatsapp"></i> Beli</a></div></div></div>
+                <div class="product-item"><img src="https://macstoredigital.id/img/meitu.png" alt="Meitu Sharing 1 Bulan" loading="lazy"><div class="product-content"><div><h3 class="product-name">Meitu Sharing 1 Bulan</h3><p class="product-description">Akun Sharing dari kami (Garansi 25 Hari)</p></div><div class="product-footer"><span class="product-price">Rp 18.000</span><a href="https://api.whatsapp.com/send?phone=6283853289396&text=Hi%2C%20Saya%20Ress%20Mac%22%20saya%20beli%20produk%20Meitu%20Sharing%201%20Bulan" target="_blank" rel="noopener noreferrer" class="buy-button"><i class="fab fa-whatsapp"></i> Beli</a></div></div></div>
+                <div class="product-item"><img src="https://macstoredigital.id/img/ibis.png" alt="IBIS PAINT (Android Only) Sharing 1 Bulan" loading="lazy"><div class="product-content"><div><h3 class="product-name">IBIS PAINT (Android Only) Sharing 1 Bulan</h3><p class="product-description">Akun Sharing dari kami (Garansi 25 Hari)</p></div><div class="product-footer"><span class="product-price">Rp 14.000</span><a href="https://api.whatsapp.com/send?phone=6283853289396&text=Hi%2C%20Saya%20Ress%20Mac%22%20saya%20beli%20produk%20IBIS%20PAINT%20(Android%20Only)%20Sharing%201%20Bulan" target="_blank" rel="noopener noreferrer" class="buy-button"><i class="fab fa-whatsapp"></i> Beli</a></div></div></div>
+            </div>
+            <div class="note">
+                <p class="font-semibold text-lg mb-3 text-gray-800">📌 Catatan Penting untuk Desain & Editing:</p>
+                <ul class="list-disc pl-5 space-y-2 text-sm text-gray-700">
+                    <li><strong class="font-semibold text-slate-900">Canva:</strong> Kirimkan email, kami akan kirimkan link untuk join tim agar bisa akses Canva Pro.</li>
+                    <li><strong class="font-semibold text-slate-900">CapCut:</strong> Akun dari kami dan bisa digunakan sampai 3 device per akun.</li>
+                </ul>
+                <p class="font-semibold text-lg mt-5 mb-2 text-gray-800">📖 Panduan Lengkap:</p>
+                <ul class="list-disc pl-5 space-y-2 text-sm text-gray-700">
+                    <li>Cara Login CapCut Pro: <a href="https://www.notion.so/Cara-Login-CapCut-Pro-Private-237b68103c0880328218fb5ff80468bf?source=copy_link" target="_blank" class="text-blue-600 hover:underline font-medium">Lihat Panduan di Notion</a></li>
+                    <li>Cara Gabung Canva Pro: <a href="https://www.notion.so/Cara-Masuk-Canva-Pro-237b68103c0880879199f036f6eb006c?source=copy_link" target="_blank" class="text-blue-600 hover:underline font-medium">Lihat Panduan di Notion</a></li>
+                    <li>Cara Pindahkan Desain Canva: <a href="https://www.youtube.com/watch?v=JSVAIo3a17s" target="_blank" class="text-blue-600 hover:underline font-medium">Tonton Video Tutorial (YouTube)</a></li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- AI TOOLS -->
+        <section class="card">
+            <h2 class="section-title"><i class="fas fa-robot text-indigo-500"></i> AI TOOLS</h2>
+            <div class="product-category-title"><i class="fas fa-brain"></i> Solusi Kecerdasan Buatan</div>
+            <div class="product-grid mt-6">
+                <div class="product-item"><img src="https://macstoredigital.id/img/chatgpt.png" alt="ChatGPT Pro Sharing 1 Bulan" loading="lazy"><div class="product-content"><div><h3 class="product-name">ChatGPT Pro Sharing 1 Bulan</h3><p class="product-description">Menggunakan email pembeli (Garansi 28 Hari)</p></div><div class="product-footer"><span class="product-price">Rp 10.000</span><a href="https://api.whatsapp.com/send?phone=6283853289396&text=Hi%2C%20Saya%20Ress%20Mac%22%20saya%20beli%20produk%20ChatGPT%20Pro%20Sharing%201%20Bulan" target="_blank" rel="noopener noreferrer" class="buy-button"><i class="fab fa-whatsapp"></i> Beli</a></div></div></div>
+                <div class="product-item"><img src="https://macstoredigital.id/img/chatgpt.png" alt="ChatGPT Pro Private 1 Bulan" loading="lazy"><div class="product-content"><div><h3 class="product-name">ChatGPT Pro Private 1 Bulan</h3><p class="product-description">Akun Private dari kami atau bisa menggunakan akun pembeli (Garansi 28 Hari)</p></div><div class="product-footer"><span class="product-price">Rp 19.000</span><a href="https://api.whatsapp.com/send?phone=6283853289396&text=Hi%2C%20Saya%20Ress%20Mac%22%20saya%20beli%20produk%20ChatGPT%20Pro%20Private%201%20Bulan" target="_blank" rel="noopener noreferrer" class="buy-button"><i class="fab fa-whatsapp"></i> Beli</a></div></div></div>
+                <div class="product-item"><img src="https://macstoredigital.id/img/chatgpt.png" alt="ChatGPT Pro Private 3 Bulan" loading="lazy"><div class="product-content"><div><h3 class="product-name">ChatGPT Pro Private 3 Bulan</h3><p class="product-description">Menggunakan email pembeli (Garansi 3 Bulan)</p></div><div class="product-footer"><span class="product-price">Rp 49.000</span><a href="https://api.whatsapp.com/send?phone=6283853289396&text=Hi%2C%20Saya%20Ress%20Mac%22%20saya%20beli%20produk%20ChatGPT%20Pro%20Private%203%20Bulan" target="_blank" rel="noopener noreferrer" class="buy-button"><i class="fab fa-whatsapp"></i> Beli</a></div></div></div>
+                <div class="product-item"><img src="https://macstoredigital.id/img/chatgpt.png" alt="ChatGPT Go Private 12 Bulan" loading="lazy"><div class="product-content"><div><h3 class="product-name">ChatGPT Go Private 12 Bulan</h3><p class="product-description">Akun Private dari kami atau bisa menggunakan akun pembeli (Garansi 11 Bulan)</p></div><div class="product-footer"><span class="product-price">Rp 59.000</span><a href="https://api.whatsapp.com/send?phone=6283853289396&text=Hi%2C%20Saya%20Ress%20Mac%22%20saya%20beli%20produk%20ChatGPT%20Go%20Private%2012%20Bulan" target="_blank" rel="noopener noreferrer" class="buy-button"><i class="fab fa-whatsapp"></i> Beli</a></div></div></div>
+                <div class="product-item"><img src="https://macstoredigital.id/img/gemini.png" alt="Gemini Pro 1 Tahun" loading="lazy"><div class="product-content"><div><h3 class="product-name">Gemini Pro 1 Tahun</h3><p class="product-description">Menggunakan akun pembeli dengan benefit storage 2 TB, Gemini Pro (VEO3), Gemini in (Gmail, Docs, Sheet). (Garansi 11 Bulan)</p></div><div class="product-footer"><span class="product-price">Rp 39.000</span><a href="https://api.whatsapp.com/send?phone=6283853289396&text=Hi%2C%20Saya%20Ress%20Mac%22%20saya%20beli%20produk%20Gemini%20Pro%201%20Tahun" target="_blank" rel="noopener noreferrer" class="buy-button"><i class="fab fa-whatsapp"></i> Beli</a></div></div></div>
+                <div class="product-item"><img src="https://macstoredigital.id/img/perplexity.png" alt="Perplexity Pro Private 1 Bulan" loading="lazy"><div class="product-content"><div><h3 class="product-name">Perplexity Pro Private 1 Bulan</h3><p class="product-description">Akun private dari kami (Garansi 1 Bulan)</p></div><div class="product-footer"><span class="product-price">Rp 19.000</span><a href="https://api.whatsapp.com/send?phone=6283853289396&text=Hi%2C%20Saya%20Ress%20Mac%22%20saya%20beli%20produk%20Perplexity%20Pro%20Private%201%20Bulan" target="_blank" rel="noopener noreferrer" class="buy-button"><i class="fab fa-whatsapp"></i> Beli</a></div></div></div>
+                <div class="product-item"><img src="https://macstoredigital.id/img/suno.png" alt="Jasa Generate SUNO AI Versi 4.5" loading="lazy"><div class="product-content"><div><h3 class="product-name">Jasa Generate SUNO AI Versi 4.5</h3><p class="product-description">Jasa generate SUNO AI v4.5 | Harga persekali generate | Kirimkan lirik lagumu Beserta stylenya via chat | Min Order 10 | Bebas copyright. (No Garansi)</p></div><div class="product-footer"><span class="product-price">Rp 6.000</span><a href="https://api.whatsapp.com/send?phone=6283853289396&text=Hi%2C%20Saya%20Ress%20Mac%22%20saya%20beli%20produk%20Jasa%20Generate%20SUNO%20AI%20Versi%204.5" target="_blank" rel="noopener noreferrer" class="buy-button"><i class="fab fa-whatsapp"></i> Beli</a></div></div></div>
+                <div class="product-item"><img src="https://macstoredigital.id/img/grammarly.png" alt="Grammarly Sharing 1 Bulan" loading="lazy"><div class="product-content"><div><h3 class="product-name">Grammarly Sharing 1 Bulan</h3><p class="product-description">Akun sharing dari kami (Garansi 28 Hari)</p></div><div class="product-footer"><span class="product-price">Rp 19.000</span><a href="https://api.whatsapp.com/send?phone=6283853289396&text=Hi%2C%20Saya%20Ress%20Mac%22%20saya%20beli%20produk%20Grammarly%20Sharing%201%20Bulan" target="_blank" rel="noopener noreferrer" class="buy-button"><i class="fab fa-whatsapp"></i> Beli</a></div></div></div>
+                <div class="product-item"><img src="https://macstoredigital.id/img/quillbot.png" alt="QuillBot Sharing 1 Bulan" loading="lazy"><div class="product-content"><div><h3 class="product-name">QuillBot Sharing 1 Bulan</h3><p class="product-description">Akun sharing dari kami (Garansi 28 Hari)</p></div><div class="product-footer"><span class="product-price">Rp 18.000</span><a href="https://api.whatsapp.com/send?phone=6283853289396&text=Hi%2C%20Saya%20Ress%20Mac%22%20saya%20beli%20produk%20QuillBot%20Sharing%201%20Bulan" target="_blank" rel="noopener noreferrer" class="buy-button"><i class="fab fa-whatsapp"></i> Beli</a></div></div></div>
+                <div class="product-item"><img src="https://macstoredigital.id/img/deepl.png" alt="DeepL Sharing 1 Bulan" loading="lazy"><div class="product-content"><div><h3 class="product-name">DeepL Sharing 1 Bulan</h3><p class="product-description">Akun sharing dari kami (Garansi 28 Hari)</p></div><div class="product-footer"><span class="product-price">Rp 18.000</span><a href="https://api.whatsapp.com/send?phone=6283853289396&text=Hi%2C%20Saya%20Ress%20Mac%22%20saya%20beli%20produk%20DeepL%20Sharing%201%20Bulan" target="_blank" rel="noopener noreferrer" class="buy-button"><i class="fab fa-whatsapp"></i> Beli</a></div></div></div>
+                <div class="product-item"><img src="https://macstoredigital.id/img/jasper.png" alt="Jasper AI Sharing 1 Bulan" loading="lazy"><div class="product-content"><div><h3 class="product-name">Jasper AI Sharing 1 Bulan</h3><p class="product-description">Akun sharing dari kami (Garansi 28 Hari)</p></div><div class="product-footer"><span class="product-price">Rp 29.000</span><a href="https://api.whatsapp.com/send?phone=6283853289396&text=Hi%2C%20Saya%20Ress%20Mac%22%20saya%20beli%20produk%20Jasper%20AI%20Sharing%201%20Bulan" target="_blank" rel="noopener noreferrer" class="buy-button"><i class="fab fa-whatsapp"></i> Beli</a></div></div></div>
+                <div class="product-item"><img src="https://macstoredigital.id/img/humata.png" alt="Humata AI Sharing 1 Bulan" loading="lazy"><div class="product-content"><div><h3 class="product-name">Humata AI Sharing 1 Bulan</h3><p class="product-description">Akun sharing dari kami (Garansi 28 Hari)</p></div><div class="product-footer"><span class="product-price">Rp 24.000</span><a href="https://api.whatsapp.com/send?phone=6283853289396&text=Hi%2C%20Saya%20Ress%20Mac%22%20saya%20beli%20produk%20Humata%20AI%20Sharing%201%20Bulan" target="_blank" rel="noopener noreferrer" class="buy-button"><i class="fab fa-whatsapp"></i> Beli</a></div></div></div>
+                <div class="product-item"><img src="https://macstoredigital.id/img/deepseek.png" alt="DeepSeek Sharing 1 Bulan" loading="lazy"><div class="product-content"><div><h3 class="product-name">DeepSeek Sharing 1 Bulan</h3><p class="product-description">Akun sharing dari kami (Garansi 28 Hari)</p></div><div class="product-footer"><span class="product-price">Rp 29.000</span><a href="https://api.whatsapp.com/send?phone=6283853289396&text=Hi%2C%20Saya%20Ress%20Mac%22%20saya%20beli%20produk%20DeepSeek%20Sharing%201%20Bulan" target="_blank" rel="noopener noreferrer" class="buy-button"><i class="fab fa-whatsapp"></i> Beli</a></div></div></div>
+            </div>
+        </section>
+
+        <!-- STREAMING -->
+        <section class="card">
+            <h2 class="section-title"><i class="fas fa-video text-indigo-500"></i> STREAMING</h2>
+            <div class="product-category-title"><i class="fas fa-tv"></i> Hiburan & Media Premium</div>
+            <div class="product-grid mt-6">
+                <div class="product-item"><img src="https://macstoredigital.id/img/netflix.png" alt="Netflix Sharing 1 Bulan" loading="lazy"><div class="product-content"><div><h3 class="product-name">Netflix Sharing 1 Bulan</h3><p class="product-description">1 Profile 2 User | hanya untuk 1 device | Wajib Cantumkan Device &amp; Lokasi saat order (Garansi 1 Bulan)</p></div><div class="product-footer"><span class="product-price">Rp 19.000</span><a href="https://api.whatsapp.com/send?phone=6283853289396&text=Hi%2C%20Saya%20Ress%20Mac%22%20saya%20beli%20produk%20Netflix%20Sharing%201%20Bulan" target="_blank" rel="noopener noreferrer" class="buy-button"><i class="fab fa-whatsapp"></i> Beli</a></div></div></div>
+                <div class="product-item"><img src="https://macstoredigital.id/img/netflix.png" alt="Netflix Semi Private 1 Bulan" loading="lazy"><div class="product-content"><div><h3 class="product-name">Netflix Semi Private 1 Bulan</h3><p class="product-description">1 Profile 1 User | untuk 2 device | Wajib Cantumkan Device &amp; Lokasi saat order (Garansi 1 Bulan)</p></div><div class="product-footer"><span class="product-price">Rp 29.000</span><a href="https://api.whatsapp.com/send?phone=6283853289396&text=Hi%2C%20Saya%20Ress%20Mac%22%20saya%20beli%20produk%20Netflix%20Semi%20Private%201%20Bulan" target="_blank" rel="noopener noreferrer" class="buy-button"><i class="fab fa-whatsapp"></i> Beli</a></div></div></div>
+                <div class="product-item"><img src="https://macstoredigital.id/img/spotify.png" alt="Spotify Premium Private 1 Bulan" loading="lazy"><div class="product-content"><div><h3 class="product-name">Spotify Premium Private 1 Bulan</h3><p class="product-description">Akun private dari kami (Garansi 28 Hari)</p></div><div class="product-footer"><span class="product-price">Rp 24.000</span><a href="https://api.whatsapp.com/send?phone=6283853289396&text=Hi%2C%20Saya%20Ress%20Mac%22%20saya%20beli%20produk%20Spotify%20Premium%20Private%201%20Bulan" target="_blank" rel="noopener noreferrer" class="buy-button"><i class="fab fa-whatsapp"></i> Beli</a></div></div></div>
+                <div class="product-item"><img src="https://macstoredigital.id/img/spotify.png" alt="Spotify Premium Private 2 Bulan" loading="lazy"><div class="product-content"><div><h3 class="product-name">Spotify Premium Private 2 Bulan</h3><p class="product-description">Akun private dari kami (Garansi 28 Hari)</p></div><div class="product-footer"><span class="product-price">Rp 39.000</span><a href="https://api.whatsapp.com/send?phone=6283853289396&text=Hi%2C%20Saya%20Ress%20Mac%22%20saya%20beli%20produk%20Spotify%20Premium%20Private%202%20Bulan" target="_blank" rel="noopener noreferrer" class="buy-button"><i class="fab fa-whatsapp"></i> Beli</a></div></div></div>
+                <div class="product-item"><img src="https://macstoredigital.id/img/youtube.png" alt="Youtube Premium Private 1 Bulan" loading="lazy"><div class="product-content"><div><h3 class="product-name">Youtube Premium Private 1 Bulan</h3><p class="product-description">Syarat akun gmail belum pernah mendaftarkan youtube premium, jika sudah pernah maksimal 1 tahun yang lalu. (Garansi 25 Hari)</p></div><div class="product-footer"><span class="product-price">Rp 3.000</span><a href="https://api.whatsapp.com/send?phone=6283853289396&text=Hi%2C%20Saya%20Ress%20Mac%22%20saya%20beli%20produk%20Youtube%20Premium%20Private%201%20Bulan" target="_blank" rel="noopener noreferrer" class="buy-button"><i class="fab fa-whatsapp"></i> Beli</a></div></div></div>
+                <div class="product-item"><img src="https://macstoredigital.id/img/youtube.png" alt="Youtube Premium Private (Akun Baru) 1 Bulan" loading="lazy"><div class="product-content"><div><h3 class="product-name">Youtube Premium Private (Akun Baru) 1 Bulan</h3><p class="product-description">Akun baru dari kami tinggal login gmail &amp; siap pakai (Garansi 25 Hari)</p></div><div class="product-footer"><span class="product-price">Rp 8.000</span><a href="https://api.whatsapp.com/send?phone=6283853289396&text=Hi%2C%20Saya%20Ress%20Mac%22%20saya%20beli%20produk%20Youtube%20Premium%20Private%20(Akun%20Baru)%201%20Bulan" target="_blank" rel="noopener noreferrer" class="buy-button"><i class="fab fa-whatsapp"></i> Beli</a></div></div></div>
+                <div class="product-item"><img src="https://macstoredigital.id/img/youtube.png" alt="Youtube Premium Private (Akun Baru) 3 Bulan" loading="lazy"><div class="product-content"><div><h3 class="product-name">Youtube Premium Private (Akun Baru) 3 Bulan</h3><p class="product-description">Akun baru dari kami tinggal login gmail &amp; siap pakai (Garansi 85 Hari)</p></div><div class="product-footer"><span class="product-price">Rp 25.000</span><a href="https://api.whatsapp.com/send?phone=6283853289396&text=Hi%2C%20Saya%20Ress%20Mac%22%20saya%20beli%20produk%20Youtube%20Premium%20Private%20(Akun%20Baru)%203%20Bulan" target="_blank" rel="noopener noreferrer" class="buy-button"><i class="fab fa-whatsapp"></i> Beli</a></div></div></div>
+                <div class="product-item"><img src="https://macstoredigital.id/img/vidio.png" alt="Vidio Platinum (TV Only) Private 1 Tahun" loading="lazy"><div class="product-content"><div><h3 class="product-name">Vidio Platinum (TV Only) Private 1 Tahun</h3><p class="product-description">Akun private dari kami | Login hanya untuk di TV (Garansi 1 Tahun)</p></div><div class="product-footer"><span class="product-price">Rp 29.000</span><a href="https://api.whatsapp.com/send?phone=6283853289396&text=Hi%2C%20Saya%20Ress%20Mac%22%20saya%20beli%20produk%20Vidio%20Platinum%20(TV%20Only)%20Private%201%20Tahun" target="_blank" rel="noopener noreferrer" class="buy-button"><i class="fab fa-whatsapp"></i> Beli</a></div></div></div>
+                <div class="product-item"><img src="https://macstoredigital.id/img/vidio.png" alt="Vidio Platinum (All Device) Sharing 1 Bulan" loading="lazy"><div class="product-content"><div><h3 class="product-name">Vidio Platinum (All Device) Sharing 1 Bulan</h3><p class="product-description">Akun sharing dari kami | Bisa login untuk semua jenis device (Garansi 28 Hari)</p></div><div class="product-footer"><span class="product-price">Rp 34.000</span><a href="https://api.whatsapp.com/send?phone=6283853289396&text=Hi%2C%20Saya%20Ress%20Mac%22%20saya%20beli%20produk%20Vidio%20Platinum%20(All%20Device)%20Sharing%201%20Bulan" target="_blank" rel="noopener noreferrer" class="buy-button"><i class="fab fa-whatsapp"></i> Beli</a></div></div></div>
+                <div class="product-item"><img src="https://macstoredigital.id/img/vidio.png" alt="Vidio Platinum (Mobile Only) Sharing 1 Bulan" loading="lazy"><div class="product-content"><div><h3 class="product-name">Vidio Platinum (Mobile Only) Sharing 1 Bulan</h3><p class="product-description">Akun sharing dari kami | Login hanya untuk Mobile / HaPe (Garansi 28 Hari)</p></div><div class="product-footer"><span class="product-price">Rp 29.000</span><a href="https://api.whatsapp.com/send?phone=6283853289396&text=Hi%2C%20Saya%20Ress%20Mac%22%20saya%20beli%20produk%20Vidio%20Platinum%20(Mobile%20Only)%20Sharing%201%20Bulan" target="_blank" rel="noopener noreferrer" class="buy-button"><i class="fab fa-whatsapp"></i> Beli</a></div></div></div>
+                <div class="product-item"><img src="https://macstoredigital.id/img/disney.png" alt="Disney+ Hotstar Sharing 1 Bulan" loading="lazy"><div class="product-content"><div><h3 class="product-name">Disney+ Hotstar Sharing 1 Bulan</h3><p class="product-description">Akun sharing dari kami | Login via OTP nomor dari kami (Garansi 28 Hari)</p></div><div class="product-footer"><span class="product-price">Rp 24.000</span><a href="https://api.whatsapp.com/send?phone=6283853289396&text=Hi%2C%20Saya%20Ress%20Mac%22%20saya%20beli%20produk%20Disney%2B%20Hotstar%20Sharing%201%20Bulan" target="_blank" rel="noopener noreferrer" class="buy-button"><i class="fab fa-whatsapp"></i> Beli</a></div></div></div>
+                <div class="product-item"><img src="https://macstoredigital.id/img/viu.png" alt="Viu Premium Private 12 Bulan" loading="lazy"><div class="product-content"><div><h3 class="product-name">Viu Premium Private 12 Bulan</h3><p class="product-description">Akun private dari kami (Garansi 10 Bulan)</p></div><div class="product-footer"><span class="product-price">Rp 10.000</span><a href="https://api.whatsapp.com/send?phone=6283853289396&text=Hi%2C%20Saya%20Ress%20Mac%22%20saya%20beli%20produk%20Viu%20Premium%20Private%2012%20Bulan" target="_blank" rel="noopener noreferrer" class="buy-button"><i class="fab fa-whatsapp"></i> Beli</a></div></div></div>
+                <div class="product-item"><img src="https://macstoredigital.id/img/bstation.png" alt="Bstation Premium Sharing 12 Bulan" loading="lazy"><div class="product-content"><div><h3 class="product-name">Bstation Premium Sharing 12 Bulan</h3><p class="product-description">Akun Sharing dari kami (Garansi 10 Bulan)</p></div><div class="product-footer"><span class="product-price">Rp 19.000</span><a href="https://api.whatsapp.com/send?phone=6283853289396&text=Hi%2C%20Saya%20Ress%20Mac%22%20saya%20beli%20produk%20Bstation%20Premium%20Sharing%2012%20Bulan" target="_blank" rel="noopener noreferrer" class="buy-button"><i class="fab fa-whatsapp"></i> Beli</a></div></div></div>
+                <div class="product-item"><img src="https://macstoredigital.id/img/crunchyroll.png" alt="Crunchyroll Premium Sharing 12 Bulan" loading="lazy"><div class="product-content"><div><h3 class="product-name">Crunchyroll Premium Sharing 12 Bulan</h3><p class="product-description">Akun Sharing dari kami (Garansi 10 Bulan)</p></div><div class="product-footer"><span class="product-price">Rp 19.000</span><a href="https://api.whatsapp.com/send?phone=6283853289396&text=Hi%2C%20Saya%20Ress%20Mac%22%20saya%20beli%20produk%20Crunchyroll%20Premium%20Sharing%2012%20Bulan" target="_blank" rel="noopener noreferrer" class="buy-button"><i class="fab fa-whatsapp"></i> Beli</a></div></div></div>
+                <div class="product-item"><img src="https://macstoredigital.id/img/amazon.png" alt="Amazon Prime Video Sharing 1 Bulan" loading="lazy"><div class="product-content"><div><h3 class="product-name">Amazon Prime Video Sharing 1 Bulan</h3><p class="product-description">Akun sharing dari kami (Garansi 28 Hari)</p></div><div class="product-footer"><span class="product-price">Rp 14.000</span><a href="https://api.whatsapp.com/send?phone=6283853289396&text=Hi%2C%20Saya%20Ress%20Mac%22%20saya%20beli%20produk%20Amazon%20Prime%20Video%20Sharing%201%20Bulan" target="_blank" rel="noopener noreferrer" class="buy-button"><i class="fab fa-whatsapp"></i> Beli</a></div></div></div>
+                <div class="product-item"><img src="https://macstoredigital.id/img/wetv.png" alt="WeTV VIP Sharing 1 Bulan" loading="lazy"><div class="product-content"><div><h3 class="product-name">WeTV VIP Sharing 1 Bulan</h3><p class="product-description">Akun sharing dari kami | Wajib Cantumkan Device &amp; Lokasi saat order (Garansi 28 Hari)</p></div><div class="product-footer"><span class="product-price">Rp 14.000</span><a href="https://api.whatsapp.com/send?phone=6283853289396&text=Hi%2C%20Saya%20Ress%20Mac%22%20saya%20beli%20produk%20WeTV%20VIP%20Sharing%201%20Bulan" target="_blank" rel="noopener noreferrer" class="buy-button"><i class="fab fa-whatsapp"></i> Beli</a></div></div></div>
+                <div class="product-item"><img src="https://macstoredigital.id/img/iqiyi.png" alt="iQIYI VIP Premium Sharing 1 Bulan" loading="lazy"><div class="product-content"><div><h3 class="product-name">iQIYI VIP Premium Sharing 1 Bulan</h3><p class="product-description">Akun sharing dari kami (Garansi 28 Hari)</p></div><div class="product-footer"><span class="product-price">Rp 14.000</span><a href="https://api.whatsapp.com/send?phone=6283853289396&text=Hi%2C%20Saya%20Ress%20Mac%22%20saya%20beli%20produk%20iQIYI%20VIP%20Premium%20Sharing%201%20Bulan" target="_blank" rel="noopener noreferrer" class="buy-button"><i class="fab fa-whatsapp"></i> Beli</a></div></div></div>
+                <div class="product-item"><img src="https://macstoredigital.id/img/drakor.png" alt="Drakor ID Premium Sharing 1 Bulan" loading="lazy"><div class="product-content"><div><h3 class="product-name">Drakor ID Premium Sharing 1 Bulan</h3><p class="product-description">Akun sharing dari kami (Garansi 28 Hari)</p></div><div class="product-footer"><span class="product-price">Rp 14.000</span><a href="https://api.whatsapp.com/send?phone=6283853289396&text=Hi%2C%20Saya%20Ress%20Mac%22%20saya%20beli%20produk%20Drakor%20ID%20Premium%20Sharing%201%20Bulan" target="_blank" rel="noopener noreferrer" class="buy-button"><i class="fab fa-whatsapp"></i> Beli</a></div></div></div>
+                <div class="product-item"><img src="https://macstoredigital.id/img/youku.png" alt="YOUKU VIP Sharing 1 Bulan" loading="lazy"><div class="product-content"><div><h3 class="product-name">YOUKU VIP Sharing 1 Bulan</h3><p class="product-description">Akun sharing dari kami (Garansi 28 Hari)</p></div><div class="product-footer"><span class="product-price">Rp 14.000</span><a href="https://api.whatsapp.com/send?phone=6283853289396&text=Hi%2C%20Saya%20Ress%20Mac%22%20saya%20beli%20produk%20YOUKU%20VIP%20Sharing%201%20Bulan" target="_blank" rel="noopener noreferrer" class="buy-button"><i class="fab fa-whatsapp"></i> Beli</a></div></div></div>
+                <div class="product-item"><img src="https://macstoredigital.id/img/loklok.png" alt="LOKLOK Premium Sharing 1 Bulan" loading="lazy"><div class="product-content"><div><h3 class="product-name">LOKLOK Premium Sharing 1 Bulan</h3><p class="product-description">Akun sharing dari kami (Garansi 28 Hari)</p></div><div class="product-footer"><span class="product-price">Rp 19.000</span><a href="https://api.whatsapp.com/send?phone=6283853289396&text=Hi%2C%20Saya%20Ress%20Mac%22%20saya%20beli%20produk%20LOKLOK%20Premium%20Sharing%201%20Bulan" target="_blank" rel="noopener noreferrer" class="buy-button"><i class="fab fa-whatsapp"></i> Beli</a></div></div></div>
+                <div class="product-item"><img src="https://macstoredigital.id/img/dramabox.png" alt="DramaBox Premium Sharing 1 Bulan" loading="lazy"><div class="product-content"><div><h3 class="product-name">DramaBox Premium Sharing 1 Bulan</h3><p class="product-description">Akun sharing dari kami (Garansi 28 Hari)</p></div><div class="product-footer"><span class="product-price">Rp 14.000</span><a href="https://api.whatsapp.com/send?phone=6283853289396&text=Hi%2C%20Saya%20Ress%20Mac%22%20saya%20beli%20produk%20DramaBox%20Premium%20Sharing%201%20Bulan" target="_blank" rel="noopener noreferrer" class="buy-button"><i class="fab fa-whatsapp"></i> Beli</a></div></div></div>
+                <div class="product-item"><img src="https://macstoredigital.id/img/hbo.png" alt="HBO Max Ultimate Sharing 1 Bulan" loading="lazy"><div class="product-content"><div><h3 class="product-name">HBO Max Ultimate Sharing 1 Bulan</h3><p class="product-description">Akun sharing dari kami (Garansi 28 Hari)</p></div><div class="product-footer"><span class="product-price">Rp 19.000</span><a href="https://api.whatsapp.com/send?phone=6283853289396&text=Hi%2C%20Saya%20Ress%20Mac%22%20saya%20beli%20produk%20HBO%20Max%20Ultimate%20Sharing%201%20Bulan" target="_blank" rel="noopener noreferrer" class="buy-button"><i class="fab fa-whatsapp"></i> Beli</a></div></div></div>
+            </div>
+             <div class="note">
+                <p class="font-semibold text-lg mb-3 text-gray-800">📖 Panduan Wajib Netflix:</p>
+                <ul class="list-disc pl-5 space-y-2 text-sm text-gray-700">
+                    <li>Pengguna Netflix Pemula WAJIB Baca: <a href="https://www.notion.so/PENGGUNA-AWAM-WAJIB-BACA-INI-265b68103c0880a39649dabcfbec77b2?source=copy_link" target="_blank" class="text-blue-600 hover:underline font-medium">Lihat Panduan</a></li>
+                    <li>Tutorial Jika Netflix Incorrect Password: <a href="https://www.notion.so/TUTORIAL-LOGIN-NETFLIX-INCORECT-PASSWORD-LIMIT-LOGIN-237b68103c08804abd0cf022b382e1b1?source=copy_link" target="_blank" class="text-blue-600 hover:underline font-medium">Lihat Panduan</a></li>
+                </ul>
+                <p class="mt-6 text-center italic font-semibold text-amber-800 bg-amber-100 p-3 rounded-lg shadow-inner">
+                    Budayakan mandiri sebelum tanya admin 🙏
+                </p>
+            </div>
+        </section>
+
+        <!-- PAKET STORAGE -->
+        <section class="card">
+            <h2 class="section-title"><i class="fas fa-hdd text-indigo-500"></i> PAKET STORAGE</h2>
+            <div class="product-category-title"><i class="fas fa-cloud"></i> Penyimpanan Digital Aman & Luas</div>
+            <div class="product-grid mt-6">
+                 <div class="product-item"><img src="https://macstoredigital.id/img/google-drive.png" alt="Google Drive 1TB Private Lifetime (Selamanya)" loading="lazy"><div class="product-content"><div><h3 class="product-name">Google Drive 1TB Private Lifetime (Selamanya)</h3><p class="product-description">Akun private dari kami | Tinggal digunakan saja dengan bijak</p></div><div class="product-footer"><span class="product-price">Rp 79.000</span><a href="https://api.whatsapp.com/send?phone=6283853289396&text=Hi%2C%20Saya%20Ress%20Mac%22%20saya%20beli%20produk%20Google%20Drive%201TB%20Private%20Lifetime%20(Selamanya)" target="_blank" rel="noopener noreferrer" class="buy-button"><i class="fab fa-whatsapp"></i> Beli</a></div></div></div>
+                 <div class="product-item"><img src="https://macstoredigital.id/img/google-drive.png" alt="Google Storage 2TB 1 Tahun" loading="lazy"><div class="product-content"><div><h3 class="product-name">Google Storage 2TB 1 Tahun</h3><p class="product-description">Menggunakan akun dari pembeli | Benefit: storage 2 TB (Google Drive, Google Foto, dll), Gemini Pro (VEO3), Gemini in (Gmail, Docs, Sheet), Google Meet 24 Jam NonStop, Google Calendar Premium, dll (Garansi 10 Bulan)</p></div><div class="product-footer"><span class="product-price">Rp 39.000</span><a href="https://api.whatsapp.com/send?phone=6283853289396&text=Hi%2C%20Saya%20Ress%20Mac%22%20saya%20beli%20produk%20Google%20Storage%202TB%201%20Tahun" target="_blank" rel="noopener noreferrer" class="buy-button"><i class="fab fa-whatsapp"></i> Beli</a></div></div></div>
+                 <div class="product-item"><img src="https://macstoredigital.id/img/google-drive.png" alt="Google AI Pro Private 12 Bulan" loading="lazy"><div class="product-content"><div><h3 class="product-name">Google AI Pro Private 12 Bulan</h3><p class="product-description">Akun dari kami Kredit AI 1000 Perbulan ( Benefit: storage 2 TB (Google Drive, Google Foto, dll), Gemini Pro (VEO3), Gemini in (Gmail, Docs, Sheet), Google Meet 24 Jam NonStop, Google Calendar Premium, dll (Garansi 10 Bulan)</p></div><div class="product-footer"><span class="product-price">Rp 69.000</span><a href="https://api.whatsapp.com/send?phone=6283853289396&text=Hi%2C%20Saya%20Ress%20Mac%22%20saya%20beli%20produk%20Google%20AI%20Pro%20Private%2012%20Bulan" target="_blank" rel="noopener noreferrer" class="buy-button"><i class="fab fa-whatsapp"></i> Beli</a></div></div></div>
+            </div>
+        </section>
+
+        <!-- ECOURSE -->
+        <section class="card">
+            <h2 class="section-title"><i class="fas fa-graduation-cap text-indigo-500"></i> ECOURSE</h2>
+            <div class="product-category-title"><i class="fas fa-book-open"></i> Materi Pembelajaran Digital</div>
+            <div class="product-grid mt-6">
+                <div class="product-item"><img src="https://macstoredigital.id/img/ebook1.png" alt="Complete Financial Freedom & Invest - Ternak Uang Original Episode 1 - 29" loading="lazy"><div class="product-content"><div><h3 class="product-name">Complete Financial Freedom & Invest - Ternak Uang Original Episode 1 - 29</h3><p class="product-description">BONUS: Sekolah Jalanan By Timothy Ronald - Rahasia Jualan Untuk Omset Terbaik.</p></div><div class="product-footer"><span class="product-price">Rp 9.500</span><a href="https://api.whatsapp.com/send?phone=6283853289396&text=Hi%2C%20Saya%20Ress%20Mac%22%20saya%20beli%20produk%20Complete%20Financial%20Freedom%20%26%20Invest%20-%20Ternak%20Uang%20Original%20Episode%201%20-%2029" target="_blank" rel="noopener noreferrer" class="buy-button"><i class="fab fa-whatsapp"></i> Beli</a></div></div></div>
+                <div class="product-item"><img src="https://macstoredigital.id/img/ebook2.png" alt="Kelas Jago Capcut - Belajar Mahir Editing Video dengan Aplikasi Capcut Terlengkap" loading="lazy"><div class="product-content"><div><h3 class="product-name">Kelas Jago Capcut - Belajar Mahir Editing Video dengan Aplikasi Capcut Terlengkap</h3><p class="product-description">BONUS: JAGO CANVA DALAM 5 HARI - Mahir Buat Konten Apapun Menggunakan Canva</p></div><div class="product-footer"><span class="product-price">Rp 4.000</span><a href="https://api.whatsapp.com/send?phone=6283853289396&text=Hi%2C%20Saya%20Ress%20Mac%22%20saya%20beli%20produk%20Kelas%20Jago%20Capcut%20-%20Belajar%20Mahir%20Editing%20Video%20dengan%20Aplikasi%20Capcut%20Terlengkap" target="_blank" rel="noopener noreferrer" class="buy-button"><i class="fab fa-whatsapp"></i> Beli</a></div></div></div>
+                <div class="product-item"><img src="https://macstoredigital.id/img/ebook3.png" alt="TIKTOK AFFILIATE UNTUK PEMULA TANPA JUTAAN FOLLOWER" loading="lazy"><div class="product-content"><div><h3 class="product-name">TIKTOK AFFILIATE UNTUK PEMULA TANPA JUTAAN FOLLOWER</h3><p class="product-description">BONUS: Cara Mudah Fyp Tiktok</p></div><div class="product-footer"><span class="product-price">Rp 6.000</span><a href="https://api.whatsapp.com/send?phone=6283853289396&text=Hi%2C%20Saya%20Ress%20Mac%22%20saya%20beli%20produk%20TIKTOK%20AFFILIATE%20UNTUK%20PEMULA%20TANPA%20JUTAAN%20FOLLOWER" target="_blank" rel="noopener noreferrer" class="buy-button"><i class="fab fa-whatsapp"></i> Beli</a></div></div></div>
+                <div class="product-item"><img src="https://macstoredigital.id/img/ebook4.png" alt="ECOURSE - KELAS MASTER TT ADS Cuan Berlipat Ganda Hingga Jutaan Dari Ngiklan (Materi Video Pembelajaran)" loading="lazy"><div class="product-content"><div><h3 class="product-name">ECOURSE - KELAS MASTER TT ADS Cuan Berlipat Ganda Hingga Jutaan Dari Ngiklan (Materi Video Pembelajaran)</h3><p class="product-description">Ada 11 Materi yang dijelaskan berupa video</p></div><div class="product-footer"><span class="product-price">Rp 5.000</span><a href="https://api.whatsapp.com/send?phone=6283853289396&text=Hi%2C%20Saya%20Ress%20Mac%22%20saya%20beli%20produk%20ECOURSE%20-%20KELAS%20MASTER%20TT%20ADS%20Cuan%20Berlipat%20Ganda%20Hingga%20Jutaan%20Dari%20Ngiklan%20(Materi%20Video%20Pembelajaran)" target="_blank" rel="noopener noreferrer" class="buy-button"><i class="fab fa-whatsapp"></i> Beli</a></div></div></div>
+                <div class="product-item"><img src="https://macstoredigital.id/img/ebook5.png" alt="1000+ GPT Prompt - Mengungkap Rahasia Kekuatan AI untuk Para Konten Kreator" loading="lazy"><div class="product-content"><div><h3 class="product-name">1000+ GPT Prompt - Mengungkap Rahasia Kekuatan AI untuk Para Konten Kreator</h3><p class="product-description">Miliki kekuatan 1000+ prompt ChatGPT yang membuat anda bekerja lebih cepat, lebih cerdas, dan 10x lebih efisien.</p></div><div class="product-footer"><span class="product-price">Rp 2.000</span><a href="https://api.whatsapp.com/send?phone=6283853289396&text=Hi%2C%20Saya%20Ress%20Mac%22%20saya%20beli%20produk%201000%2B%20GPT%20Prompt%20-%20Mengungkap%20Rahasia%20Kekuatan%20AI%20untuk%20Para%20Konten%20Kreator" target="_blank" rel="noopener noreferrer" class="buy-button"><i class="fab fa-whatsapp"></i> Beli</a></div></div></div>
+            </div>
+            <div class="note">
+                <p class="font-semibold text-lg mb-3 text-gray-800">📌 Catatan Ecourse:</p>
+                <ul class="list-disc pl-5 space-y-2 text-sm text-gray-700">
+                    <li>Produk berupa video pembelajaran, kecuali "1000+ GPT Prompt" yang berupa teks.</li>
+                    <li>Sekali beli, bisa dijual berkali-kali! Peluang tak terbatas untuk reseller.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- LAIN-LAIN -->
+        <section class="card">
+            <h2 class="section-title"><i class="fas fa-ellipsis-h text-indigo-500"></i> LAIN-LAIN</h2>
+            <div class="product-category-title"><i class="fas fa-globe"></i> Layanan Digital Lainnya</div>
+            <div class="product-grid mt-6">
+                 <div class="product-item"><img src="https://macstoredigital.id/img/turnitin.png" alt="TURNITIN Private 7 Hari" loading="lazy"><div class="product-content"><div><h3 class="product-name">TURNITIN Private 7 Hari</h3><p class="product-description">Max upload 3x/24 jam (Garansi 7 Hari)</p></div><div class="product-footer"><span class="product-price">Rp 19.000</span><a href="https://api.whatsapp.com/send?phone=6283853289396&text=Hi%2C%20Saya%20Ress%20Mac%22%20saya%20beli%20produk%20TURNITIN%20Private%207%20Hari" target="_blank" rel="noopener noreferrer" class="buy-button"><i class="fab fa-whatsapp"></i> Beli</a></div></div></div>
+                 <div class="product-item"><img src="https://macstoredigital.id/img/scribd.png" alt="SCRIBD Private 1 Bulan" loading="lazy"><div class="product-content"><div><h3 class="product-name">SCRIBD Private 1 Bulan</h3><p class="product-description">Akun private dari kami (Garansi 1 Bulan)</p></div><div class="product-footer"><span class="product-price">Rp 14.000</span><a href="https://api.whatsapp.com/send?phone=6283853289396&text=Hi%2C%20Saya%20Ress%20Mac%22%20saya%20beli%20produk%20SCRIBD%20Private%201%20Bulan" target="_blank" rel="noopener noreferrer" class="buy-button"><i class="fab fa-whatsapp"></i> Beli</a></div></div></div>
+                 <div class="product-item"><img src="https://macstoredigital.id/img/getcontact.png" alt="GetContact Premium Private 1 Bulan" loading="lazy"><div class="product-content"><div><h3 class="product-name">GetContact Premium Private 1 Bulan</h3><p class="product-description">Proses Menggunakan Nomor WhatsApp | Wajib standby untuk proses orderan (Garansi 20 Hari)</p></div><div class="product-footer"><span class="product-price">Rp 14.000</span><a href="https://api.whatsapp.com/send?phone=6283853289396&text=Hi%2C%20Saya%20Ress%20Mac%22%20saya%20beli%20produk%20GetContact%20Premium%20Private%201%20Bulan" target="_blank" rel="noopener noreferrer" class="buy-button"><i class="fab fa-whatsapp"></i> Beli</a></div></div></div>
+                 <div class="product-item"><img src="https://macstoredigital.id/img/kahoot.png" alt="Kahoot Sharing 1 Bulan" loading="lazy"><div class="product-content"><div><h3 class="product-name">Kahoot Sharing 1 Bulan</h3><p class="product-description">Akun sharing dari kami (Garansi 28 Hari)</p></div><div class="product-footer"><span class="product-price">Rp 29.000</span><a href="https://api.whatsapp.com/send?phone=6283853289396&text=Hi%2C%20Saya%20Ress%20Mac%22%20saya%20beli%20produk%20Kahoot%20Sharing%201%20Bulan" target="_blank" rel="noopener noreferrer" class="buy-button"><i class="fab fa-whatsapp"></i> Beli</a></div></div></div>
+                 <div class="product-item"><img src="https://macstoredigital.id/img/duolingo.png" alt="Duolingo Private 1 Bulan" loading="lazy"><div class="product-content"><div><h3 class="product-name">Duolingo Private 1 Bulan</h3><p class="product-description">Akun private dari kami (Garansi 28 Hari)</p></div><div class="product-footer"><span class="product-price">Rp 14.000</span><a href="https://api.whatsapp.com/send?phone=6283853289396&text=Hi%2C%20Saya%20Ress%20Mac%22%20saya%20beli%20produk%20Duolingo%20Private%201%20Bulan" target="_blank" rel="noopener noreferrer" class="buy-button"><i class="fab fa-whatsapp"></i> Beli</a></div></div></div>
+                 <div class="product-item"><img src="https://macstoredigital.id/img/zoom.png" alt="Zoom Pro Private 14 Hari" loading="lazy"><div class="product-content"><div><h3 class="product-name">Zoom Pro Private 14 Hari</h3><p class="product-description">Akun private dari kami | 100 Peserta (Garansi 14 Hari)</p></div><div class="product-footer"><span class="product-price">Rp 14.000</span><a href="https://api.whatsapp.com/send?phone=6283853289396&text=Hi%2C%20Saya%20Ress%20Mac%22%20saya%20beli%20produk%20Zoom%20Pro%20Private%2014%20Hari" target="_blank" rel="noopener noreferrer" class="buy-button"><i class="fab fa-whatsapp"></i> Beli</a></div></div></div>
+                 <div class="product-item"><img src="https://macstoredigital.id/img/wattpad.png" alt="Wattpad Sharing 12 Bulan" loading="lazy"><div class="product-content"><div><h3 class="product-name">Wattpad Sharing 12 Bulan</h3><p class="product-description">Akun sharing dari kami (Garansi 11 Bulan)</p></div><div class="product-footer"><span class="product-price">Rp 19.000</span><a href="https://api.whatsapp.com/send?phone=6283853289396&text=Hi%2C%20Saya%20Ress%20Mac%22%20saya%20beli%20produk%20Wattpad%20Sharing%2012%20Bulan" target="_blank" rel="noopener noreferrer" class="buy-button"><i class="fab fa-whatsapp"></i> Beli</a></div></div></div>
+                 <div class="product-item"><img src="https://macstoredigital.id/img/office365.png" alt="Microsoft 365 Private 12 Bulan" loading="lazy"><div class="product-content"><div><h3 class="product-name">Microsoft 365 Private 12 Bulan</h3><p class="product-description">Akun private dari kami | Full akses Original: Word, Excel, Power Point, One Note, Outlook, Publisher, Access (Garansi 6 Bulan)</p></div><div class="product-footer"><span class="product-price">Rp 49.000</span><a href="https://api.whatsapp.com/send?phone=6283853289396&text=Hi%2C%20Saya%20Ress%20Mac%22%20saya%20beli%20produk%20Microsoft%20365%20Private%2012%20Bulan" target="_blank" rel="noopener noreferrer" class="buy-button"><i class="fab fa-whatsapp"></i> Beli</a></div></div></div>
+                 <div class="product-item"><img src="https://macstoredigital.id/img/fizzo.png" alt="Fizzo Sharing 1 Bulan" loading="lazy"><div class="product-content"><div><h3 class="product-name">Fizzo Sharing 1 Bulan</h3><p class="product-description">Akun sharing dari kami (Garansi 28 Hari)</p></div><div class="product-footer"><span class="product-price">Rp 14.000</span><a href="https://api.whatsapp.com/send?phone=6283853289396&text=Hi%2C%20Saya%20Ress%20Mac%22%20saya%20beli%20produk%20Fizzo%20Sharing%201%20Bulan" target="_blank" rel="noopener noreferrer" class="buy-button"><i class="fab fa-whatsapp"></i> Beli</a></div></div></div>
+                 <div class="product-item"><img src="https://macstoredigital.id/img/surfshark.png" alt="Surfshark VPN Private 3 Bulan" loading="lazy"><div class="product-content"><div><h3 class="product-name">Surfshark VPN Private 3 Bulan</h3><p class="product-description">Akun private dari kami (Garansi 3 Bulan)</p></div><div class="product-footer"><span class="product-price">Rp 29.000</span><a href="https://api.whatsapp.com/send?phone=6283853289396&text=Hi%2C%20Saya%20Ress%20Mac%22%20saya%20beli%20produk%20Surfshark%20VPN%20Private%203%20Bulan" target="_blank" rel="noopener noreferrer" class="buy-button"><i class="fab fa-whatsapp"></i> Beli</a></div></div></div>
+                 <div class="product-item"><img src="https://macstoredigital.id/img/express.png" alt="ExpressVPN Private 1 Bulan" loading="lazy"><div class="product-content"><div><h3 class="product-name">ExpressVPN Private 1 Bulan</h3><p class="product-description">Akun private dari kami (Garansi 28 Hari)</p></div><div class="product-footer"><span class="product-price">Rp 14.000</span><a href="https://api.whatsapp.com/send?phone=6283853289396&text=Hi%2C%20Saya%20Ress%20Mac%22%20saya%20beli%20produk%20ExpressVPN%20Private%201%20Bulan" target="_blank" rel="noopener noreferrer" class="buy-button"><i class="fab fa-whatsapp"></i> Beli</a></div></div></div>
+                 <div class="product-item"><img src="https://macstoredigital.id/img/hma.png" alt="HMA VPN Private 1 Bulan" loading="lazy"><div class="product-content"><div><h3 class="product-name">HMA VPN Private 1 Bulan</h3><p class="product-description">Akun private dari kami (Garansi 28 Hari)</p></div><div class="product-footer"><span class="product-price">Rp 14.000</span><a href="https://api.whatsapp.com/send?phone=6283853289396&text=Hi%2C%20Saya%20Ress%20Mac%22%20saya%20beli%20produk%20HMA%20VPN%20Private%201%20Bulan" target="_blank" rel="noopener noreferrer" class="buy-button"><i class="fab fa-whatsapp"></i> Beli</a></div></div></div>
+                 <div class="product-item"><img src="https://macstoredigital.id/img/bypass.png" alt="Open Bypass iPhone Lock iCloud Or Passcode (Not For Robber)" loading="lazy"><div class="product-content"><div><h3 class="product-name">Open Bypass iPhone Lock iCloud Or Passcode (Not For Robber)</h3><p class="product-description">Hubungi admin untuk detail lebih lanjut mengenai layanan ini.</p></div><div class="product-footer"><span class="product-price">Hubungi Admin</span></div></div></div>
+            </div>
+        </section>
+        
+        <section class="card bg-gradient-to-r from-indigo-600 to-purple-600 text-white text-center shadow-2xl mt-8">
+            <h2 class="section-title !text-white !border-indigo-300"><i class="fas fa-search-plus"></i> Tidak Menemukan Produk?</h2>
+            <p class="text-lg leading-relaxed mb-8 max-w-3xl mx-auto font-light text-indigo-200">
+                Hubungi admin untuk menanyakan ketersediaan produk yang kamu cari. Kami siap membantu!
+            </p>
+            <a href="https://api.whatsapp.com/send?phone=6283853289396&text=Halo%20Kak%2C%20saya%20mau%20cari%20produk%20%5Bisi%20produknya%5D%2C%20apakah%20ada%3F" target="_blank" rel="noopener noreferrer" class="inline-block bg-white text-indigo-600 font-bold text-lg py-3 px-8 rounded-lg shadow-xl transform transition-all duration-300 hover:scale-105 hover:bg-yellow-300">
+                <i class="fab fa-whatsapp mr-2"></i> Tanyakan di Sini
+            </a>
+        </section>
+
+    </main>
+
+    <footer class="footer-main">
+        <div class="max-w-6xl mx-auto">
+            <p class="mb-2 text-lg font-light">
+                © 2024 Macstore Digital. Semua Hak Dilindungi.
+            </p>
+            <p class="text-xl font-medium mt-4">
+                Kunjungi website resmi kami: <a href="http://macstoredigital.id/" target="_blank" rel="noopener noreferrer" class="text-indigo-400 hover:text-indigo-300 hover:underline transition-colors">macstoredigital.id</a>
+            </p>
+            <p class="mt-4 text-md text-slate-400">
+                Dukungan & pendaftaran reseller via WhatsApp: <a href="https://api.whatsapp.com/send?phone=6283853289396" target="_blank" rel="noopener noreferrer" class="text-green-400 hover:text-green-300 hover:underline transition-colors font-medium">083853289396</a>
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>
