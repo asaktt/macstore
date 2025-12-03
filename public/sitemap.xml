@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
+
+  <!-- Homepage -->
+  <url>
+    <loc>https://macstoredigital.id/</loc>
+    <lastmod>2025-12-04</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://macstoredigital.id/img/logo-macstore.png</image:loc>
+      <image:title>Macstore Digital - Jual Akun Premium Murah</image:title>
+    </image:image>
+  </url>
+
+  <!-- Product Categories -->
+  <url>
+    <loc>https://macstoredigital.id/#promo</loc>
+    <lastmod>2025-12-04</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.95</priority>
+  </url>
+
+  <url>
+    <loc>https://macstoredigital.id/#design</loc>
+    <lastmod>2025-12-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
+    <loc>https://macstoredigital.id/#ai</loc>
+    <lastmod>2025-12-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
+    <loc>https://macstoredigital.id/#streaming</loc>
+    <lastmod>2025-12-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
+    <loc>https://macstoredigital.id/#storage</loc>
+    <lastmod>2025-12-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
+  </url>
+
+  <url>
+    <loc>https://macstoredigital.id/#ecourse</loc>
+    <lastmod>2025-12-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
+  </url>
+
+  <url>
+    <loc>https://macstoredigital.id/#lainnya</loc>
+    <lastmod>2025-12-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
+  </url>
+
+  <!-- Best Sellers / Popular Products -->
+  <url>
+    <loc>https://macstoredigital.id/?product=capcut-pro</loc>
+    <lastmod>2025-12-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://macstoredigital.id/img/capcut.png</image:loc>
+      <image:title>CapCut Pro Private - Edit Video Tanpa Watermark</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://macstoredigital.id/?product=canva-pro</loc>
+    <lastmod>2025-12-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://macstoredigital.id/img/canva.png</image:loc>
+      <image:title>Canva Pro - Template Premium Desain</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://macstoredigital.id/?product=netflix</loc>
+    <lastmod>2025-12-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://macstoredigital.id/img/netflix.png</image:loc>
+      <image:title>Netflix Murah - Streaming Film & Series</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://macstoredigital.id/?product=chatgpt-pro</loc>
+    <lastmod>2025-12-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://macstoredigital.id/img/chatgpt.png</image:loc>
+      <image:title>ChatGPT Pro - AI Terpintar</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://macstoredigital.id/?product=youtube-premium</loc>
+    <lastmod>2025-12-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://macstoredigital.id/img/youtube.png</image:loc>
+      <image:title>YouTube Premium - Tonton Tanpa Iklan</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://macstoredigital.id/?product=spotify-premium</loc>
+    <lastmod>2025-12-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://macstoredigital.id/img/spotify.png</image:loc>
+      <image:title>Spotify Premium - Musik Unlimited</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://macstoredigital.id/?product=gemini-pro</loc>
+    <lastmod>2025-12-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://macstoredigital.id/img/gemini.png</image:loc>
+      <image:title>Gemini Pro - AI Google dengan Storage 2TB</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://macstoredigital.id/?product=google-drive</loc>
+    <lastmod>2025-12-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://macstoredigital.id/img/google-drive.png</image:loc>
+      <image:title>Google Drive 1TB - Cloud Storage</image:title>
+    </image:image>
+  </url>
+
+  <!-- Landing Pages / Content Pages -->
+  <url>
+    <loc>https://macstoredigital.id/blog/capcut-pro-murah</loc>
+    <lastmod>2025-12-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://macstoredigital.id/blog/netflix-murah-bergaransi</loc>
+    <lastmod>2025-12-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://macstoredigital.id/blog/chatgpt-pro-vs-free</loc>
+    <lastmod>2025-12-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://macstoredigital.id/tentang</loc>
+    <lastmod>2025-12-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://macstoredigital.id/kontak</loc>
+    <lastmod>2025-12-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://macstoredigital.id/kebijakan-privasi</loc>
+    <lastmod>2025-12-04</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://macstoredigital.id/syarat-ketentuan</loc>
+    <lastmod>2025-12-04</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+</urlset>
